@@ -108,6 +108,18 @@
         letter-spacing: 2px;
         display: inline-block;
       }
+      .code-box {
+        background: #0f172a;
+        color: #e5e7eb;
+        padding: 18px 22px;
+        border-radius: 14px;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 15px 0;
+        overflow-x: auto;
+        font-family: "Poppins", monospace;
+        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.1);
+      }
 
       .brand-stem {
         color: #2d3748;
@@ -717,86 +729,104 @@
 
       <div class="content">
         <form id="quizForm">
-          <!-- Question 1 -->
           <div class="question-block">
             <div class="question-number">1</div>
             <div class="question-text">
-              🎤 What does <code>input()</code> do in Python?
+              🧠 A smart door opens only when:
+              <br /><br />
+
+              🔐 The password is correct
+              <br />
+              👤 The face is recognized
+              <br /><br />
+
+              👉 Which condition logic is used here?
             </div>
+
             <div class="options">
               <div class="option">
-                <input type="radio" id="q1a" name="q1" value="A" />
-                <label for="q1a">Prints output on screen</label>
+                <input type="radio" name="q1" value="A" /><label>OR</label>
               </div>
               <div class="option">
-                <input type="radio" id="q1b" name="q1" value="B" />
-                <label for="q1b">Takes input from the user</label>
+                <input type="radio" name="q1" value="B" /><label>AND</label>
               </div>
               <div class="option">
-                <input type="radio" id="q1c" name="q1" value="C" />
-                <label for="q1c">Stores output in variable</label>
+                <input type="radio" name="q1" value="C" /><label>NOT</label>
               </div>
               <div class="option">
-                <input type="radio" id="q1d" name="q1" value="D" />
-                <label for="q1d">Stops the program</label>
+                <input type="radio" name="q1" value="D" /><label>==</label>
               </div>
             </div>
           </div>
 
-          <!-- Question 2 -->
           <div class="question-block">
             <div class="question-number">2</div>
             <div class="question-text">
-              🧠 What will this code print?
-              <pre><code>age = 10
-if age >= 18:
-    print("Adult")
+              🏫 A student enters marks = 75. What grade will be printed?
+            </div>
+            <div class="code-box">
+              <pre>
+marks = int(input())
+if marks >= 90:
+    print("A")
+elif marks >= 75:
+    print("B")
 else:
-    print("Child")</code></pre>
+    print("C")
+  </pre
+              >
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" id="q2a" name="q2" value="A" />
-                <label for="q2a">Adult</label>
+                <input type="radio" name="q2" value="A" /><label>A</label>
               </div>
               <div class="option">
-                <input type="radio" id="q2b" name="q2" value="B" />
-                <label for="q2b">Child</label>
+                <input type="radio" name="q2" value="B" /><label>B</label>
               </div>
               <div class="option">
-                <input type="radio" id="q2c" name="q2" value="C" />
-                <label for="q2c">Error</label>
+                <input type="radio" name="q2" value="C" /><label>C</label>
               </div>
               <div class="option">
-                <input type="radio" id="q2d" name="q2" value="D" />
-                <label for="q2d">Nothing</label>
+                <input type="radio" name="q2" value="D" /><label>Error</label>
               </div>
             </div>
           </div>
 
-          <!-- Question 3 -->
           <div class="question-block">
             <div class="question-number">3</div>
             <div class="question-text">
-              🌧️ If it is raining and your program uses <code>if / else</code>,
-              what is the computer doing?
+              🚦 A traffic robot stops cars if speed is more than 60. If speed =
+              70, what will be printed?
             </div>
+
+            <div class="code-box">
+              <pre>
+speed = int(input())
+
+if speed > 60:
+    print("Fine Issued 🚨")
+else:
+    print("Safe Drive 🙂")
+    </pre
+              >
+            </div>
+
             <div class="options">
               <div class="option">
-                <input type="radio" id="q3a" name="q3" value="A" />
-                <label for="q3a">Printing randomly</label>
+                <input type="radio" name="q3" value="A" /><label
+                  >Fine Issued 🚨</label
+                >
               </div>
               <div class="option">
-                <input type="radio" id="q3b" name="q3" value="B" />
-                <label for="q3b">Making a decision based on condition</label>
+                <input type="radio" name="q3" value="B" /><label
+                  >Safe Drive 🙂</label
+                >
               </div>
               <div class="option">
-                <input type="radio" id="q3c" name="q3" value="C" />
-                <label for="q3c">Repeating code</label>
+                <input type="radio" name="q3" value="C" /><label>70</label>
               </div>
               <div class="option">
-                <input type="radio" id="q3d" name="q3" value="D" />
-                <label for="q3d">Stopping the program</label>
+                <input type="radio" name="q3" value="D" /><label>Error</label>
               </div>
             </div>
           </div>
@@ -805,25 +835,31 @@ else:
           <div class="question-block">
             <div class="question-number">4</div>
             <div class="question-text">
-              🎒 Which condition will correctly check if a student can buy a
-              snack when pocket money is 50?
+              🤖 A robot checks a secret number. If number = 0, what will be
+              printed?
+            </div>
+            <div class="code-box">
+              <pre>
+num = int(input())
+if num:
+    print("YES")
+else:
+    print("NO")
+  </pre
+              >
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" id="q4a" name="q4" value="A" />
-                <label for="q4a">money = 50</label>
+                <input type="radio" name="q4" value="A" /><label>YES</label>
               </div>
               <div class="option">
-                <input type="radio" id="q4b" name="q4" value="B" />
-                <label for="q4b">money == 50</label>
+                <input type="radio" name="q4" value="B" /><label>NO</label>
               </div>
               <div class="option">
-                <input type="radio" id="q4c" name="q4" value="C" />
-                <label for="q4c">money >=</label>
+                <input type="radio" name="q4" value="C" /><label>0</label>
               </div>
               <div class="option">
-                <input type="radio" id="q4d" name="q4" value="D" />
-                <label for="q4d">50 == money == true</label>
+                <input type="radio" name="q4" value="D" /><label>Error</label>
               </div>
             </div>
           </div>
@@ -872,11 +908,11 @@ else:
 
     <script>
       const correctAnswers = {
-        q1: "B", // input takes data
-        q2: "B", // Child
-        q3: "B", // decision making
-        q4: "B", // ==
-        q5: "B", // conditional statement
+        q1: "B",
+        q2: "B",
+        q3: "A",
+        q4: "B",
+        q5: "B",
       };
 
       const QUIZ_DURATION = 180;
