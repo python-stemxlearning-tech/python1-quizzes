@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 9 Quiz</title>
+    <title>STEMxLearning - Lesson 11 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -716,8 +716,8 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 9 Quiz</h1>
-        <p class="quiz-subtitle">Advanced List Concepts & Tuples</p>
+        <h1 class="quiz-title">🎯 Lesson 11 Quiz</h1>
+        <p class="quiz-subtitle">Set and Dictionary</p>
       </div>
 
       <div class="timer-section">
@@ -733,62 +733,58 @@
 
       <div class="content">
         <form id="quizForm">
-          <!-- Question 1 (VERY EASY – tuple creation) -->
+          <!-- Question 1 (VERY EASY – set property) -->
           <div class="question-block">
             <div class="question-number">1</div>
             <div class="question-text">
-              🧩 What is the type of <code>t</code>?
+              🧩 Which of the following statements about a <b>set</b> is TRUE?
             </div>
-            <div class="code-box">
-              <pre>
-t = (10,)
-print(type(t))
-</pre
-              >
-            </div>
+
             <div class="options">
               <div class="option">
                 <input type="radio" name="q1" value="A" />
-                <label>&lt;class 'int'&gt;</label>
+                <label>A set can store duplicate values</label>
               </div>
               <div class="option">
                 <input type="radio" name="q1" value="B" />
-                <label>&lt;class 'list'&gt;</label>
+                <label>A set stores items in order</label>
               </div>
               <div class="option">
                 <input type="radio" name="q1" value="C" />
-                <label>&lt;class 'tuple'&gt;</label>
+                <label>A set removes duplicate values automatically</label>
               </div>
               <div class="option">
                 <input type="radio" name="q1" value="D" />
-                <label>Error</label>
+                <label>A set allows indexing like a list</label>
               </div>
             </div>
           </div>
 
-          <!-- Question 2 (EASY – nested list + tuple indexing) -->
+          <!-- Question 2 (EASY – set from string + uniqueness trap) -->
           <div class="question-block">
             <div class="question-number">2</div>
-            <div class="question-text">📋 What will this code print?</div>
+            <div class="question-text">📋 What will be the output?</div>
+
             <div class="code-box">
               <pre>
-data = [1, (2, 3), 4]
-print(data[1][0])
+s = set("apple")
+print(s)
 </pre
               >
             </div>
+
             <div class="options">
               <div class="option">
                 <input type="radio" name="q2" value="A" />
-                <label>1</label>
+                <label>{'a', 'p', 'p', 'l', 'e'}</label>
               </div>
               <div class="option">
                 <input type="radio" name="q2" value="B" />
-                <label>2</label>
+                <label>{'a', 'p', 'l', 'e'}</label>
               </div>
               <div class="option">
                 <input type="radio" name="q2" value="C" />
-                <label>(2, 3)</label>
+                <label>['a', 'p', 'l', 'e']</label>
               </div>
               <div class="option">
                 <input type="radio" name="q2" value="D" />
@@ -797,141 +793,132 @@ print(data[1][0])
             </div>
           </div>
 
-          <!-- Question 3 (MEDIUM – slicing + built-ins combined) -->
+          <!-- Question 3 (EASY but TRICKY – empty set vs dictionary) -->
           <div class="question-block">
             <div class="question-number">3</div>
-            <div class="question-text">🧠 What will be the output?</div>
-            <div class="code-box">
-              <pre>
-t = (5, 10, 15, 20)
-x = t[1:3]
-print(len(x) + sum(x))
-</pre
-              >
+            <div class="question-text">
+              🧠 Which option correctly creates an <b>empty set</b>?
             </div>
+
             <div class="options">
               <div class="option">
                 <input type="radio" name="q3" value="A" />
-                <label>25</label>
+                <label>{}</label>
               </div>
               <div class="option">
                 <input type="radio" name="q3" value="B" />
-                <label>30</label>
+                <label>set()</label>
               </div>
               <div class="option">
                 <input type="radio" name="q3" value="C" />
-                <label>27</label>
+                <label>[]</label>
               </div>
               <div class="option">
                 <input type="radio" name="q3" value="D" />
-                <label>Error</label>
+                <label>()</label>
               </div>
             </div>
           </div>
 
-          <!-- Question 4 (MEDIUM – tuple immutability vs mutable element) -->
+          <!-- Question 4 (MEDIUM – set difference) -->
           <div class="question-block">
             <div class="question-number">4</div>
-            <div class="question-text">⚠️ What will be printed?</div>
+            <div class="question-text">⚙️ What will be printed?</div>
+
             <div class="code-box">
               <pre>
-data = ([1, 2], (3, 4))
-data[0][1] = 99
-print(data)
+A = {1, 2, 3, 4}
+B = {3, 4, 5}
+
+print(A - B)
 </pre
               >
             </div>
+
             <div class="options">
               <div class="option">
                 <input type="radio" name="q4" value="A" />
-                <label>([1, 99], (3, 4))</label>
+                <label>{3, 4}</label>
               </div>
               <div class="option">
                 <input type="radio" name="q4" value="B" />
-                <label>([1, 2], (3, 99))</label>
+                <label>{1, 2}</label>
               </div>
               <div class="option">
                 <input type="radio" name="q4" value="C" />
-                <label>Error: tuple is immutable</label>
+                <label>{5}</label>
               </div>
               <div class="option">
                 <input type="radio" name="q4" value="D" />
-                <label>Error</label>
+                <label>{1, 2, 3, 4, 5}</label>
               </div>
             </div>
           </div>
 
-          <!-- Question 5 (HARD – slicing + sorted + return type trap) -->
+          <!-- Question 5 (MEDIUM – dictionary immutable key rule) -->
           <div class="question-block">
             <div class="question-number">5</div>
-            <div class="question-text">🔍 What will this code print?</div>
-            <div class="code-box">
-              <pre>
-t = (4, 1, 3, 2)
-x = sorted(t[1:3])
-print(type(x), x)
-</pre
-              >
+            <div class="question-text">
+              ⚠️ Which dictionary is <b>INVALID</b> and will cause an error?
             </div>
+
             <div class="options">
               <div class="option">
                 <input type="radio" name="q5" value="A" />
-                <label>&lt;class 'tuple'&gt; (1, 3)</label>
+                <label>{"name": "Aman"}</label>
               </div>
               <div class="option">
                 <input type="radio" name="q5" value="B" />
-                <label>&lt;class 'list'&gt; [1, 3]</label>
+                <label>{1: "Python"}</label>
               </div>
               <div class="option">
                 <input type="radio" name="q5" value="C" />
-                <label>&lt;class 'tuple'&gt; [1, 3]</label>
+                <label>{(1, 2): "Point"}</label>
               </div>
               <div class="option">
                 <input type="radio" name="q5" value="D" />
-                <label>Error</label>
+                <label>{[1, 2]: "List"}</label>
               </div>
             </div>
           </div>
 
-         <!-- Question 6 (HARD & TRICKY – tuple concatenation + repetition + built-in methods) -->
-<div class="question-block">
-  <div class="question-number">6</div>
-  <div class="question-text">🔥 What will be the output?</div>
+          <!-- Question 6 (HARD – get(), update, del, pop) -->
+          <div class="question-block">
+            <div class="question-number">6</div>
+            <div class="question-text">🔥 What will be the output?</div>
 
-  <div class="code-box">
-    <pre>
-t = (1, 2)
-t += (3,)
+            <div class="code-box">
+              <pre>
+d = {"name": "Kat", "age": 10, "city": "Delhi"}
 
-t = t * 2
-t += (4, 5)
+d["age"] = d.get("age") + 1
+del d["city"]
+d.pop("name")
 
-print(len(t), t.count(2), t.index(4))
-</pre>
-  </div>
+print(d)
+</pre
+              >
+            </div>
 
-  <div class="options">
-    <div class="option">
-      <input type="radio" name="q6" value="A" />
-      <label>8 2 6</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q6" value="B" />
-      <label>10 2 6</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q6" value="C" />
-      <label>10 1 6</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q6" value="D" />
-      <label>8 2 7</label>
-    </div>
-  </div>
-</div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q6" value="A" />
+                <label>{"name": "Kat", "age": 11}</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="B" />
+                <label>{"age": 10}</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="C" />
+                <label>{"age": 11}</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="D" />
+                <label>{}</label>
+              </div>
+            </div>
+          </div>
 
           <button type="submit" class="submit-btn" id="submitBtn">
             <span>🎉 Submit My Answers! 🎉</span>
@@ -949,12 +936,12 @@ print(len(t), t.count(2), t.index(4))
 
     <script>
       const correctAnswers = {
-        q1: "C", // <class 'tuple'>
-        q2: "B", // 2
-        q3: "C", // len(10,15)=2 + sum(25) = 27
-        q4: "A", // tuple contains mutable list
-        q5: "B", // sorted() returns list
-        q6: "A", 
+        q1: "C", // Set removes duplicate values automatically
+        q2: "B", // set("apple") removes duplicate 'p'
+        q3: "B", // set() creates an empty set
+        q4: "B", // A - B = {1, 2}
+        q5: "D", // List is mutable, cannot be a dictionary key
+        q6: "C", // {'age': 11}
       };
 
       const QUIZ_DURATION = 180;
