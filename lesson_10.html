@@ -794,19 +794,19 @@ print(x * y + str(z))
             <div class="code-box">
               <pre>
 s = "STEMxLEARNING"
-print(s[1:5][-1] + s[-3])
+print(s[1:5] + s[-3])
 </pre
               >
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q2" value="A" /><label>xI</label>
+                <input type="radio" name="q2" value="A" /><label>TEMxI</label>
               </div>
               <div class="option">
-                <input type="radio" name="q2" value="B" /><label>xN</label>
+                <input type="radio" name="q2" value="B" /><label>TEMxLI</label>
               </div>
               <div class="option">
-                <input type="radio" name="q2" value="C" /><label>MI</label>
+                <input type="radio" name="q2" value="C" /><label>STEMxN</label>
               </div>
               <div class="option">
                 <input type="radio" name="q2" value="D" /><label>Error</label>
@@ -1035,39 +1035,46 @@ print(s)
             </div>
           </div>
 
-          <!-- Question 10 (HARD – deep nesting + slicing + len) -->
-          <div class="question-block">
-            <div class="question-number">10</div>
-            <div class="question-text">🔍 What will this print?</div>
-            <div class="code-box">
-              <pre>
-data = [1, (2, 3, 4), [5, 6]]
-x = data[1][1:] + tuple(data[2][:1])
+          <!-- Question 10 (HARD – nesting + slicing + len, no double indexing) -->
+<div class="question-block">
+  <div class="question-number">10</div>
+  <div class="question-text">🔍 What will this print?</div>
+
+  <div class="code-box">
+    <pre>
+a = (2, 3, 4)
+b = (5, 6)
+
+data = [1, a, b]
+
+x = a[1:] + b[:1]
 print(len(x), x)
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q10" value="A" /><label
-                  >2 (3, 5)</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q10" value="B" /><label
-                  >3 (3, 4, 5)</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q10" value="C" /><label
-                  >2 (4, 5)</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q10" value="D" /><label>Error</label>
-              </div>
-            </div>
-          </div>
+</pre>
+  </div>
+
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q10" value="A" />
+      <label>2 (3, 5)</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q10" value="B" />
+      <label>3 (3, 4, 5)</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q10" value="C" />
+      <label>2 (4, 5)</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q10" value="D" />
+      <label>Error</label>
+    </div>
+  </div>
+</div>
+
 
           <!-- Question 11 (NEW – string comparison + length) -->
           <div class="question-block">
