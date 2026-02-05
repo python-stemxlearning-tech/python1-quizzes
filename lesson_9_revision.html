@@ -717,7 +717,7 @@
           </div>
         </div>
         <h1 class="quiz-title">🎯 Lesson 9 Revision Quiz</h1>
-        <p class="quiz-subtitle">Advanced List Concepts & Tuples</p>
+        <p class="quiz-subtitle">List and its operations</p>
       </div>
 
       <div class="timer-section">
@@ -733,61 +733,64 @@
 
       <div class="content">
         <form id="quizForm">
-          <!-- Question 1 (VERY EASY – tuple vs list visual trap) -->
+          <!-- Question 1 (EASY – indexing + negative index) -->
           <div class="question-block">
             <div class="question-number">1</div>
-            <div class="question-text">🧩 What will be printed?</div>
+            <div class="question-text">🌱 What will this code print?</div>
+
             <div class="code-box">
               <pre>
-x = (1, 2)
-y = [1, 2]
-print(type(x) == type(y))
-</pre
+nums = [4, 8, 12]
+print(len(nums))
+    </pre
               >
             </div>
+
             <div class="options">
               <div class="option">
                 <input type="radio" name="q1" value="A" />
-                <label>True</label>
+                <label>2</label>
               </div>
               <div class="option">
                 <input type="radio" name="q1" value="B" />
-                <label>False</label>
+                <label>3</label>
               </div>
               <div class="option">
                 <input type="radio" name="q1" value="C" />
-                <label>Error</label>
+                <label>4</label>
               </div>
               <div class="option">
                 <input type="radio" name="q1" value="D" />
-                <label>None</label>
+                <label>Error</label>
               </div>
             </div>
           </div>
 
-          <!-- Question 2 (EASY – list containing tuple + negative index) -->
+          <!-- Question 2 (EASY – slicing) -->
           <div class="question-block">
             <div class="question-number">2</div>
-            <div class="question-text">📋 What will this code print?</div>
+            <div class="question-text">🔍 What will be printed?</div>
+
             <div class="code-box">
               <pre>
-data = [100, (200, 300, 400), 500]
-print(data[1][-2])
-</pre
+a = [1, 3, 5, 7]
+print(5 in a)
+    </pre
               >
             </div>
+
             <div class="options">
               <div class="option">
                 <input type="radio" name="q2" value="A" />
-                <label>200</label>
+                <label>True</label>
               </div>
               <div class="option">
                 <input type="radio" name="q2" value="B" />
-                <label>300</label>
+                <label>False</label>
               </div>
               <div class="option">
                 <input type="radio" name="q2" value="C" />
-                <label>400</label>
+                <label>5</label>
               </div>
               <div class="option">
                 <input type="radio" name="q2" value="D" />
@@ -796,95 +799,106 @@ print(data[1][-2])
             </div>
           </div>
 
-          <!-- Question 3 (EASY – tuple inside list, reassignment vs mutation) -->
+          <!-- Question 3 (MEDIUM – slice vs original list) -->
           <div class="question-block">
             <div class="question-number">3</div>
-            <div class="question-text">🧠 What will be printed?</div>
+            <div class="question-text">✏️ What will be the output?</div>
+
             <div class="code-box">
               <pre>
-a = [(1, 2), (3, 4)]
-a[0] = (9, 9)
-print(a)
-</pre
+x = [10, 20, 30]
+x[1] = 99
+print(x)
+    </pre
               >
             </div>
+
             <div class="options">
               <div class="option">
                 <input type="radio" name="q3" value="A" />
-                <label>[(1, 2), (3, 4)]</label>
+                <label>[10, 20, 30]</label>
               </div>
               <div class="option">
                 <input type="radio" name="q3" value="B" />
-                <label>[(9, 9), (3, 4)]</label>
+                <label>[10, 99, 30]</label>
               </div>
               <div class="option">
                 <input type="radio" name="q3" value="C" />
-                <label>Error</label>
+                <label>[99, 20, 30]</label>
               </div>
               <div class="option">
                 <input type="radio" name="q3" value="D" />
-                <label>[(9, 2), (3, 4)]</label>
+                <label>Error</label>
               </div>
             </div>
           </div>
 
-          <!-- Question 4 (MEDIUM – tuple containing list containing tuple) -->
+          <!-- Question 4 (HARD – copy vs reference) -->
           <div class="question-block">
             <div class="question-number">4</div>
-            <div class="question-text">⚠️ What will be the output?</div>
+            <div class="question-text">🧠 What will be printed?</div>
+
             <div class="code-box">
               <pre>
-t = ([1, (2, 3)], 4)
-t[0][1] = (9, 9)
-print(t)
-</pre
+a = [1, 2, 3, 2]
+a.remove(2)
+print(a)
+    </pre
               >
             </div>
+
             <div class="options">
               <div class="option">
                 <input type="radio" name="q4" value="A" />
-                <label>([1, (9, 9)], 4)</label>
+                <label>[1, 3, 2]</label>
               </div>
               <div class="option">
                 <input type="radio" name="q4" value="B" />
-                <label>([1, (2, 3)], 4)</label>
+                <label>[1, 2, 3]</label>
               </div>
               <div class="option">
                 <input type="radio" name="q4" value="C" />
-                <label>Error</label>
+                <label>[1, 3]</label>
               </div>
               <div class="option">
                 <input type="radio" name="q4" value="D" />
-                <label>([1, 9], 4)</label>
+                <label>Error</label>
               </div>
             </div>
           </div>
 
-          <!-- Question 5 (MEDIUM – slicing + built-ins + order confusion) -->
+          <!-- Question 5 (HARD – pop + count only) -->
           <div class="question-block">
             <div class="question-number">5</div>
-            <div class="question-text">🔢 What will this print?</div>
+            <div class="question-text">📦 What will this print?</div>
+
             <div class="code-box">
               <pre>
-t = (7, 2, 9, 4, 1)
-x = sorted(t[1:4])
-print(x[0] + x[-1])
-</pre
+nums = [4, 1, 3, 2]
+nums.sort()
+nums.pop(1)
+
+print(nums)
+    </pre
               >
             </div>
+
             <div class="options">
               <div class="option">
                 <input type="radio" name="q5" value="A" />
-                <label>6</label>
+                <label>[1, 3, 4]</label>
               </div>
+
               <div class="option">
                 <input type="radio" name="q5" value="B" />
-                <label>11</label>
+                <label>[1, 2, 4]</label>
               </div>
+
               <div class="option">
                 <input type="radio" name="q5" value="C" />
-                <label>13</label>
+                <label>[2, 3, 4]</label>
               </div>
+
               <div class="option">
                 <input type="radio" name="q5" value="D" />
                 <label>Error</label>
@@ -892,30 +906,34 @@ print(x[0] + x[-1])
             </div>
           </div>
 
-          <!-- Question 6 (HARD – deep nesting + slice + len trap) -->
+          <!-- Question 6 (Medium – list join) -->
           <div class="question-block">
             <div class="question-number">6</div>
-            <div class="question-text">🔥 What will be the output?</div>
+            <div class="question-text">⚠️ What will be printed?</div>
+
             <div class="code-box">
               <pre>
-data = [(1, 2), [3, (4, 5, 6)], 7]
-x = data[1][1][1:]
-print(len(x), x)
-</pre
+a = [1, 2]
+b = a * 2
+b[0] = 99
+
+print(a, b)
+    </pre
               >
             </div>
+
             <div class="options">
               <div class="option">
                 <input type="radio" name="q6" value="A" />
-                <label>2 (5, 6)</label>
+                <label>[1, 2] [99, 2, 1, 2]</label>
               </div>
               <div class="option">
                 <input type="radio" name="q6" value="B" />
-                <label>3 (4, 5, 6)</label>
+                <label>[99, 2] [99, 2, 99, 2]</label>
               </div>
               <div class="option">
                 <input type="radio" name="q6" value="C" />
-                <label>2 [5, 6]</label>
+                <label>[1, 2] [99, 2, 99, 2]</label>
               </div>
               <div class="option">
                 <input type="radio" name="q6" value="D" />
@@ -940,12 +958,12 @@ print(len(x), x)
 
     <script>
       const correctAnswers = {
-        q1: "B", // tuple and list are different types → False
-        q2: "B", // data[1] = (200,300,400) → -2 index = 300
-        q3: "B", // tuple replaced inside list
-        q4: "A", // list inside tuple is mutable
-        q5: "B", // sorted(2,9,4) → [2,4,9] → 2+9 = 11
-        q6: "A", // (4,5,6)[1:] → (5,6), len = 2
+        q1: "B", // len([4, 8, 12]) → 3
+        q2: "A", // 5 in [1, 3, 5, 7] → True
+        q3: "B", // [10, 99, 30]
+        q4: "A", // remove() removes first occurrence → [1, 3, 2]
+        q5: "A", // nested indexing → 2
+        q6: "A", // a unchanged, b modified → [1,2] [99,2,1,2]
       };
 
       const QUIZ_DURATION = 180;

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 8 Quiz</title>
+    <title>STEMxLearning - Lesson 20 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -285,6 +285,29 @@
 
       .question-block:nth-child(6) {
         background: linear-gradient(135deg, #ffd6a5 0%, #fdffb6 100%);
+      }
+      .question-block:nth-child(7) {
+        background: linear-gradient(135deg, #c7ecee 0%, #dff9fb 100%);
+      }
+
+      .question-block:nth-child(8) {
+        background: linear-gradient(135deg, #ffcccc 0%, #ffe6e6 100%);
+      }
+
+      .question-block:nth-child(9) {
+        background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+      }
+
+      .question-block:nth-child(10) {
+        background: linear-gradient(135deg, #fddb92 0%, #d1fdff 100%);
+      }
+
+      .question-block:nth-child(11) {
+        background: linear-gradient(135deg, #c6ffdd 0%, #fbd786 100%);
+      }
+
+      .question-block:nth-child(12) {
+        background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
       }
 
       .question-block:hover {
@@ -698,6 +721,9 @@
           font-size: 18px;
           padding: 15px;
         }
+        .question-block {
+          scroll-margin-top: 120px;
+        }
       }
     </style>
   </head>
@@ -716,43 +742,44 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 8 Quiz</h1>
-        <p class="quiz-subtitle">List and its operations</p>
+        <h1 class="quiz-title">🎯 Assesment-1 Quiz</h1>
       </div>
 
       <div class="timer-section">
         <div class="timer-box">
           <div class="timer-label">⏰ Time Left</div>
-          <div class="timer-value" id="timer">3:00</div>
+          <div class="timer-value" id="timer">15:00</div>
         </div>
         <div class="progress-info">
           <div class="progress-label">📊 Progress:</div>
-          <div class="progress-value" id="progress">0/6</div>
+          <div class="progress-value" id="progress">0/12</div>
         </div>
       </div>
 
       <div class="content">
         <form id="quizForm">
-          <!-- Question 1 (EASY – indexing + negative index) -->
+          <!-- Question 1 (EASY – string × int + concatenation) -->
           <div class="question-block">
             <div class="question-number">1</div>
             <div class="question-text">📋 What will this code print?</div>
             <div class="code-box">
               <pre>
-a = [10, 20, 30, 40]
-print(a[1], a[-1])
+x = "2"
+y = 3
+z = 4
+print(x * y + str(z))
 </pre
               >
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q1" value="A" /><label>10 40</label>
+                <input type="radio" name="q1" value="A" /><label>234</label>
               </div>
               <div class="option">
-                <input type="radio" name="q1" value="B" /><label>20 30</label>
+                <input type="radio" name="q1" value="B" /><label>2224</label>
               </div>
               <div class="option">
-                <input type="radio" name="q1" value="C" /><label>20 40</label>
+                <input type="radio" name="q1" value="C" /><label>222</label>
               </div>
               <div class="option">
                 <input type="radio" name="q1" value="D" /><label>Error</label>
@@ -760,31 +787,26 @@ print(a[1], a[-1])
             </div>
           </div>
 
-          <!-- Question 2 (EASY – slicing) -->
+          <!-- Question 2 (EASY – string slicing + negative index) -->
           <div class="question-block">
             <div class="question-number">2</div>
-            <div class="question-text">✂️ What will be the output?</div>
+            <div class="question-text">🧠 What will be the output?</div>
             <div class="code-box">
               <pre>
-nums = [1, 2, 3, 4, 5]
-x = nums[:3]
-print(x)
+s = "STEMxLEARNING"
+print(s[1:5] + s[-3])
 </pre
               >
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q2" value="A" /><label>[1, 2]</label>
+                <input type="radio" name="q2" value="A" /><label>TEMxI</label>
               </div>
               <div class="option">
-                <input type="radio" name="q2" value="B" /><label
-                  >[1, 2, 3]</label
-                >
+                <input type="radio" name="q2" value="B" /><label>TEMxLI</label>
               </div>
               <div class="option">
-                <input type="radio" name="q2" value="C" /><label
-                  >[2, 3, 4]</label
-                >
+                <input type="radio" name="q2" value="C" /><label>STEMxN</label>
               </div>
               <div class="option">
                 <input type="radio" name="q2" value="D" /><label>Error</label>
@@ -792,73 +814,66 @@ print(x)
             </div>
           </div>
 
-          <!-- Question 3 (MEDIUM – slice vs original list) -->
+          <!-- Question 3 (MEDIUM – operator precedence + conditionals) -->
           <div class="question-block">
             <div class="question-number">3</div>
-            <div class="question-text">🧠 What will be printed?</div>
+            <div class="question-text">⚙️ What will be printed?</div>
             <div class="code-box">
               <pre>
-a = [5, 10, 15, 20]
-b = a[1:3]
-b[0] = 99
+a = 5
+b = 2
+c = 10
 
-print(a, b)
+if a * b > c or c // b == 5 and a + b == 7:
+    print("YES")
+else:
+    print("NO")
 </pre
               >
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q3" value="A" /><label
-                  >[5, 99, 15, 20] [99, 15]</label
-                >
+                <input type="radio" name="q3" value="A" /><label>YES</label>
               </div>
               <div class="option">
-                <input type="radio" name="q3" value="B" /><label
-                  >[5, 10, 15, 20] [99, 15]</label
-                >
+                <input type="radio" name="q3" value="B" /><label>NO</label>
               </div>
               <div class="option">
-                <input type="radio" name="q3" value="C" /><label
-                  >[5, 10, 99, 20] [99, 15]</label
-                >
+                <input type="radio" name="q3" value="C" /><label>Error</label>
               </div>
               <div class="option">
-                <input type="radio" name="q3" value="D" /><label>Error</label>
+                <input type="radio" name="q3" value="D" /><label>Depends</label>
               </div>
             </div>
           </div>
 
-          <!-- Question 4 (HARD – copy vs reference) -->
+          <!-- Question 4 (MEDIUM – slicing copy vs original list) -->
           <div class="question-block">
             <div class="question-number">4</div>
-            <div class="question-text">⚠️ What will be printed?</div>
+            <div class="question-text">🧪 What will this print?</div>
             <div class="code-box">
               <pre>
-x = [1, 2, 3]
-y = x
-z = x.copy()
-
-y.append(4)
-z.append(9)
-
-print(x, y, z)
+x = [1, 2, 3, 4]
+y = x[:2]
+x[1] = 99
+print(y, x)
 </pre
               >
             </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q4" value="A" /><label
-                  >[1, 2, 3, 4] [1, 2, 3, 4] [1, 2, 3, 9]</label
+                  >[1, 2] [1, 99, 3, 4]</label
                 >
               </div>
               <div class="option">
                 <input type="radio" name="q4" value="B" /><label
-                  >[1, 2, 3] [1, 2, 3, 4] [1, 2, 3, 9]</label
+                  >[1, 99] [1, 99, 3, 4]</label
                 >
               </div>
               <div class="option">
                 <input type="radio" name="q4" value="C" /><label
-                  >[1, 2, 3, 9] [1, 2, 3, 4] [1, 2, 3, 9]</label
+                  >[1, 2] [1, 2, 3, 4]</label
                 >
               </div>
               <div class="option">
@@ -867,88 +882,263 @@ print(x, y, z)
             </div>
           </div>
 
-         <!-- Question 5 (HARD – pop + count only) -->
+          <!-- Question 5 (MEDIUM – nested list reassignment) -->
+          <div class="question-block">
+            <div class="question-number">5</div>
+            <div class="question-text">📦 What will be printed?</div>
+            <div class="code-box">
+              <pre>
+data = [[10, 20], [30, 40]]
+data[0][1] = data[1][0]
+print(data)
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q5" value="A" /><label
+                  >[[10, 20], [30, 40]]</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q5" value="B" /><label
+                  >[[10, 30], [30, 40]]</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q5" value="C" /><label
+                  >[[10, 40], [30, 40]]</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q5" value="D" /><label>Error</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 6 (MEDIUM – string + operators + conditionals) -->
+          <div class="question-block">
+            <div class="question-number">6</div>
+            <div class="question-text">🧪 What will be printed?</div>
+            <div class="code-box">
+              <pre>
+s = "Py3"
+if s[0].isupper() and s[2].isdigit():
+    print("YES")
+else:
+    print("NO")
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q6" value="A" /><label>YES</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="B" /><label>NO</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="C" /><label>Error</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="D" /><label>None</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 7 (HARD – list + len + operators) -->
+          <div class="question-block">
+            <div class="question-number">7</div>
+            <div class="question-text">🔥 What will be printed?</div>
+            <div class="code-box">
+              <pre>
+nums = [2, 4, 6]
+print(len(nums) * nums[0] == nums[-1])
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q7" value="A" /><label>True</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q7" value="B" /><label>False</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q7" value="C" /><label>Error</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q7" value="D" /><label>None</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 8 (HARD – truthiness) -->
+          <div class="question-block">
+            <div class="question-number">8</div>
+            <div class="question-text">🧠 What will be printed?</div>
+            <div class="code-box">
+              <pre>
+a = []
+b = [0]
+
+if a:
+    print("A")
+elif b:
+    print("B")
+else:
+    print("C")
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q8" value="A" /><label>A</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q8" value="B" /><label>B</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q8" value="C" /><label>C</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q8" value="D" /><label>Error</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 9 (HARD – string immutability) -->
+          <div class="question-block">
+            <div class="question-number">9</div>
+            <div class="question-text">✂️ What will be the output?</div>
+            <div class="code-box">
+              <pre>
+s = "code"
+s = s[:2] + "X" + s[3]
+print(s)
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q9" value="A" /><label>coXe</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q9" value="B" /><label>coXd</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q9" value="C" /><label>Error</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q9" value="D" /><label>code</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 10 (HARD – nesting + slicing + len, no double indexing) -->
 <div class="question-block">
-  <div class="question-number">5</div>
-  <div class="question-text">🔢 What will this print?</div>
+  <div class="question-number">10</div>
+  <div class="question-text">🔍 What will this print?</div>
+
   <div class="code-box">
     <pre>
-a = [1, 2, 3, 2]
-b = [2, 3]
+a = (2, 3, 4)
+b = (5, 6)
 
-a.pop()
-b.pop()
+data = [1, a, b]
 
-x = a.count(2) + b.count(2)
-
-print(a, x)
+x = a[1:] + b[:1]
+print(len(x), x)
 </pre>
   </div>
 
   <div class="options">
     <div class="option">
-      <input type="radio" name="q5" value="A" />
-      <label>[1, 2, 3] 2</label>
+      <input type="radio" name="q10" value="A" />
+      <label>2 (3, 5)</label>
     </div>
 
     <div class="option">
-      <input type="radio" name="q5" value="B" />
-      <label>[1, 2, 3] 1</label>
+      <input type="radio" name="q10" value="B" />
+      <label>3 (3, 4, 5)</label>
     </div>
 
     <div class="option">
-      <input type="radio" name="q5" value="C" />
-      <label>[1, 2, 3, 2] 2</label>
+      <input type="radio" name="q10" value="C" />
+      <label>2 (4, 5)</label>
     </div>
 
     <div class="option">
-      <input type="radio" name="q5" value="D" />
+      <input type="radio" name="q10" value="D" />
       <label>Error</label>
     </div>
   </div>
 </div>
 
 
-          <!-- Question 6 (Medium – list join) -->
-<div class="question-block">
-  <div class="question-number">6</div>
-  <div class="question-text">
-    🤔 What will be the output?
-  </div>
-  <div class="code-box">
-    <pre>
-a = [10, 20]
-b = [30, 40]
+          <!-- Question 11 (NEW – string comparison + length) -->
+          <div class="question-block">
+            <div class="question-number">11</div>
+            <div class="question-text">🧩 What will be printed?</div>
+            <div class="code-box">
+              <pre>
+a = "python"
+b = "Python"
 
-c = a + b
-a.append(50)
+print(len(a) == len(b) and a != b)
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q11" value="A" /><label>True</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q11" value="B" /><label>False</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q11" value="C" /><label>Error</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q11" value="D" /><label>None</label>
+              </div>
+            </div>
+          </div>
 
-print(a, c)
-</pre>
-  </div>
+          <!-- Question 12 (MAX HARD – string + list + operators + precedence) -->
+          <div class="question-block">
+            <div class="question-number">12</div>
+            <div class="question-text">🔥 What will be printed?</div>
+            <div class="code-box">
+              <pre>
+data = ["Code", [4, 2, 1]]
 
-  <div class="options">
-    <div class="option">
-      <input type="radio" name="q6" value="A" />
-      <label>[10, 20, 50] [10, 20, 30, 40]</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q6" value="B" />
-      <label>[10, 20] [10, 20, 30, 40, 50]</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q6" value="C" />
-      <label>[10, 20, 30, 40, 50] [10, 20, 30, 40]</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q6" value="D" />
-      <label>Error</label>
-    </div>
-  </div>
-</div>
+print(
+    data[0][1] == "o"
+    and data[1][0] * data[1][-1] > len(data[0])
+)
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q12" value="A" />
+                <label>True</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q12" value="B" />
+                <label>False</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q12" value="C" />
+                <label>Error</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q12" value="D" />
+                <label>None</label>
+              </div>
+            </div>
+          </div>
 
           <button type="submit" class="submit-btn" id="submitBtn">
             <span>🎉 Submit My Answers! 🎉</span>
@@ -966,15 +1156,21 @@ print(a, c)
 
     <script>
       const correctAnswers = {
-        q1: "C", // 20 40
-        q2: "B", // [1, 2, 3]
-        q3: "B", // slice creates new list
-        q4: "A", // y shares reference, z is copy
-        q5: "B", 
-        q6: "A", 
+        q1: "B", // "2224"
+        q2: "A", // "xI"
+        q3: "A", // YES
+        q4: "A", // [1, 2] [1, 99, 3, 4]
+        q5: "B", // [[10, 30], [30, 40]]
+        q6: "A", // (1, [2, 3, 5], 4)
+        q7: "A", // 6
+        q8: "B", // B
+        q9: "A", // coXe
+        q10: "B", // 3 (3, 4, 5)
+        q11: "A", // True
+        q12: "B", // False
       };
 
-      const QUIZ_DURATION = 180;
+      const QUIZ_DURATION = 900;
       let timeRemaining = QUIZ_DURATION;
       let timerInterval = null;
       let quizStarted = false;
