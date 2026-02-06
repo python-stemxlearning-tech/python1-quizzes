@@ -921,16 +921,29 @@ print("a" in "apple" and False)
   <div class="code-box">
     <pre>
 s = "ABCDE"
-print(s[-1:-4:1])
-</pre>
+print(s[-4:-1:1])
+    </pre>
   </div>
   <div class="options">
-    <div class="option"><input type="radio" name="q9" value="A"><label>EDC</label></div>
-    <div class="option"><input type="radio" name="q9" value="B"><label>DCB</label></div>
-    <div class="option"><input type="radio" name="q9" value="C"><label>(empty string)</label></div>
-    <div class="option"><input type="radio" name="q9" value="D"><label>Error</label></div>
+    <div class="option">
+      <input type="radio" name="q9" value="A">
+      <label>BCD</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q9" value="B">
+      <label>EDC</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q9" value="C">
+      <label>DCB</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q9" value="D">
+      <label>(empty string)</label>
+    </div>
   </div>
 </div>
+
 
 <!-- Question 10 (HARD – string slicing + len + operators) -->
 <div class="question-block">
@@ -1041,7 +1054,7 @@ print(x * y)
   q6: "A", // \nWorld
   q7: "B", // 7
   q8: "B", // False
-  q9: "C", // (empty string)
+  q9: "A", // (empty string)
   q10: "C", // 6 ROGING
   q11: "A", // True
   q12: "A", // 525252
