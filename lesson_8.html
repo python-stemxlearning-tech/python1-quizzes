@@ -777,13 +777,13 @@ print(x * y)
   </div>
 </div>
 
-<!-- Question 2 (MEDIUM – comparison chaining) -->
+<!-- Question 2 (MEDIUM – comparison chaining without boolean arithmetic) -->
 <div class="question-block">
   <div class="question-number">2</div>
   <div class="question-text">🧠 What will be printed?</div>
   <div class="code-box">
     <pre>
-print(5 > 3 == 1)
+print(5 > 3 and 3 == 1)
 </pre>
   </div>
   <div class="options">
@@ -793,6 +793,7 @@ print(5 > 3 == 1)
     <div class="option"><input type="radio" name="q2" value="D"><label>Error</label></div>
   </div>
 </div>
+
 
 <!-- Question 3 (EASY – string slicing) -->
 <div class="question-block">
@@ -833,7 +834,7 @@ else:
   </div>
 </div>
 
-<!-- Question 5 (MEDIUM – boolean arithmetic) -->
+<!-- Question 5 (MEDIUM – boolean logic without arithmetic) -->
 <div class="question-block">
   <div class="question-number">5</div>
   <div class="question-text">🧮 What will be printed?</div>
@@ -841,7 +842,7 @@ else:
     <pre>
 a = True
 b = False
-print(a + b)
+print(a and b)
 </pre>
   </div>
   <div class="options">
@@ -851,6 +852,7 @@ print(a + b)
     <div class="option"><input type="radio" name="q5" value="D"><label>Error</label></div>
   </div>
 </div>
+
 
 <!-- Question 6 (MEDIUM – escape sequence + slicing) -->
 <div class="question-block">
@@ -870,7 +872,7 @@ print(text[5:])
   </div>
 </div>
 
-<!-- Question 7 (MEDIUM – assignment + comparison) -->
+<!-- Question 7 (MEDIUM – assignment with condition) -->
 <div class="question-block">
   <div class="question-number">7</div>
   <div class="question-text">🔥 What will be printed?</div>
@@ -878,7 +880,10 @@ print(text[5:])
     <pre>
 x = 5
 y = 10
-x += y == 10
+
+if y == 10:
+    x += 1
+
 print(x)
 </pre>
   </div>
@@ -890,13 +895,14 @@ print(x)
   </div>
 </div>
 
-<!-- Question 8 (HARD – comparison chaining) -->
+
+<!-- Question 8 (HARD – logical comparison) -->
 <div class="question-block">
   <div class="question-number">8</div>
   <div class="question-text">🧠 What will be printed?</div>
   <div class="code-box">
     <pre>
-print("a" in "apple" == False)
+print("a" in "apple" and False)
 </pre>
   </div>
   <div class="options">
@@ -907,6 +913,7 @@ print("a" in "apple" == False)
   </div>
 </div>
 
+
 <!-- Question 9 (HARD – slicing direction) -->
 <div class="question-block">
   <div class="question-number">9</div>
@@ -914,7 +921,7 @@ print("a" in "apple" == False)
   <div class="code-box">
     <pre>
 s = "ABCDE"
-print(s[-1:-4])
+print(s[-1:-4:1])
 </pre>
   </div>
   <div class="options">
@@ -1025,20 +1032,21 @@ print(x * y)
     </div>
 
     <script>
-      const correctAnswers = {
+   const correctAnswers = {
   q1: "C", // "1010101010"
-  q2: "A", // True
+  q2: "B", // False
   q3: "B", // YTH
   q4: "B", // No
-  q5: "C", // 1
-  q6: "C", // nWorld
-  q7: "B", // 6
+  q5: "B", // False
+  q6: "A", // \nWorld
+  q7: "B", // 7
   q8: "B", // False
   q9: "C", // (empty string)
   q10: "C", // 6 ROGING
   q11: "A", // True
-  q12: "A", // 522
+  q12: "A", // 525252
 };
+
 
 
       const QUIZ_DURATION = 900;
