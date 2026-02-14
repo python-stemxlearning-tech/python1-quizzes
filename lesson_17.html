@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 16 Quiz</title>
+    <title>STEMxLearning - Lesson 17 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -716,8 +716,8 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 16 Quiz</h1>
-        <p class="quiz-subtitle">Funtions-I</p>
+        <h1 class="quiz-title">🎯 Lesson 17 Quiz</h1>
+        <p class="quiz-subtitle">Funtions-II</p>
       </div>
 
       <div class="timer-section">
@@ -732,112 +732,113 @@
       </div>
 
       <div class="content">
-        <form id="quizForm">
+      <form id="quizForm">
 
-  <!-- Question 1 (VERY EASY – Basics) -->
+  <!-- Question 1 (VERY EASY – Theory: Local Variable) -->
   <div class="question-block">
     <div class="question-number">1</div>
-    <div class="question-text">🟢 What is a function in Python?</div>
+    <div class="question-text">🟢 What is a local variable?</div>
 
     <div class="options">
       <div class="option">
         <input type="radio" name="q1" value="A">
-        <label>A variable that stores data</label>
+        <label>A variable that works everywhere</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q1" value="B">
-        <label>A reusable block of code that does a task</label>
+        <label>A variable created inside a function</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q1" value="C">
-        <label>A loop that runs many times</label>
+        <label>A variable created using lambda</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q1" value="D">
-        <label>A comment in the program</label>
+        <label>A variable that never changes</label>
       </div>
     </div>
   </div>
 
-  <!-- Question 2 (EASY – Function Creation) -->
+  <!-- Question 2 (EASY – Code: Local vs Global) -->
   <div class="question-block">
     <div class="question-number">2</div>
-    <div class="question-text">🟢 Which keyword is used to create a function in Python?</div>
-
-    <div class="options">
-      <div class="option">
-        <input type="radio" name="q2" value="A">
-        <label>make</label>
-      </div>
-
-      <div class="option">
-        <input type="radio" name="q2" value="B">
-        <label>function</label>
-      </div>
-
-      <div class="option">
-        <input type="radio" name="q2" value="C">
-        <label>def</label>
-      </div>
-
-      <div class="option">
-        <input type="radio" name="q2" value="D">
-        <label>create</label>
-      </div>
-    </div>
-  </div>
-
-  <!-- Question 3 (EASY – Function Call) -->
-  <div class="question-block">
-    <div class="question-number">3</div>
-    <div class="question-text">🟡 What will be printed?</div>
+    <div class="question-text">🟢 What will be printed?</div>
 
     <div class="code-box">
       <pre>
-def greet():
-    print("Hello")
+x = 10
 
-greet()
+def show():
+    x = 5
+    print(x)
+
+show()
       </pre>
     </div>
 
     <div class="options">
       <div class="option">
-        <input type="radio" name="q3" value="A">
-        <label>greet</label>
+        <input type="radio" name="q2" value="A">
+        <label>10</label>
       </div>
 
       <div class="option">
-        <input type="radio" name="q3" value="B">
-        <label>Hello</label>
+        <input type="radio" name="q2" value="B">
+        <label>5</label>
       </div>
 
       <div class="option">
-        <input type="radio" name="q3" value="C">
-        <label>Nothing will be printed</label>
-      </div>
-
-      <div class="option">
-        <input type="radio" name="q3" value="D">
+        <input type="radio" name="q2" value="C">
         <label>Error</label>
+      </div>
+
+      <div class="option">
+        <input type="radio" name="q2" value="D">
+        <label>Nothing</label>
       </div>
     </div>
   </div>
 
-  <!-- Question 4 (MEDIUM – Parameters) -->
+  <!-- Question 3 (MEDIUM – Theory: Lambda) -->
+  <div class="question-block">
+    <div class="question-number">3</div>
+    <div class="question-text">🟡 Which statement about lambda functions is correct?</div>
+
+    <div class="options">
+      <div class="option">
+        <input type="radio" name="q3" value="A">
+        <label>Lambda functions can have many lines</label>
+      </div>
+
+      <div class="option">
+        <input type="radio" name="q3" value="B">
+        <label>Lambda functions must have a name</label>
+      </div>
+
+      <div class="option">
+        <input type="radio" name="q3" value="C">
+        <label>Lambda functions return values automatically</label>
+      </div>
+
+      <div class="option">
+        <input type="radio" name="q3" value="D">
+        <label>Lambda functions cannot take input</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Question 4 (MEDIUM – Code: Simple Lambda) -->
   <div class="question-block">
     <div class="question-number">4</div>
     <div class="question-text">🟠 What will be printed?</div>
 
     <div class="code-box">
       <pre>
-def add(a, b):
-    print(a + b)
-
-add(3, 4)
+add = lambda x: x + 2
+print(add(3))
       </pre>
     </div>
 
@@ -849,50 +850,53 @@ add(3, 4)
 
       <div class="option">
         <input type="radio" name="q4" value="B">
-        <label>4</label>
+        <label>5</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q4" value="C">
-        <label>7</label>
+        <label>x + 2</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q4" value="D">
-        <label>a + b</label>
+        <label>Error</label>
       </div>
     </div>
   </div>
 
-  <!-- Question 5 (MEDIUM – return vs print) -->
+  <!-- Question 5 (HARD – Code: Local & Global Together) -->
   <div class="question-block">
     <div class="question-number">5</div>
     <div class="question-text">🔴 What will be printed?</div>
 
     <div class="code-box">
       <pre>
-def add(a, b):
-    print(a + b)
+score = 50
 
-result = add(2, 3)
-print(result)
+def result():
+    score = 80
+    return score
+
+print(result())
+print(score)
       </pre>
     </div>
 
     <div class="options">
       <div class="option">
         <input type="radio" name="q5" value="A">
-        <label>5</label>
+        <label>80<br>80</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q5" value="B">
-        <label>5<br>None</label>
+        <label>50<br>80</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q5" value="C">
-        <label>None</label>
+        <label>80<br>50</label>
       </div>
 
       <div class="option">
@@ -902,40 +906,36 @@ print(result)
     </div>
   </div>
 
-  <!-- Question 6 (HARD – Tricky return vs print + modular) -->
+  <!-- Question 6 (HARD & TRICKY – Lambda with Loop) -->
   <div class="question-block">
     <div class="question-number">6</div>
     <div class="question-text">🔥 What will be printed?</div>
 
     <div class="code-box">
       <pre>
-def double(num):
-    return num * 2
+nums = [1, 2, 3]
 
-def show(value):
-    print(value)
+square = lambda x: x * x
 
-x = double(3)
-y = show(x)
-
-print(y)
+for n in nums:
+    print(square(n))
       </pre>
     </div>
 
     <div class="options">
       <div class="option">
         <input type="radio" name="q6" value="A">
-        <label>6</label>
+        <label>1 2 3</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q6" value="B">
-        <label>6<br/>None</label>
+        <label>1 <br/>4 <br/>9</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q6" value="C">
-        <label>3</label>
+        <label>[1, 4, 9]</label>
       </div>
 
       <div class="option">
@@ -952,6 +952,7 @@ print(y)
 </form>
 
 
+
         <div class="result" id="result">
           <div class="result-emoji" id="resultEmoji">🎉</div>
           <div class="score-message" id="scoreMessage"></div>
@@ -963,11 +964,11 @@ print(y)
 
     <script>
     const correctAnswers = {
-  q1: "B",
-    q2: "C",
-    q3: "B",
-    q4: "C",
-    q5: "B",
+   q1: "B",
+    q2: "B",
+    q3: "C",
+    q4: "B",
+    q5: "C",
     q6: "B"
 
 };

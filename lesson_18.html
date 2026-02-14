@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 16 Quiz</title>
+    <title>STEMxLearning - Lesson 18 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -716,8 +716,8 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 16 Quiz</h1>
-        <p class="quiz-subtitle">Funtions-I</p>
+        <h1 class="quiz-title">🎯 Lesson 18 Quiz</h1>
+        <p class="quiz-subtitle">Recursion</p>
       </div>
 
       <div class="timer-section">
@@ -732,92 +732,110 @@
       </div>
 
       <div class="content">
-        <form id="quizForm">
+      <form id="quizForm">
 
-  <!-- Question 1 (VERY EASY – Basics) -->
+  <!-- Question 1 (VERY EASY – Theory: Recursion) -->
   <div class="question-block">
     <div class="question-number">1</div>
-    <div class="question-text">🟢 What is a function in Python?</div>
+    <div class="question-text">🟢 What is recursion in Python?</div>
 
     <div class="options">
       <div class="option">
         <input type="radio" name="q1" value="A">
-        <label>A variable that stores data</label>
+        <label>A loop that runs forever</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q1" value="B">
-        <label>A reusable block of code that does a task</label>
+        <label>A function calling another function</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q1" value="C">
-        <label>A loop that runs many times</label>
+        <label>A function calling itself</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q1" value="D">
-        <label>A comment in the program</label>
+        <label>A variable changing its value</label>
       </div>
     </div>
   </div>
 
-  <!-- Question 2 (EASY – Function Creation) -->
+  <!-- Question 2 (EASY – Code: Simple Recursion) -->
   <div class="question-block">
     <div class="question-number">2</div>
-    <div class="question-text">🟢 Which keyword is used to create a function in Python?</div>
+    <div class="question-text">🟢 What will be printed?</div>
+
+    <div class="code-box">
+      <pre>
+def greet(n):
+    if n == 0:
+        return
+    print("Hi")
+    greet(n - 1)
+
+greet(2)
+      </pre>
+    </div>
 
     <div class="options">
       <div class="option">
         <input type="radio" name="q2" value="A">
-        <label>make</label>
+        <label>Hi</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q2" value="B">
-        <label>function</label>
+        <label>
+          Hi<br>
+          Hi
+        </label>
       </div>
 
       <div class="option">
         <input type="radio" name="q2" value="C">
-        <label>def</label>
+        <label>Hi Hi Hi</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q2" value="D">
-        <label>create</label>
+        <label>Error</label>
       </div>
     </div>
   </div>
 
-  <!-- Question 3 (EASY – Function Call) -->
+  <!-- Question 3 (MEDIUM – Code: Print Numbers Using Recursion) -->
   <div class="question-block">
     <div class="question-number">3</div>
     <div class="question-text">🟡 What will be printed?</div>
 
     <div class="code-box">
       <pre>
-def greet():
-    print("Hello")
+def print_numbers(n):
+    if n == 0:
+        return
+    print(n)
+    print_numbers(n - 1)
 
-greet()
+print_numbers(3)
       </pre>
     </div>
 
     <div class="options">
       <div class="option">
         <input type="radio" name="q3" value="A">
-        <label>greet</label>
+        <label>1 2 3</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q3" value="B">
-        <label>Hello</label>
+        <label>3 2 1</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q3" value="C">
-        <label>Nothing will be printed</label>
+        <label>3 2</label>
       </div>
 
       <div class="option">
@@ -827,17 +845,19 @@ greet()
     </div>
   </div>
 
-  <!-- Question 4 (MEDIUM – Parameters) -->
+  <!-- Question 4 (MEDIUM – Code: Base Case Return) -->
   <div class="question-block">
     <div class="question-number">4</div>
     <div class="question-text">🟠 What will be printed?</div>
 
     <div class="code-box">
       <pre>
-def add(a, b):
-    print(a + b)
+def fun(n):
+    if n == 1:
+        return 1
+    return fun(n - 1)
 
-add(3, 4)
+print(fun(3))
       </pre>
     </div>
 
@@ -849,50 +869,64 @@ add(3, 4)
 
       <div class="option">
         <input type="radio" name="q4" value="B">
-        <label>4</label>
+        <label>2</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q4" value="C">
-        <label>7</label>
+        <label>1</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q4" value="D">
-        <label>a + b</label>
+        <label>Error</label>
       </div>
     </div>
   </div>
 
-  <!-- Question 5 (MEDIUM – return vs print) -->
+  <!-- Question 5 (HARD – Code: Recursive Flow) -->
   <div class="question-block">
     <div class="question-number">5</div>
     <div class="question-text">🔴 What will be printed?</div>
 
     <div class="code-box">
       <pre>
-def add(a, b):
-    print(a + b)
+def show(n):
+    if n == 0:
+        print("Done")
+        return
+    print(n)
+    show(n - 1)
 
-result = add(2, 3)
-print(result)
+show(2)
       </pre>
     </div>
 
     <div class="options">
       <div class="option">
         <input type="radio" name="q5" value="A">
-        <label>5</label>
+        <label>
+          2<br>
+          1<br>
+          Done
+        </label>
       </div>
 
       <div class="option">
         <input type="radio" name="q5" value="B">
-        <label>5<br>None</label>
+        <label>
+          1<br>
+          2<br>
+          Done
+        </label>
       </div>
 
       <div class="option">
         <input type="radio" name="q5" value="C">
-        <label>None</label>
+        <label>
+          2<br>
+          Done
+        </label>
       </div>
 
       <div class="option">
@@ -902,45 +936,40 @@ print(result)
     </div>
   </div>
 
-  <!-- Question 6 (HARD – Tricky return vs print + modular) -->
+  <!-- Question 6 (HARD & TRICKY – Infinite Recursion) -->
   <div class="question-block">
     <div class="question-number">6</div>
-    <div class="question-text">🔥 What will be printed?</div>
+    <div class="question-text">🔥 What will happen when this code runs?</div>
 
     <div class="code-box">
       <pre>
-def double(num):
-    return num * 2
+def test(n):
+    print(n)
+    test(n - 1)
 
-def show(value):
-    print(value)
-
-x = double(3)
-y = show(x)
-
-print(y)
+test(3)
       </pre>
     </div>
 
     <div class="options">
       <div class="option">
         <input type="radio" name="q6" value="A">
-        <label>6</label>
+        <label>Prints 3 2 1 0</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q6" value="B">
-        <label>6<br/>None</label>
+        <label>Prints 3 2 1</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q6" value="C">
-        <label>3</label>
+        <label>Runs forever and crashes</label>
       </div>
 
       <div class="option">
         <input type="radio" name="q6" value="D">
-        <label>Error</label>
+        <label>Stops automatically</label>
       </div>
     </div>
   </div>
@@ -950,6 +979,8 @@ print(y)
   </button>
 
 </form>
+
+
 
 
         <div class="result" id="result">
@@ -963,12 +994,12 @@ print(y)
 
     <script>
     const correctAnswers = {
-  q1: "B",
-    q2: "C",
+    q1: "C",
+    q2: "B",
     q3: "B",
     q4: "C",
-    q5: "B",
-    q6: "B"
+    q5: "A",
+    q6: "C"
 
 };
 
