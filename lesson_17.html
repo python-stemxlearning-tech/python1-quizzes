@@ -734,33 +734,44 @@
       <div class="content">
       <form id="quizForm">
 
-  <!-- Question 1 (VERY EASY – Theory: Local Variable) -->
-  <div class="question-block">
-    <div class="question-number">1</div>
-    <div class="question-text">🟢 What is a local variable?</div>
+  <!-- Question 1 (VERY EASY – Code: Local Variable) -->
+<div class="question-block">
+  <div class="question-number">1</div>
+  <div class="question-text">🟢 What will be printed?</div>
 
-    <div class="options">
-      <div class="option">
-        <input type="radio" name="q1" value="A">
-        <label>A variable that works everywhere</label>
-      </div>
+  <div class="code-box">
+    <pre>
+def greet():
+    message = "Hello"
+    print(message)
 
-      <div class="option">
-        <input type="radio" name="q1" value="B">
-        <label>A variable created inside a function</label>
-      </div>
+greet()
+    </pre>
+  </div>
 
-      <div class="option">
-        <input type="radio" name="q1" value="C">
-        <label>A variable created using lambda</label>
-      </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q1" value="A">
+      <label>Hello</label>
+    </div>
 
-      <div class="option">
-        <input type="radio" name="q1" value="D">
-        <label>A variable that never changes</label>
-      </div>
+    <div class="option">
+      <input type="radio" name="q1" value="B">
+      <label>message</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q1" value="C">
+      <label>Error</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q1" value="D">
+      <label>None</label>
     </div>
   </div>
+</div>
+
 
   <!-- Question 2 (EASY – Code: Local vs Global) -->
   <div class="question-block">
@@ -802,33 +813,41 @@ show()
     </div>
   </div>
 
-  <!-- Question 3 (MEDIUM – Theory: Lambda) -->
-  <div class="question-block">
-    <div class="question-number">3</div>
-    <div class="question-text">🟡 Which statement about lambda functions is correct?</div>
+ <!-- Question 3 (MEDIUM – Code: Lambda Expression) -->
+<div class="question-block">
+  <div class="question-number">3</div>
+  <div class="question-text">🟡 What does this lambda function return?</div>
 
-    <div class="options">
-      <div class="option">
-        <input type="radio" name="q3" value="A">
-        <label>Lambda functions can have many lines</label>
-      </div>
+  <div class="code-box">
+    <pre>
+double = lambda x: x * 2
+result = double(4)
+print(result)
+    </pre>
+  </div>
 
-      <div class="option">
-        <input type="radio" name="q3" value="B">
-        <label>Lambda functions must have a name</label>
-      </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q3" value="A">
+      <label>4</label>
+    </div>
 
-      <div class="option">
-        <input type="radio" name="q3" value="C">
-        <label>Lambda functions return values automatically</label>
-      </div>
+    <div class="option">
+      <input type="radio" name="q3" value="B">
+      <label>6</label>
+    </div>
 
-      <div class="option">
-        <input type="radio" name="q3" value="D">
-        <label>Lambda functions cannot take input</label>
-      </div>
+    <div class="option">
+      <input type="radio" name="q3" value="C">
+      <label>8</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q3" value="D">
+      <label>Error</label>
     </div>
   </div>
+</div>
 
   <!-- Question 4 (MEDIUM – Code: Simple Lambda) -->
   <div class="question-block">
@@ -964,7 +983,7 @@ for n in nums:
 
     <script>
     const correctAnswers = {
-   q1: "B",
+   q1: "A",
     q2: "B",
     q3: "C",
     q4: "B",
