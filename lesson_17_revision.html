@@ -734,33 +734,45 @@
       <div class="content">
     <form id="quizForm">
 
-  <!-- Question 1 (VERY EASY – Theory) -->
-  <div class="question-block">
-    <div class="question-number">1</div>
-    <div class="question-text">🟢 Which of the following best describes a global variable?</div>
+  <!-- Question 1 (VERY EASY – Code: Reading Global Variable) -->
+<div class="question-block">
+  <div class="question-number">1</div>
+  <div class="question-text">🟢 What will be printed?</div>
 
-    <div class="options">
-      <div class="option">
-        <input type="radio" name="q1" value="A">
-        <label>A variable created inside a loop</label>
-      </div>
+  <div class="code-box">
+    <pre>
+count = 3
 
-      <div class="option">
-        <input type="radio" name="q1" value="B">
-        <label>A variable created inside a function</label>
-      </div>
+def show():
+    print(count)
 
-      <div class="option">
-        <input type="radio" name="q1" value="C">
-        <label>A variable created outside all functions</label>
-      </div>
+show()
+    </pre>
+  </div>
 
-      <div class="option">
-        <input type="radio" name="q1" value="D">
-        <label>A variable created using lambda</label>
-      </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q1" value="A">
+      <label>3</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q1" value="B">
+      <label>0</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q1" value="C">
+      <label>Error</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q1" value="D">
+      <label>None</label>
     </div>
   </div>
+</div>
+
 
   <!-- Question 2 (BASIC – Local Variable Concept) -->
   <div class="question-block">
@@ -802,33 +814,46 @@ change()
     </div>
   </div>
 
-  <!-- Question 3 (MEDIUM – Theory: global keyword) -->
-  <div class="question-block">
-    <div class="question-number">3</div>
-    <div class="question-text">🟡 When do we need to use the <code>global</code> keyword inside a function?</div>
+  <!-- Question 3 (MEDIUM – Code: Missing global keyword) -->
+<div class="question-block">
+  <div class="question-number">3</div>
+  <div class="question-text">🟡 What will happen when this code runs?</div>
 
-    <div class="options">
-      <div class="option">
-        <input type="radio" name="q3" value="A">
-        <label>When reading a global variable</label>
-      </div>
+  <div class="code-box">
+    <pre>
+score = 10
 
-      <div class="option">
-        <input type="radio" name="q3" value="B">
-        <label>When printing a global variable</label>
-      </div>
+def add():
+    score = score + 5
+    print(score)
 
-      <div class="option">
-        <input type="radio" name="q3" value="C">
-        <label>When changing a global variable</label>
-      </div>
+add()
+    </pre>
+  </div>
 
-      <div class="option">
-        <input type="radio" name="q3" value="D">
-        <label>When creating a local variable</label>
-      </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q3" value="A">
+      <label>15</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q3" value="B">
+      <label>10</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q3" value="C">
+      <label>Error</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q3" value="D">
+      <label>None</label>
     </div>
   </div>
+</div>
+
 
   <!-- Question 4 (MEDIUM – Code: global update) -->
   <div class="question-block">
@@ -964,7 +989,7 @@ print(points)
 
     <script>
     const correctAnswers = {
-    q1: "C",
+    q1: "A",
     q2: "B",
     q3: "C",
     q4: "C",
