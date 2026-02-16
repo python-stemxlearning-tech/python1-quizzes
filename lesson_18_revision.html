@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 6 Quiz</title>
+    <title>STEMxLearning - Lesson 18 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -716,8 +716,8 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 6 Quiz</h1>
-        <p class="quiz-subtitle">Control flow statements-II</p>
+        <h1 class="quiz-title">🎯 Lesson 18 Revision  Quiz</h1>
+        <p class="quiz-subtitle">Recursion</p>
       </div>
 
       <div class="timer-section">
@@ -732,248 +732,257 @@
       </div>
 
       <div class="content">
-        <form id="quizForm">
-          <!-- Question 1 (EASY – nested if true/true) -->
-          <div class="question-block">
-            <div class="question-number">1</div>
-            <div class="question-text">
-              🏫 A school checks uniform and ID. What will this code print?
-            </div>
-            <div class="code-box">
-              <pre>
-uniform = True
-id_card = True
+ <form id="quizForm">
 
-if uniform:
-    if id_card:
-        print("Enter class")
-    else:
-        print("ID missing")
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q1" value="A" /><label
-                  >Enter class</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q1" value="B" /><label
-                  >ID missing</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q1" value="C" /><label
-                  >No uniform</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q1" value="D" /><label>Error</label>
-              </div>
-            </div>
-          </div>
+  <!-- Question 1 (EASY – String + Recursion) -->
+  <div class="question-block">
+    <div class="question-number">1</div>
+    <div class="question-text">🟢 What will be printed?</div>
 
-         <!-- Question 2 (EASY–MEDIUM – nested else used) -->
-<div class="question-block">
-  <div class="question-number">2</div>
-  <div class="question-text">
-    🚌 Bus travel system check. What will be printed?
-  </div>
-  <div class="code-box">
-    <pre>
-ticket = False
-pass_card = True
+    <div class="code-box">
+      <pre>
+def repeat(word, n):
+    if n == 0:
+        return
+    print(word)
+    repeat(word, n - 1)
 
-if ticket:
-    print("Board the bus")
-else:
-    if pass_card:
-        print("Board using pass")
-    else:
-        print("Buy ticket")
-</pre>
-  </div>
-  <div class="options">
-    <div class="option">
-      <input type="radio" name="q2" value="A" /><label>Board the bus</label>
+repeat("Hi", 2)
+      </pre>
     </div>
-    <div class="option">
-      <input type="radio" name="q2" value="B" /><label>Board using pass</label>
-    </div>
-    <div class="option">
-      <input type="radio" name="q2" value="C" /><label>Buy ticket</label>
-    </div>
-    <div class="option">
-      <input type="radio" name="q2" value="D" /><label>Error</label>
+
+    <div class="options">
+      <div class="option">
+        <input type="radio" name="q1" value="A">
+        <label>Hi</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q1" value="B">
+        <label>
+          Hi<br>
+          Hi
+        </label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q1" value="C">
+        <label>HiHi</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q1" value="D">
+        <label>Error</label>
+      </div>
     </div>
   </div>
-</div>
 
+  <!-- Question 2 (EASY – Output Based) -->
+  <div class="question-block">
+    <div class="question-number">2</div>
+    <div class="question-text">🟢 What will be printed?</div>
 
-          <!-- Question 3 (MEDIUM – outer else runs) -->
-          <div class="question-block">
-            <div class="question-number">3</div>
-            <div class="question-text">
-              🎮 Game level unlock check. What will this print?
-            </div>
-            <div class="code-box">
-              <pre>
-level = 5
-key = True
+    <div class="code-box">
+      <pre>
+def call(n):
+    if n == 1:
+        print("Hello")
+        return
+    call(n - 1)
 
-if level >= 10:
-    if key:
-        print("Level unlocked")
-    else:
-        print("Key needed")
-else:
-    print("Play more")
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q3" value="A" /><label
-                  >Level unlocked</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q3" value="B" /><label
-                  >Key needed</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q3" value="C" /><label
-                  >Play more</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q3" value="D" /><label>Error</label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Question 4 (MEDIUM – print outside nested block) -->
-          <div class="question-block">
-            <div class="question-number">4</div>
-            <div class="question-text">
-              🏧 ATM system check. What will be printed?
-            </div>
-            <div class="code-box">
-              <pre>
-card = True
-pin = False
-
-if card:
-    if pin:
-        print("Cash withdrawn")
-    else:
-        print("Wrong pin")
-print("Thank you")
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q4" value="A" /><label
-                  >Wrong pin</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q4" value="B" /><label
-                  >Wrong pin <br />Thank you</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q4" value="C" /><label
-                  >Thank you</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q4" value="D" /><label>Error</label>
-              </div>
-            </div>
-          </div>
-
-         <!-- Question 5 (MEDIUM–HARD – nested if–else in both blocks) -->
-<div class="question-block">
-  <div class="question-number">5</div>
-  <div class="question-text">
-    🔐 Secure login system. What will this code print?
-  </div>
-  <div class="code-box">
-    <pre>
-username = ""
-password = "admin123"
-
-if username:
-    if password:
-        print("Login successful")
-    else:
-        print("Password missing")
-else:
-    if password:
-        print("Username missing")
-    else:
-        print("Enter credentials")
-</pre>
-  </div>
-  <div class="options">
-    <div class="option">
-      <input type="radio" name="q5" value="A" /><label>Login successful</label>
+call(3)
+      </pre>
     </div>
-    <div class="option">
-      <input type="radio" name="q5" value="B" /><label>Password missing</label>
-    </div>
-    <div class="option">
-      <input type="radio" name="q5" value="C" /><label>Username missing</label>
-    </div>
-    <div class="option">
-      <input type="radio" name="q5" value="D" /><label>Enter credentials</label>
+
+    <div class="options">
+      <div class="option">
+        <input type="radio" name="q2" value="A">
+        <label>Hello</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q2" value="B">
+        <label>
+          Hello<br>
+          Hello
+        </label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q2" value="C">
+        <label>Nothing</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q2" value="D">
+        <label>Error</label>
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- Question 3 (MEDIUM – List + Recursion) -->
+  <div class="question-block">
+    <div class="question-number">3</div>
+    <div class="question-text">🟡 What will be printed?</div>
+
+    <div class="code-box">
+      <pre>
+def print_list(lst):
+    if len(lst) == 0:
+        return
+    print(lst[0])
+    print_list(lst[1:])
+
+print_list(["A", "B"])
+      </pre>
+    </div>
+
+    <div class="options">
+      <div class="option">
+        <input type="radio" name="q3" value="A">
+        <label>A<br/> B</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q3" value="B">
+        <label>B A</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q3" value="C">
+        <label>A</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q3" value="D">
+        <label>Error</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Question 4 (MEDIUM – String Length Using Recursion) -->
+  <div class="question-block">
+    <div class="question-number">4</div>
+    <div class="question-text">🟠 What will be printed?</div>
+
+    <div class="code-box">
+      <pre>
+def length(s):
+    if s == "":
+        return 0
+    return 1 + length(s[1:])
+
+print(length("Hi"))
+      </pre>
+    </div>
+
+    <div class="options">
+      <div class="option">
+        <input type="radio" name="q4" value="A">
+        <label>0</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q4" value="B">
+        <label>1</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q4" value="C">
+        <label>2</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q4" value="D">
+        <label>Error</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Question 5 (HARD – Flow + Print Order) -->
+  <div class="question-block">
+    <div class="question-number">5</div>
+    <div class="question-text">🔴 What will be printed?</div>
+
+    <div class="code-box">
+      <pre>
+def fun(n):
+    if n == 0:
+        return
+    print("Start", n)
+    fun(n - 1)
+    print("End", n)
+
+fun(2)
+      </pre>
+    </div>
+
+    <div class="options">
+      <div class="option">
+        <input type="radio" name="q5" value="A">
+        <label>
+          Start 2<br>
+          Start 1<br>
+          End 1<br>
+          End 2
+        </label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q5" value="B">
+        <label>
+          Start 1<br>
+          Start 2<br>
+          End 2<br>
+          End 1
+        </label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q5" value="C">
+        <label>
+          Start 2<br>
+          End 2
+        </label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q5" value="D">
+        <label>Error</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Question 6 (MEDIUM–TRICKY – List + Return) -->
+  <div class="question-block">
+    <div class="question-number">6</div>
+    <div class="question-text">🟠 What will be printed?</div>
+
+    <div class="code-box">
+      <pre>
+def last_item(lst):
+    if len(lst) == 1:
+        return lst[0]
+    return last_item(lst[1:])
+
+print(last_item([1, 2, 3]))
+      </pre>
+    </div>
+
+    <div class="options">
+      <div class="option">
+        <input type="radio" name="q6" value="A">
+        <label>1</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q6" value="B">
+        <label>2</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q6" value="C">
+        <label>3</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q6" value="D">
+        <label>Error</label>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="submit-btn" id="submitBtn">
+    <span>🎉 Submit My Answers! 🎉</span>
+  </button>
+
+</form>
 
 
-          <!-- Question 6 (HARD – NESTED + FLOW + OUTSIDE PRINT TRICK) -->
-          <div class="question-block">
-            <div class="question-number">6</div>
-            <div class="question-text">🔥 What will be printed?</div>
-            <div class="code-box">
-              <pre>
-x = True
-y = False
 
-if x:
-    if y:
-        print("A")
-    else:
-        print("B")
-print("C")
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q6" value="A" /><label>B</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q6" value="B" /><label>B <br />C</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q6" value="C" /><label>C</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q6" value="D" /><label>A C</label>
-              </div>
-            </div>
-          </div>
 
-          <button type="submit" class="submit-btn" id="submitBtn">
-            <span>🎉 Submit My Answers! 🎉</span>
-          </button>
-        </form>
 
         <div class="result" id="result">
           <div class="result-emoji" id="resultEmoji">🎉</div>
@@ -985,14 +994,17 @@ print("C")
     </div>
 
     <script>
-      const correctAnswers = {
-        q1: "A",
-        q2: "B",
-        q3: "C",
-        q4: "B",
-        q5: "C",
-        q6: "B",
-      };
+    const correctAnswers = {
+     q1: "B", // Hi Hi
+  q2: "A", // Hello
+  q3: "A", // A B
+  q4: "C", // 2
+  q5: "A", // Start 2 → Start 1 → End 1 → End 2
+  q6: "C"
+
+};
+
+
 
       const QUIZ_DURATION = 180;
       let timeRemaining = QUIZ_DURATION;
