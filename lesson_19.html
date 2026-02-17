@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 18 Quiz</title>
+    <title>STEMxLearning - Lesson 19 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -716,8 +716,8 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 18 Revision  Quiz</h1>
-        <p class="quiz-subtitle">Recursion</p>
+        <h1 class="quiz-title">🎯 Lesson 19 Quiz</h1>
+        <p class="quiz-subtitle">Modules & Packages</p>
       </div>
 
       <div class="timer-section">
@@ -732,239 +732,213 @@
       </div>
 
       <div class="content">
-<form id="quizForm">
+        <form id="quizForm">
+          <!-- Question 1 (VERY EASY – Module vs Function Confusion) -->
+          <div class="question-block">
+            <div class="question-number">1</div>
+            <div class="question-text">
+              🟢 A student writes this code in a file named <b>tools.py</b>.
+              Which statement correctly allows another file to use
+              <code>greet()</code>?
+            </div>
 
-  <!-- Question 1 (VERY EASY – Simple Function Call) -->
-  <div class="question-block">
-    <div class="question-number">1</div>
-    <div class="question-text">🟢 What will be printed?</div>
-
-    <div class="code-box">
-      <pre>
-def say_hi():
-    print("Hi")
-
-say_hi()
-      </pre>
-    </div>
-
-    <div class="options">
-      <div class="option">
-        <input type="radio" name="q1" value="A">
-        <label>Hi</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q1" value="B">
-        <label>Hello</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q1" value="C">
-        <label>Nothing</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q1" value="D">
-        <label>Error</label>
-      </div>
-    </div>
-  </div>
-
-  <!-- Question 2 (EASY – One-Step Recursion) -->
-  <div class="question-block">
-    <div class="question-number">2</div>
-    <div class="question-text">🟢 What will be printed?</div>
-
-    <div class="code-box">
-      <pre>
-def show(n):
-    if n == 0:
-        return
+            <div class="code-box">
+              <pre>
+def greet():
     print("Hello")
+      </pre
+              >
+            </div>
 
-show(1)
-      </pre>
-    </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q1" value="A" />
+                <label>import greet</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q1" value="B" />
+                <label>import tools</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q1" value="C" />
+                <label>use tools</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q1" value="D" />
+                <label>include tools</label>
+              </div>
+            </div>
+          </div>
 
-    <div class="options">
-      <div class="option">
-        <input type="radio" name="q2" value="A">
-        <label>Hello</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q2" value="B">
-        <label>Hello Hello</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q2" value="C">
-        <label>Nothing</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q2" value="D">
-        <label>Error</label>
-      </div>
-    </div>
+          <!-- Question 2 (EASY – Dot Notation Understanding) -->
+          <div class="question-block">
+            <div class="question-number">2</div>
+            <div class="question-text">
+              🟢 After writing <code>import math</code>, which of the following
+              will work correctly?
+            </div>
+
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q2" value="A" />
+                <label>sqrt(16)</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q2" value="B" />
+                <label>math.sqrt(16)</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q2" value="C" />
+                <label>sqrt.math(16)</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q2" value="D" />
+                <label>math(16)</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 3 (MEDIUM – random.randint Logic) -->
+          <div class="question-block">
+            <div class="question-number">3</div>
+            <div class="question-text">
+              🟡 What is <b>always true</b> about this code?
+            </div>
+
+            <div class="code-box">
+              <pre>
+import random
+x = random.randint(2, 5)
+      </pre
+              >
+            </div>
+
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q3" value="A" />
+                <label>x will always be 2</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q3" value="B" />
+                <label>x can be 2 or 5</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q3" value="C" />
+                <label>x can never be 5</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q3" value="D" />
+                <label>x will be the same every time</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 4 (MEDIUM – Package Identification) -->
+          <div class="question-block">
+            <div class="question-number">4</div>
+            <div class="question-text">
+              🟠 A folder contains the following files. What is <b>school</b> in
+              Python terms?
+            </div>
+
+            <div class="code-box">
+              <pre>
+school/
+ ├── marks.py
+ ├── attendance.py
+      </pre
+              >
+            </div>
+
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q4" value="A" />
+                <label>A module</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q4" value="B" />
+                <label>A function</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q4" value="C" />
+                <label>A package</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q4" value="D" />
+                <label>A variable</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 5 (HARD – Selective Import) -->
+          <div class="question-block">
+            <div class="question-number">5</div>
+            <div class="question-text">
+              🔴 You want to use <b>only</b> the <code>add</code> function from
+              a module named <code>calc</code>. Which is the best choice?
+            </div>
+
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q5" value="A" />
+                <label>import calc</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q5" value="B" />
+                <label>from calc import *</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q5" value="C" />
+                <label>from calc import add</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q5" value="D" />
+                <label>import add from calc</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 6 (HARD & TRICKY – random.randint Logic) -->
+<div class="question-block">
+  <div class="question-number">6</div>
+  <div class="question-text">🔥 What can be printed by this code?</div>
+
+  <div class="code-box">
+    <pre>
+import random
+a = random.randint(5, 8)
+b = random.randint(5, 8)
+print(a == b)
+    </pre>
   </div>
 
-  <!-- Question 3 (EASY – List Access) -->
-  <div class="question-block">
-    <div class="question-number">3</div>
-    <div class="question-text">🟢 What will be printed?</div>
-
-    <div class="code-box">
-      <pre>
-def get_first(lst):
-    return lst[0]
-
-print(get_first(["A", "B", "C"]))
-      </pre>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q6" value="A">
+      <label>Always True</label>
     </div>
 
-    <div class="options">
-      <div class="option">
-        <input type="radio" name="q3" value="A">
-        <label>A</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q3" value="B">
-        <label>B</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q3" value="C">
-        <label>C</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q3" value="D">
-        <label>Error</label>
-      </div>
+    <div class="option">
+      <input type="radio" name="q6" value="B">
+      <label>Always False</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q6" value="C">
+      <label>Sometimes True, sometimes False</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q6" value="D">
+      <label>Error</label>
     </div>
   </div>
+</div>
 
-  <!-- Question 4 (MEDIUM – String + Recursion) [OLD Q1] -->
-  <div class="question-block">
-    <div class="question-number">4</div>
-    <div class="question-text">🟡 What will be printed?</div>
-
-    <div class="code-box">
-      <pre>
-def repeat(word, n):
-    if n == 0:
-        return
-    print(word)
-    repeat(word, n - 1)
-
-repeat("Hi", 2)
-      </pre>
-    </div>
-
-    <div class="options">
-      <div class="option">
-        <input type="radio" name="q4" value="A">
-        <label>Hi</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q4" value="B">
-        <label>
-          Hi<br>
-          Hi
-        </label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q4" value="C">
-        <label>HiHi</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q4" value="D">
-        <label>Error</label>
-      </div>
-    </div>
-  </div>
-
-  <!-- Question 5 (MEDIUM – Output Based) [OLD Q2] -->
-  <div class="question-block">
-    <div class="question-number">5</div>
-    <div class="question-text">🟠 What will be printed?</div>
-
-    <div class="code-box">
-      <pre>
-def call(n):
-    if n == 1:
-        print("Hello")
-        return
-    call(n - 1)
-
-call(3)
-      </pre>
-    </div>
-
-    <div class="options">
-      <div class="option">
-        <input type="radio" name="q5" value="A">
-        <label>Hello</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q5" value="B">
-        <label>
-          Hello<br>
-          Hello
-        </label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q5" value="C">
-        <label>Nothing</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q5" value="D">
-        <label>Error</label>
-      </div>
-    </div>
-  </div>
-
-  <!-- Question 6 (MEDIUM–TRICKY – List + Recursion) [OLD Q3] -->
-  <div class="question-block">
-    <div class="question-number">6</div>
-    <div class="question-text">🔴 What will be printed?</div>
-
-    <div class="code-box">
-      <pre>
-def print_list(lst):
-    if len(lst) == 0:
-        return
-    print(lst[0])
-    print_list(lst[1:])
-
-print_list(["A", "B"])
-      </pre>
-    </div>
-
-    <div class="options">
-      <div class="option">
-        <input type="radio" name="q6" value="A">
-        <label>A<br/>B</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q6" value="B">
-        <label>B A</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q6" value="C">
-        <label>A</label>
-      </div>
-      <div class="option">
-        <input type="radio" name="q6" value="D">
-        <label>Error</label>
-      </div>
-    </div>
-  </div>
-
-  <button type="submit" class="submit-btn" id="submitBtn">
-    <span>🎉 Submit My Answers! 🎉</span>
-  </button>
-
-</form>
-
-
-
-
-
+          <button type="submit" class="submit-btn" id="submitBtn">
+            <span>🎉 Submit My Answers! 🎉</span>
+          </button>
+        </form>
 
         <div class="result" id="result">
           <div class="result-emoji" id="resultEmoji">🎉</div>
@@ -976,17 +950,14 @@ print_list(["A", "B"])
     </div>
 
     <script>
-    const correctAnswers = {
-     q1: "A", // Hi
-  q2: "A", // Hello
-  q3: "A", // A
-  q4: "B", // Hi Hi
-  q5: "A", // Hello
-  q6: "A" 
-
-};
-
-
+      const correctAnswers = {
+        q1: "B", // import tools
+        q2: "B", // math.sqrt(16)
+        q3: "B", // x can be 2 or 5
+        q4: "C", // school is a package
+        q5: "C", // from calc import add
+        q6: "C",
+      };
 
       const QUIZ_DURATION = 180;
       let timeRemaining = QUIZ_DURATION;
