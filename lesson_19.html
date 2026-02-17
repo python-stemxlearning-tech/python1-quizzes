@@ -814,23 +814,24 @@ x = random.randint(2, 5)
             </div>
 
             <div class="options">
-              <div class="option">
-                <input type="radio" name="q3" value="A" />
-                <label>x will always be 2</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q3" value="B" />
-                <label>x can be 2 or 5</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q3" value="C" />
-                <label>x can never be 5</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q3" value="D" />
-                <label>x will be the same every time</label>
-              </div>
-            </div>
+  <div class="option">
+    <input type="radio" name="q3" value="A" />
+    <label>x will always be between 2 and 5 (inclusive)</label>
+  </div>
+  <div class="option">
+    <input type="radio" name="q3" value="B" />
+    <label>x will always be 2</label>
+  </div>
+  <div class="option">
+    <input type="radio" name="q3" value="C" />
+    <label>x can never be 5</label>
+  </div>
+  <div class="option">
+    <input type="radio" name="q3" value="D" />
+    <label>x will be the same every time</label>
+  </div>
+</div>
+
           </div>
 
           <!-- Question 4 (MEDIUM – Package Identification) -->
@@ -878,24 +879,25 @@ school/
               a module named <code>calc</code>. Which is the best choice?
             </div>
 
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q5" value="A" />
-                <label>import calc</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q5" value="B" />
-                <label>from calc import *</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q5" value="C" />
-                <label>from calc import add</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q5" value="D" />
-                <label>import add from calc</label>
-              </div>
-            </div>
+          <div class="options">
+  <div class="option">
+    <input type="radio" name="q5" value="A" />
+    <label>import calc</label>
+  </div>
+  <div class="option">
+    <input type="radio" name="q5" value="B" />
+    <label>from calc import *</label>
+  </div>
+  <div class="option">
+    <input type="radio" name="q5" value="C" />
+    <label>import math</label>
+  </div>
+  <div class="option">
+    <input type="radio" name="q5" value="D" />
+    <label>calc.add()</label>
+  </div>
+</div>
+
           </div>
 
           <!-- Question 6 (HARD & TRICKY – random.randint Logic) -->
@@ -953,9 +955,9 @@ print(a == b)
       const correctAnswers = {
         q1: "B", // import tools
         q2: "B", // math.sqrt(16)
-        q3: "B", // x can be 2 or 5
+        q3: "A", // x can be 2 or 5
         q4: "C", // school is a package
-        q5: "C", // from calc import add
+        q5: "A", // from calc import add
         q6: "C",
       };
 
