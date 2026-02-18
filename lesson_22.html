@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 20 Quiz</title>
+    <title>STEMxLearning - Lesson 22 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -285,29 +285,6 @@
 
       .question-block:nth-child(6) {
         background: linear-gradient(135deg, #ffd6a5 0%, #fdffb6 100%);
-      }
-      .question-block:nth-child(7) {
-        background: linear-gradient(135deg, #c7ecee 0%, #dff9fb 100%);
-      }
-
-      .question-block:nth-child(8) {
-        background: linear-gradient(135deg, #ffcccc 0%, #ffe6e6 100%);
-      }
-
-      .question-block:nth-child(9) {
-        background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
-      }
-
-      .question-block:nth-child(10) {
-        background: linear-gradient(135deg, #fddb92 0%, #d1fdff 100%);
-      }
-
-      .question-block:nth-child(11) {
-        background: linear-gradient(135deg, #c6ffdd 0%, #fbd786 100%);
-      }
-
-      .question-block:nth-child(12) {
-        background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
       }
 
       .question-block:hover {
@@ -721,9 +698,6 @@
           font-size: 18px;
           padding: 15px;
         }
-        .question-block {
-          scroll-margin-top: 120px;
-        }
       }
     </style>
   </head>
@@ -742,297 +716,205 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Assesment-2 Quiz</h1>
+        <h1 class="quiz-title">🎯 Lesson 22  Quiz</h1>
+        <p class="quiz-subtitle">Errors & Exception Handling</p>
       </div>
 
       <div class="timer-section">
         <div class="timer-box">
           <div class="timer-label">⏰ Time Left</div>
-          <div class="timer-value" id="timer">15:00</div>
+          <div class="timer-value" id="timer">3:00</div>
         </div>
         <div class="progress-info">
           <div class="progress-label">📊 Progress:</div>
-          <div class="progress-value" id="progress">0/12</div>
+          <div class="progress-value" id="progress">0/6</div>
         </div>
       </div>
 
       <div class="content">
    <form id="quizForm">
 
-<!-- Q1 -->
+<!-- Question 1 (VERY EASY) -->
 <div class="question-block">
   <div class="question-number">1</div>
-  <div class="question-text">🔁 What will be printed?</div>
-  <div class="code-box"><pre>
-nums = [1, 2, 3]
-total = 0
-for x in nums:
-    total += x
-print(total)
-</pre></div>
+  <div class="question-text">
+    🟢 What will be the output?
+  </div>
+
+  <div class="code-box">
+    <pre>
+try:
+    print("Hello")
+except:
+    print("Error")
+    </pre>
+  </div>
+
   <div class="options">
-    <div class="option"><input type="radio" name="q1" value="A"><label>123</label></div>
-    <div class="option"><input type="radio" name="q1" value="B"><label>6</label></div>
-    <div class="option"><input type="radio" name="q1" value="C"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q1" value="D"><label>[1, 2, 3]</label></div>
+    <div class="option"><input type="radio" name="q1" value="A"><label>Error</label></div>
+    <div class="option"><input type="radio" name="q1" value="B"><label>Hello</label></div>
+    <div class="option"><input type="radio" name="q1" value="C"><label>Nothing</label></div>
+    <div class="option"><input type="radio" name="q1" value="D"><label>Program crashes</label></div>
   </div>
 </div>
 
-<!-- Q2 -->
+<!-- Question 2 (EASY) -->
 <div class="question-block">
   <div class="question-number">2</div>
-  <div class="question-text">🧮 What will be printed?</div>
-  <div class="code-box"><pre>
-def add(a, b):
-    return a + b
-print(add(2, 3))
-</pre></div>
+  <div class="question-text">
+    🟢 What will be printed?
+  </div>
+
+  <div class="code-box">
+    <pre>
+try:
+    x = int("5")
+    if x > 3:
+        print("Big")
+    else:
+        print("Small")
+except:
+    print("Error")
+    </pre>
+  </div>
+
   <div class="options">
-    <div class="option"><input type="radio" name="q2" value="A"><label>None</label></div>
-    <div class="option"><input type="radio" name="q2" value="B"><label>5</label></div>
-    <div class="option"><input type="radio" name="q2" value="C"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q2" value="D"><label>23</label></div>
+    <div class="option"><input type="radio" name="q2" value="A"><label>Error</label></div>
+    <div class="option"><input type="radio" name="q2" value="B"><label>Small</label></div>
+    <div class="option"><input type="radio" name="q2" value="C"><label>Big</label></div>
+    <div class="option"><input type="radio" name="q2" value="D"><label>Program crashes</label></div>
   </div>
 </div>
 
-<!-- Q3 -->
+<!-- Question 3 (EASY) -->
 <div class="question-block">
   <div class="question-number">3</div>
-  <div class="question-text">🔍 What will be printed?</div>
-  <div class="code-box"><pre>
-def show(x):
-    print(x * 2)
-result = show(5)
-print(result)
-</pre></div>
+  <div class="question-text">
+    🟢 What happens when this code runs?
+  </div>
+
+  <div class="code-box">
+    <pre>
+numbers = [10, 5, 0, 2]
+
+try:
+    for n in numbers:
+        print(10 / n)
+except:
+    print("Error occurred")
+    </pre>
+  </div>
+
   <div class="options">
-    <div class="option"><input type="radio" name="q3" value="A"><label>10</label></div>
-    <div class="option"><input type="radio" name="q3" value="B"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q3" value="C"><label>10<br/> None</label></div>
-    <div class="option"><input type="radio" name="q3" value="D"><label>None</label></div>
+    <div class="option"><input type="radio" name="q3" value="A"><label>All values printed</label></div>
+    <div class="option"><input type="radio" name="q3" value="B"><label>Program crashes</label></div>
+    <div class="option"><input type="radio" name="q3" value="C"><label>Some values printed, then "Error occurred"</label></div>
+    <div class="option"><input type="radio" name="q3" value="D"><label>Only "Error occurred"</label></div>
   </div>
 </div>
 
-<!-- Q4 -->
+<!-- Question 4 (MEDIUM) -->
 <div class="question-block">
   <div class="question-number">4</div>
-  <div class="question-text">⚙️ What will be printed?</div>
-  <div class="code-box"><pre>
-for i in range(3):
-    if i == 1:
-        print("A")
+  <div class="question-text">
+    🟠 Assume <b>score.txt</b> contains:
+    <pre>
+40
+60
+    </pre>
+    What will be printed?
+  </div>
+
+  <div class="code-box">
+    <pre>
+try:
+    f = open("score.txt", "r")
+    total = 0
+
+    for line in f:
+        total += int(line)
+
+    if total >= 100:
+        print("Pass")
     else:
-        print("B")
-</pre></div>
+        print("Fail")
+
+    f.close()
+except:
+    print("Error")
+    </pre>
+  </div>
+
   <div class="options">
-    <div class="option"><input type="radio" name="q4" value="A"><label>A<br/> B <br/>B</label></div>
-    <div class="option"><input type="radio" name="q4" value="B"><label>B<br/> A <br/>B</label></div>
-    <div class="option"><input type="radio" name="q4" value="C"><label>B<br/> B <br/>B</label></div>
-    <div class="option"><input type="radio" name="q4" value="D"><label>Error</label></div>
+    <div class="option"><input type="radio" name="q4" value="A"><label>Pass</label></div>
+    <div class="option"><input type="radio" name="q4" value="B"><label>Fail</label></div>
+    <div class="option"><input type="radio" name="q4" value="C"><label>Pass <br/>Error</label></div>
+    <div class="option"><input type="radio" name="q4" value="D"><label>No output</label></div>
   </div>
 </div>
 
-<!-- Q5 -->
+<!-- Question 5 (MEDIUM) -->
 <div class="question-block">
   <div class="question-number">5</div>
-  <div class="question-text">🔁 What will be printed?</div>
-  <div class="code-box"><pre>
-def fun(n):
-    if n == 0:
-        return
-    print(n)
-    fun(n - 1)
-fun(2)
-</pre></div>
+  <div class="question-text">
+    🟠 What will be printed?
+  </div>
+
+  <div class="code-box">
+    <pre>
+try:
+    marks = [20, 30, "40"]
+    total = 0
+
+    for m in marks:
+        total += int(m)
+
+    print(total)
+except:
+    print("Invalid data")
+    </pre>
+  </div>
+
   <div class="options">
-    <div class="option"><input type="radio" name="q5" value="A"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q5" value="B"><label>2<br/> 1</label></div>
-    <div class="option"><input type="radio" name="q5" value="C"><label>1<br/> 2</label></div>
-    <div class="option"><input type="radio" name="q5" value="D"><label>2</label></div>
+    <div class="option"><input type="radio" name="q5" value="A"><label>50</label></div>
+    <div class="option"><input type="radio" name="q5" value="B"><label>90</label></div>
+    <div class="option"><input type="radio" name="q5" value="C"><label>Invalid data</label></div>
+    <div class="option"><input type="radio" name="q5" value="D"><label>Program crashes</label></div>
   </div>
 </div>
 
-<!-- Q6 (HARD – string + loop + condition, NEW topic) -->
+<!-- Question 6 (HARD & TRICKY) -->
 <div class="question-block">
   <div class="question-number">6</div>
-  <div class="question-text">🔥 What will be printed?</div>
+  <div class="question-text">
+    🔥 What will be printed?
+  </div>
 
-  <div class="code-box"><pre>
-s = "Python"
-count = 0
-
-for ch in s:
-    if ch.isupper():
-        count += 1
-
-print(count)
-</pre></div>
+  <div class="code-box">
+    <pre>
+try:
+    for i in range(3):
+        if i == 1:
+            int("abc")
+        print(i)
+except:
+    print("Error")
+finally:
+    print("Done")
+    </pre>
+  </div>
 
   <div class="options">
-    <div class="option">
-      <input type="radio" name="q6" value="A">
-      <label>0</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q6" value="B">
-      <label>1</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q6" value="C">
-      <label>6</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q6" value="D">
-      <label>Error</label>
-    </div>
+    <div class="option"><input type="radio" name="q6" value="A"><label>0<br/> 1 <br/>2 <br/>Done</label></div>
+    <div class="option"><input type="radio" name="q6" value="B"><label>0 <br/>Error <br/>Done</label></div>
+    <div class="option"><input type="radio" name="q6" value="C"><label>Error <br/>Done</label></div>
+    <div class="option"><input type="radio" name="q6" value="D"><label>0<br/> Done</label></div>
   </div>
 </div>
 
-<!-- Q7 -->
-<div class="question-block">
-  <div class="question-number">7</div>
-  <div class="question-text">📋 What will be printed?</div>
-  <div class="code-box"><pre>
-a = [10, 20]
-b = a[:]
-b.append(30)
-print(a, b)
-</pre></div>
-  <div class="options">
-    <div class="option"><input type="radio" name="q7" value="A"><label>[10, 20] [10, 20, 30]</label></div>
-    <div class="option"><input type="radio" name="q7" value="B"><label>[10, 20, 30] [10, 20, 30]</label></div>
-    <div class="option"><input type="radio" name="q7" value="C"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q7" value="D"><label>[10] [10, 20, 30]</label></div>
-  </div>
-</div>
-
-<!-- Q8 -->
-<div class="question-block">
-  <div class="question-number">8</div>
-  <div class="question-text">🧩 What will be printed?</div>
-  <div class="code-box"><pre>
-t = (5, 10, 15)
-print(t[1] + t[-1])
-</pre></div>
-  <div class="options">
-    <div class="option"><input type="radio" name="q8" value="A"><label>25</label></div>
-    <div class="option"><input type="radio" name="q8" value="B"><label>15</label></div>
-    <div class="option"><input type="radio" name="q8" value="C"><label>20</label></div>
-    <div class="option"><input type="radio" name="q8" value="D"><label>Error</label></div>
-  </div>
-</div>
-
-<!-- Q9 (MEDIUM–HARD – dictionary + loop logic) -->
-<div class="question-block">
-  <div class="question-number">9</div>
-  <div class="question-text">🟠 What will be printed?</div>
-
-  <div class="code-box"><pre>
-data = {"a": 2, "b": 3, "c": 5}
-total = 0
-
-for k in data:
-    total += data[k]
-
-print(total)
-</pre></div>
-
-  <div class="options">
-    <div class="option"><input type="radio" name="q9" value="A"><label>3</label></div>
-    <div class="option"><input type="radio" name="q9" value="B"><label>5</label></div>
-    <div class="option"><input type="radio" name="q9" value="C"><label>10</label></div>
-    <div class="option"><input type="radio" name="q9" value="D"><label>Error</label></div>
-  </div>
-</div>
-
-
-<!-- Q10 -->
-<div class="question-block">
-  <div class="question-number">10</div>
-  <div class="question-text">📘 What will be printed?</div>
-  <div class="code-box"><pre>
-data = {"a": 1, "b": 2}
-if "c" in data:
-    print(data["c"])
-else:
-    print(len(data))
-</pre></div>
-  <div class="options">
-    <div class="option"><input type="radio" name="q10" value="A"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q10" value="B"><label>None</label></div>
-    <div class="option"><input type="radio" name="q10" value="C"><label>2</label></div>
-    <div class="option"><input type="radio" name="q10" value="D"><label>0</label></div>
-  </div>
-</div>
-
-<!-- Q11 -->
-<div class="question-block">
-  <div class="question-number">11</div>
-  <div class="question-text">🔠 What will be printed?</div>
-  <div class="code-box"><pre>
-def count_chars(s):
-    c = 0
-    for _ in s:
-        c += 1
-    return c
-print(count_chars("Hi!"))
-</pre></div>
-  <div class="options">
-    <div class="option"><input type="radio" name="q11" value="A"><label>Hi!</label></div>
-    <div class="option"><input type="radio" name="q11" value="B"><label>2</label></div>
-    <div class="option"><input type="radio" name="q11" value="C"><label>3</label></div>
-    <div class="option"><input type="radio" name="q11" value="D"><label>Error</label></div>
-  </div>
-</div>
-
-<!-- Q12 (MEDIUM–HARD – function + string + list + condition) -->
-<div class="question-block">
-  <div class="question-number">12</div>
-  <div class="question-text">🔥🔥 What will be printed?</div>
-
-  <div class="code-box"><pre>
-def mystery(s):
-    result = []
-    for ch in s:
-        if ch.isdigit():
-            result.append(int(ch))
-        else:
-            result.append(len(result))
-    return result
-
-print(mystery("a3b2"))
-</pre></div>
-
-  <div class="options">
-    <div class="option">
-      <input type="radio" name="q12" value="A">
-      <label>[0, 3, 2, 2]</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q12" value="B">
-      <label>[0, 3, 1, 2]</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q12" value="C">
-      <label>[0, 3, 2, 4]</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q12" value="D">
-      <label>Error</label>
-    </div>
-  </div>
-</div>
-
-
-<button type="submit" class="submit-btn" id="submitBtn">
-            <span>🎉 Submit My Answers! 🎉</span>
-          </button>
+<button type="submit" class="submit-btn">
+  🎯 Submit My Answers
+</button>
 
 </form>
 
@@ -1049,21 +931,15 @@ print(mystery("a3b2"))
 
     <script>
       const correctAnswers = {
-         q1: "B",   // 6
-  q2: "B",   // 5
-  q3: "C",   // 10 None
-  q4: "B",   // B A B
-  q5: "B",   // 2 1
-  q6: "B",   // 4
-  q7: "A",   // [10, 20] [10, 20, 30]
-  q8: "A",   // 25
-  q9: "C",   // 3
-  q10: "C",  // 2
-  q11: "C",  // 3
-  q12: "A"   // 6
+          q1: "B",
+    q2: "C",
+    q3: "C",
+    q4: "C",
+    q5: "B",
+    q6: "B"
       };
 
-      const QUIZ_DURATION = 900;
+      const QUIZ_DURATION = 180;
       let timeRemaining = QUIZ_DURATION;
       let timerInterval = null;
       let quizStarted = false;
