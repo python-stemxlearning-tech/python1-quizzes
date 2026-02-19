@@ -732,7 +732,7 @@
       </div>
 
       <div class="content">
-       <form id="quizForm">
+    <form id="quizForm">
 
 <!-- Question 1 (VERY EASY) -->
 <div class="question-block">
@@ -743,9 +743,8 @@
 
   <div class="code-box">
     <pre>
-f = open("school.txt", "r")
-data = f.read()
-f.close()
+with open("school.txt", "r") as f:
+    data = f.read()
     </pre>
   </div>
 
@@ -766,9 +765,8 @@ f.close()
 
   <div class="code-box">
     <pre>
-f = open("notes.txt", "w")
-f.write("Python")
-f.close()
+with open("notes.txt", "w") as f:
+    f.write("Python")
     </pre>
   </div>
 
@@ -790,9 +788,8 @@ f.close()
   <div class="code-box">
     <pre>
 def read_file():
-    f = open("data.txt", "r")
-    text = f.read()
-    f.close()
+    with open("data.txt", "r") as f:
+        text = f.read()
     return text
 
 print(read_file())
@@ -817,9 +814,8 @@ print(read_file())
 
   <div class="code-box">
     <pre>
-f = open("test.txt", "a")
-f.write(" World")
-f.close()
+with open("test.txt", "a") as f:
+    f.write(" World")
     </pre>
   </div>
 
@@ -831,34 +827,53 @@ f.close()
   </div>
 </div>
 
-<!-- Question 5 (MEDIUM–HARD – readline + append confusion) -->
+<!-- Question 5 (MEDIUM–HARD – while + readline, NEW & SAFE) -->
 <div class="question-block">
   <div class="question-number">5</div>
   <div class="question-text">
-    🔴 Assume <b>data.txt</b> initially contains <b>Hello</b>.
+    🔴 Assume <b>info.txt</b> contains:
+    <pre>
+Apple
+Banana
+Mango
+    </pre>
     What will be printed?
   </div>
 
   <div class="code-box">
     <pre>
-f = open("data.txt", "a")
-f.write(" World")
-f.close()
-
-f = open("data.txt", "r")
-print(f.readline())
-print(f.readline())
-f.close()
+with open("info.txt", "r") as f:
+    while True:
+        line = f.readline()
+        if line=="":
+            break
+        print(line, end="")
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q5" value="A"><label>Hello</label></div>
-    <div class="option"><input type="radio" name="q5" value="B"><label>Hello World</label></div>
-    <div class="option"><input type="radio" name="q5" value="C"><label>World</label></div>
-    <div class="option"><input type="radio" name="q5" value="D"><label>Hello<br>World </label></div>
+    <div class="option">
+      <input type="radio" name="q5" value="A">
+      <label>Apple Banana Mango</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q5" value="B">
+      <label>Apple<br>Banana<br>Mango</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q5" value="C">
+      <label>AppleBananaMango</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q5" value="D">
+      <label>Infinite loop</label>
+    </div>
   </div>
 </div>
+
 
 <!-- Question 6 (HARD & TRICKY) -->
 <div class="question-block">
@@ -871,15 +886,12 @@ f.close()
   <div class="code-box">
     <pre>
 def write_data():
-    f = open("demo.txt", "a")
-    f.write(" Python")
-    f.close()
+    with open("demo.txt", "a") as f:
+        f.write(" Python")
 
 def read_data():
-    f = open("demo.txt", "r")
-    text = f.read()
-    f.close()
-    return text
+    with open("demo.txt", "r") as f:
+        return f.read()
 
 read_data()
 write_data()
@@ -902,6 +914,7 @@ print(read_data())
 </form>
 
 
+
         <div class="result" id="result">
           <div class="result-emoji" id="resultEmoji">🎉</div>
           <div class="score-message" id="scoreMessage"></div>
@@ -913,12 +926,12 @@ print(read_data())
 
     <script>
       const correctAnswers = {
-        q1: "B", // Reads the entire content of the file
-  q2: "B", // Writes "Python" and removes old content
-  q3: "B", // Hello World
-  q4: "C", // Hello World
-  q5: "B", // Hello World (append does NOT add new line)
-  q6: "C"  // Sometimes True, sometimes False,
+        q1: "B",
+        q2: "B",
+        q3: "B",
+        q4: "C",
+        q5: "B",
+        q6: "C"
       };
 
       const QUIZ_DURATION = 180;

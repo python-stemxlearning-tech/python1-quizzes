@@ -732,7 +732,7 @@
       </div>
 
       <div class="content">
-   <form id="quizForm">
+ <form id="quizForm">
 
 <!-- Question 1 -->
 <div class="question-block">
@@ -749,14 +749,12 @@
 
   <div class="code-box">
     <pre>
-f = open("marks.txt", "r")
-count = 0
-
-for line in f.readlines():
-    count = count + 1
+with open("marks.txt", "r") as f:
+    count = 0
+    for line in f:
+        count = count + 1
 
 print(count)
-f.close()
     </pre>
   </div>
 
@@ -778,9 +776,8 @@ f.close()
 
   <div class="code-box">
     <pre>
-f = open("note.txt", "w")
-f.write("Python")
-f.close()
+with open("note.txt", "w") as f:
+    f.write("Python")
     </pre>
   </div>
 
@@ -803,9 +800,8 @@ f.close()
   <div class="code-box">
     <pre>
 def show():
-    f = open("data.txt", "r")
-    text = f.read()
-    f.close()
+    with open("data.txt", "r") as f:
+        text = f.read()
     return text
 
 result = show()
@@ -836,18 +832,15 @@ print(result)
 
   <div class="code-box">
     <pre>
-f = open("num.txt", "r")
-total = 0
-
-for n in f.readlines():
-    total = total + int(n)
+with open("num.txt", "r") as f:
+    total = 0
+    for n in f:
+        total = total + int(n)
 
 if total > 50:
     print("High")
 else:
     print("Low")
-
-f.close()
     </pre>
   </div>
 
@@ -859,7 +852,7 @@ f.close()
   </div>
 </div>
 
-<!-- Question 5 -->
+<!-- Question 5 (UPDATED, append + with open) -->
 <div class="question-block">
   <div class="question-number">5</div>
   <div class="question-text">
@@ -869,9 +862,8 @@ f.close()
 
   <div class="code-box">
     <pre>
-f = open("log.txt", "a")
-f.write("End")
-f.close()
+with open("log.txt", "a") as f:
+    f.write("End")
     </pre>
   </div>
 
@@ -883,7 +875,7 @@ f.close()
   </div>
 </div>
 
-<!-- Question 6 -->
+<!-- Question 6 (UPDATED – while + readline) -->
 <div class="question-block">
   <div class="question-number">6</div>
   <div class="question-text">
@@ -898,15 +890,16 @@ Fail
 
   <div class="code-box">
     <pre>
-f = open("report.txt", "r")
-status = "Clear"
-
-for line in f.readlines():
-    if line == "Fail\n":
-        status = "Repeat"
+with open("report.txt", "r") as f:
+    status = "Clear"
+    while True:
+        line = f.readline()
+        if line == "":
+            break
+        if line == "Fail\n":
+            status = "Repeat"
 
 print(status)
-f.close()
     </pre>
   </div>
 
@@ -918,11 +911,13 @@ f.close()
   </div>
 </div>
 
+
 <button type="submit" class="submit-btn" id="submitBtn">
-            <span>🎉 Submit My Answers! 🎉</span>
-          </button>
+  <span>🎉 Submit My Answers! 🎉</span>
+</button>
 
 </form>
+
 
 
 

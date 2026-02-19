@@ -829,18 +829,17 @@ thirty
   <div class="code-box">
     <pre>
 try:
-    f = open("score.txt", "r")
-    total = 0
+    with open("score.txt", "r") as f:
+        total = 0
 
-    for line in f.readlines():
-        total += int(line)
+        for line in f:
+            total += int(line)
 
     if total >= 100:
         print("Pass")
     else:
         print("Fail")
 
-    f.close()
 except:
     print("Error")
     </pre>
