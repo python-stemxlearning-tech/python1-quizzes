@@ -821,6 +821,7 @@ except:
     <pre>
 40
 60
+thirty
     </pre>
     What will be printed?
   </div>
@@ -831,7 +832,7 @@ try:
     f = open("score.txt", "r")
     total = 0
 
-    for line in f:
+    for line in f.readlines():
         total += int(line)
 
     if total >= 100:
@@ -848,7 +849,7 @@ except:
   <div class="options">
     <div class="option"><input type="radio" name="q4" value="A"><label>Pass</label></div>
     <div class="option"><input type="radio" name="q4" value="B"><label>Fail</label></div>
-    <div class="option"><input type="radio" name="q4" value="C"><label>Pass <br/>Error</label></div>
+    <div class="option"><input type="radio" name="q4" value="C"><label>Error</label></div>
     <div class="option"><input type="radio" name="q4" value="D"><label>No output</label></div>
   </div>
 </div>
@@ -872,12 +873,14 @@ try:
     print(total)
 except:
     print("Invalid data")
+finally:
+    print("finish")
     </pre>
   </div>
 
   <div class="options">
     <div class="option"><input type="radio" name="q5" value="A"><label>50</label></div>
-    <div class="option"><input type="radio" name="q5" value="B"><label>90</label></div>
+    <div class="option"><input type="radio" name="q5" value="B"><label>90<br/>finish</label></div>
     <div class="option"><input type="radio" name="q5" value="C"><label>Invalid data</label></div>
     <div class="option"><input type="radio" name="q5" value="D"><label>Program crashes</label></div>
   </div>
@@ -912,9 +915,9 @@ finally:
   </div>
 </div>
 
-<button type="submit" class="submit-btn">
-  🎯 Submit My Answers
-</button>
+<button type="submit" class="submit-btn" id="submitBtn">
+            <span>🎉 Submit My Answers! 🎉</span>
+          </button>
 
 </form>
 

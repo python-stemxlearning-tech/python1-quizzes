@@ -746,7 +746,8 @@
 # maths.py
 def square(n):
     return n * n
-
+    </pre>
+<pre>
 # another file
 import maths
 print(maths.square(4))
@@ -818,14 +819,16 @@ print(x)
 # folder structure
 tools/
  └── calc.py
-
+</pre>
+<pre>
 # calc.py
 def add(a, b):
     return a + b
-
+</pre>
+<pre>
 # main file
-import tools.calc
-print(tools.calc.add(3, 5))
+from tool import calc
+print(calc.add(3, 5))
     </pre>
   </div>
 
@@ -883,9 +886,9 @@ print(x * 0)
   </div>
 </div>
 
-<button type="submit" class="submit-btn">
-  🎉 Submit My Answers 🎉
-</button>
+<button type="submit" class="submit-btn" id="submitBtn">
+            <span>🎉 Submit My Answers! 🎉</span>
+          </button>
 
 </form>
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 21 Quiz</title>
+    <title>STEMxLearning - Lesson 22 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -716,8 +716,8 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 21 Revision Quiz</h1>
-        <p class="quiz-subtitle">File Handling</p>
+        <h1 class="quiz-title">🎯 Lesson 22 Revision  Quiz</h1>
+        <p class="quiz-subtitle">Errors & Exception Handling</p>
       </div>
 
       <div class="timer-section">
@@ -732,198 +732,162 @@
       </div>
 
       <div class="content">
-   <form id="quizForm">
+  <form id="quizForm">
 
-<!-- Question 1 -->
+
+<!-- Question 1 (VERY EASY – CONCEPT CHECK, NO TRY BLOCK) -->
 <div class="question-block">
   <div class="question-number">1</div>
   <div class="question-text">
-    🟡 The file <b>marks.txt</b> contains:
-    <pre>
-85
-90
-78
-    </pre>
-    What will be printed?
-  </div>
-
-  <div class="code-box">
-    <pre>
-f = open("marks.txt", "r")
-count = 0
-
-for line in f:
-    count = count + 1
-
-print(count)
-f.close()
-    </pre>
+    🟢 Which situation will automatically raise an exception in Python?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q1" value="A"><label>marks.txt</label></div>
-    <div class="option"><input type="radio" name="q1" value="B"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q1" value="C"><label>3</label></div>
-    <div class="option"><input type="radio" name="q1" value="D"><label>85</label></div>
+    <div class="option"><input type="radio" name="q1" value="A"><label>Accessing list[-1]</label></div>
+    <div class="option"><input type="radio" name="q1" value="B"><label>Dividing a number by 0</label></div>
+    <div class="option"><input type="radio" name="q1" value="C"><label>Adding two integers</label></div>
+    <div class="option"><input type="radio" name="q1" value="D"><label>Printing an empty string</label></div>
   </div>
 </div>
 
-<!-- Question 2 -->
+<!-- Question 2 (EASY – MULTIPLE EXCEPT, NO OUTPUT PREDICTION) -->
 <div class="question-block">
   <div class="question-number">2</div>
   <div class="question-text">
-    🟡 The file <b>note.txt</b> initially contains <b>Welcome</b>.
-    What will be the final file content?
+    🟢 Which <b>except block</b> will execute?
   </div>
 
   <div class="code-box">
     <pre>
-f = open("note.txt", "w")
-f.write("Python")
-f.close()
+try:
+    x = int(y)
+except ValueError:
+    print("Value error")
+except NameError:
+    print("Name Error")
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q2" value="A"><label>Welcome</label></div>
-    <div class="option"><input type="radio" name="q2" value="B"><label>WelcomePython</label></div>
-    <div class="option"><input type="radio" name="q2" value="C"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q2" value="D"><label>Python</label></div>
+    <div class="option"><input type="radio" name="q2" value="A"><label>Value error</label></div>
+    <div class="option"><input type="radio" name="q2" value="B"><label>Name Error</label></div>
+    <div class="option"><input type="radio" name="q2" value="C"><label>No except runs</label></div>
+    <div class="option"><input type="radio" name="q2" value="D"><label>Program crashes</label></div>
   </div>
 </div>
 
-<!-- Question 3 -->
+<!-- Question 3 (EASY – FLOW UNDER EXCEPTION) -->
 <div class="question-block">
   <div class="question-number">3</div>
   <div class="question-text">
-    🟠 The file <b>data.txt</b> contains <b>Hello File</b>.
-    What will be printed?
+    🟢 Which statement is <b>true</b> about this code?
   </div>
 
   <div class="code-box">
     <pre>
-def show():
-    f = open("data.txt", "r")
-    text = f.read()
-    f.close()
-    return text
-
-result = show()
-print(result)
+try:
+    print("Start")
+    x = int("abc")
+    print("End")
+except:
+    print("Handled")
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q3" value="A"><label>None</label></div>
-    <div class="option"><input type="radio" name="q3" value="B"><label>data.txt</label></div>
-    <div class="option"><input type="radio" name="q3" value="C"><label>Hello File</label></div>
-    <div class="option"><input type="radio" name="q3" value="D"><label>Error</label></div>
+    <div class="option"><input type="radio" name="q3" value="A"><label>Both "Start" and "End" are printed</label></div>
+    <div class="option"><input type="radio" name="q3" value="B"><label>Only "Handled" is printed</label></div>
+    <div class="option"><input type="radio" name="q3" value="C"><label>"Start" and "Handled" are printed</label></div>
+    <div class="option"><input type="radio" name="q3" value="D"><label>Program crashes</label></div>
   </div>
 </div>
 
-<!-- Question 4 -->
+<!-- Question 4 (MEDIUM – FINALLY + LOGIC, NOT TRY-CENTERED) -->
 <div class="question-block">
   <div class="question-number">4</div>
   <div class="question-text">
-    🔴 The file <b>num.txt</b> contains:
-    <pre>
-10
-20
-30
-    </pre>
-    What will be printed?
+    🟠 What is the <b>guaranteed behavior</b> of this program?
   </div>
 
   <div class="code-box">
     <pre>
-f = open("num.txt", "r")
-total = 0
+def process():
+    try:
+        return 10
+    finally:
+        print("Cleanup")
 
-for n in f.readlines():
-    total = total + int(n)
-
-if total > 50:
-    print("High")
-else:
-    print("Low")
-
-f.close()
+process()
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q4" value="A"><label>60</label></div>
-    <div class="option"><input type="radio" name="q4" value="B"><label>Low</label></div>
-    <div class="option"><input type="radio" name="q4" value="C"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q4" value="D"><label>High</label></div>
+    <div class="option"><input type="radio" name="q4" value="A"><label>Only 10 is returned</label></div>
+    <div class="option"><input type="radio" name="q4" value="B"><label>Cleanup is always printed</label></div>
+    <div class="option"><input type="radio" name="q4" value="C"><label>Finally runs only on error</label></div>
+    <div class="option"><input type="radio" name="q4" value="D"><label>Nothing happens</label></div>
   </div>
 </div>
 
-<!-- Question 5 -->
+<!-- Question 5 (MEDIUM–HARD – TRACE + EXCEPTION TYPE) -->
 <div class="question-block">
   <div class="question-number">5</div>
   <div class="question-text">
-    🔥 The file <b>log.txt</b> initially contains <b>Start</b>.
-    What will be the final file content?
+    🟠 Which exception occurs <b>first</b> in this code?
   </div>
 
   <div class="code-box">
     <pre>
-f = open("log.txt", "a")
-f.write("End")
-f.close()
+try:
+    x = int("10")
+    y = int("abc")
+    z = x / 0
+except:
+    print("Error handled")
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q5" value="A"><label>End</label></div>
-    <div class="option"><input type="radio" name="q5" value="B"><label>Start<br>End</label></div>
-    <div class="option"><input type="radio" name="q5" value="C"><label>StartEnd</label></div>
-    <div class="option"><input type="radio" name="q5" value="D"><label>Error</label></div>
+    <div class="option"><input type="radio" name="q5" value="A"><label>ZeroDivisionError</label></div>
+    <div class="option"><input type="radio" name="q5" value="B"><label>ValueError</label></div>
+    <div class="option"><input type="radio" name="q5" value="C"><label>NameError</label></div>
+    <div class="option"><input type="radio" name="q5" value="D"><label>FileNotFoundError</label></div>
   </div>
 </div>
 
-<!-- Question 6 -->
+
+<!-- Question 6 (HARD – RAISE WITH LOGIC TRAP) -->
 <div class="question-block">
   <div class="question-number">6</div>
   <div class="question-text">
-    🔥 The file <b>report.txt</b> contains:
-    <pre>
-Pass
-Pass
-Fail
-    </pre>
-    What will be printed?
+    🔥 What will happen when this code runs?
   </div>
 
   <div class="code-box">
     <pre>
-f = open("report.txt", "r")
-status = "Clear"
+age = 0
 
-for line in f.readlines():
-    if line == "Fail\n":
-        status = "Repeat"
+if age <= 0:
+    raise ValueError("Invalid age")
 
-print(status)
-f.close()
+print("Valid user")
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>Pass</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>Clear</label></div>
-    <div class="option"><input type="radio" name="q6" value="D"><label>Repeat</label></div>
+    <div class="option"><input type="radio" name="q6" value="A"><label>"Valid user" is printed</label></div>
+    <div class="option"><input type="radio" name="q6" value="B"><label>ValueError is raised and program stops</label></div>
+    <div class="option"><input type="radio" name="q6" value="C"><label>Error message is printed but program continues</label></div>
+    <div class="option"><input type="radio" name="q6" value="D"><label>Nothing happens</label></div>
   </div>
 </div>
+
 
 <button type="submit" class="submit-btn" id="submitBtn">
             <span>🎉 Submit My Answers! 🎉</span>
           </button>
 
 </form>
-
 
 
 
@@ -938,12 +902,12 @@ f.close()
 
     <script>
       const correctAnswers = {
-        q1: "C", // 3
-    q2: "D", // Python
-    q3: "C", // Hello File
-    q4: "D", // High
-    q5: "C", // StartEnd
-    q6: "D"  // Repeat
+          q1: "B",
+    q2: "B",
+    q3: "C",
+    q4: "B",
+    q5: "B",
+    q6: "B"
       };
 
       const QUIZ_DURATION = 180;

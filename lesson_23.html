@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 21 Quiz</title>
+    <title>STEMxLearning - Lesson 23 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -716,8 +716,8 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 21 Revision Quiz</h1>
-        <p class="quiz-subtitle">File Handling</p>
+        <h1 class="quiz-title">🎯 Lesson 23  Quiz</h1>
+        <p class="quiz-subtitle">Introduction to OOPs</p>
       </div>
 
       <div class="timer-section">
@@ -732,189 +732,155 @@
       </div>
 
       <div class="content">
-   <form id="quizForm">
+  <form id="quizForm">
 
-<!-- Question 1 -->
+<!-- Question 1 (MEDIUM) -->
 <div class="question-block">
   <div class="question-number">1</div>
   <div class="question-text">
-    🟡 The file <b>marks.txt</b> contains:
-    <pre>
-85
-90
-78
-    </pre>
-    What will be printed?
+    🟠 What will be printed?
   </div>
 
   <div class="code-box">
     <pre>
-f = open("marks.txt", "r")
-count = 0
+class House:
+    def __init__(self):
+        self.rooms = 3
 
-for line in f:
-    count = count + 1
-
-print(count)
-f.close()
+h1 = House()
+print(h1.rooms)
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q1" value="A"><label>marks.txt</label></div>
-    <div class="option"><input type="radio" name="q1" value="B"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q1" value="C"><label>3</label></div>
-    <div class="option"><input type="radio" name="q1" value="D"><label>85</label></div>
+    <div class="option"><input type="radio" name="q1" value="A"><label>rooms</label></div>
+    <div class="option"><input type="radio" name="q1" value="B"><label>3</label></div>
+    <div class="option"><input type="radio" name="q1" value="C"><label>Error</label></div>
+    <div class="option"><input type="radio" name="q1" value="D"><label>None</label></div>
   </div>
 </div>
 
-<!-- Question 2 -->
+<!-- Question 2 (EASY → MEDIUM) -->
 <div class="question-block">
   <div class="question-number">2</div>
   <div class="question-text">
-    🟡 The file <b>note.txt</b> initially contains <b>Welcome</b>.
-    What will be the final file content?
+    🟢 What does this line do?
   </div>
 
   <div class="code-box">
     <pre>
-f = open("note.txt", "w")
-f.write("Python")
-f.close()
+student1 = Student()
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q2" value="A"><label>Welcome</label></div>
-    <div class="option"><input type="radio" name="q2" value="B"><label>WelcomePython</label></div>
-    <div class="option"><input type="radio" name="q2" value="C"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q2" value="D"><label>Python</label></div>
+    <div class="option"><input type="radio" name="q2" value="A"><label>Creates a class</label></div>
+    <div class="option"><input type="radio" name="q2" value="B"><label>Creates an object of Student</label></div>
+    <div class="option"><input type="radio" name="q2" value="C"><label>Calls a method</label></div>
+    <div class="option"><input type="radio" name="q2" value="D"><label>Creates an attribute</label></div>
   </div>
 </div>
 
-<!-- Question 3 -->
+<!-- Question 3 (MEDIUM) -->
 <div class="question-block">
   <div class="question-number">3</div>
   <div class="question-text">
-    🟠 The file <b>data.txt</b> contains <b>Hello File</b>.
-    What will be printed?
-  </div>
-
-  <div class="code-box">
-    <pre>
-def show():
-    f = open("data.txt", "r")
-    text = f.read()
-    f.close()
-    return text
-
-result = show()
-print(result)
-    </pre>
+    🟠 Which line correctly accesses the attribute <b>color</b> of object <b>car1</b>?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q3" value="A"><label>None</label></div>
-    <div class="option"><input type="radio" name="q3" value="B"><label>data.txt</label></div>
-    <div class="option"><input type="radio" name="q3" value="C"><label>Hello File</label></div>
-    <div class="option"><input type="radio" name="q3" value="D"><label>Error</label></div>
+    <div class="option"><input type="radio" name="q3" value="A"><label>color.car1</label></div>
+    <div class="option"><input type="radio" name="q3" value="B"><label>car1->color</label></div>
+    <div class="option"><input type="radio" name="q3" value="C"><label>car1.color</label></div>
+    <div class="option"><input type="radio" name="q3" value="D"><label>car1(color)</label></div>
   </div>
 </div>
 
-<!-- Question 4 -->
+<!-- Question 4 (MEDIUM) -->
 <div class="question-block">
   <div class="question-number">4</div>
   <div class="question-text">
-    🔴 The file <b>num.txt</b> contains:
-    <pre>
-10
-20
-30
-    </pre>
-    What will be printed?
+    🟠 What will be printed?
   </div>
 
   <div class="code-box">
     <pre>
-f = open("num.txt", "r")
-total = 0
+class Flat:
+    def __init__(self, num):
+        self.number = num
 
-for n in f.readlines():
-    total = total + int(n)
+f1 = Flat(101)
+f2 = Flat(202)
 
-if total > 50:
-    print("High")
-else:
-    print("Low")
-
-f.close()
+print(f2.number)
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q4" value="A"><label>60</label></div>
-    <div class="option"><input type="radio" name="q4" value="B"><label>Low</label></div>
-    <div class="option"><input type="radio" name="q4" value="C"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q4" value="D"><label>High</label></div>
+    <div class="option"><input type="radio" name="q4" value="A"><label>101</label></div>
+    <div class="option"><input type="radio" name="q4" value="B"><label>202</label></div>
+    <div class="option"><input type="radio" name="q4" value="C"><label>num</label></div>
+    <div class="option"><input type="radio" name="q4" value="D"><label>Error</label></div>
   </div>
 </div>
 
-<!-- Question 5 -->
+<!-- Question 5 (MEDIUM – Tricky but DIFFERENT) -->
 <div class="question-block">
   <div class="question-number">5</div>
   <div class="question-text">
-    🔥 The file <b>log.txt</b> initially contains <b>Start</b>.
-    What will be the final file content?
+    🟠 What will be printed?
   </div>
 
   <div class="code-box">
     <pre>
-f = open("log.txt", "a")
-f.write("End")
-f.close()
+class Bag:
+    def __init__(self):
+        self.items = 0
+
+b1 = Bag()
+b2 = Bag()
+
+b1.items = 5
+print(b2.items)
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q5" value="A"><label>End</label></div>
-    <div class="option"><input type="radio" name="q5" value="B"><label>Start<br>End</label></div>
-    <div class="option"><input type="radio" name="q5" value="C"><label>StartEnd</label></div>
+    <div class="option"><input type="radio" name="q5" value="A"><label>0</label></div>
+    <div class="option"><input type="radio" name="q5" value="B"><label>5</label></div>
+    <div class="option"><input type="radio" name="q5" value="C"><label>items</label></div>
     <div class="option"><input type="radio" name="q5" value="D"><label>Error</label></div>
   </div>
 </div>
 
-<!-- Question 6 -->
+<!-- Question 6 (HARD) -->
 <div class="question-block">
   <div class="question-number">6</div>
   <div class="question-text">
-    🔥 The file <b>report.txt</b> contains:
-    <pre>
-Pass
-Pass
-Fail
-    </pre>
-    What will be printed?
+    🔥 What will be printed?
   </div>
 
   <div class="code-box">
     <pre>
-f = open("report.txt", "r")
-status = "Clear"
+class Game:
+    def __init__(self):
+        self.score = 0
 
-for line in f.readlines():
-    if line == "Fail\n":
-        status = "Repeat"
+    def add(self):
+        self.score += 10
 
-print(status)
-f.close()
+g = Game()
+g.add()
+g.add()
+print(g.score)
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>Pass</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>Clear</label></div>
-    <div class="option"><input type="radio" name="q6" value="D"><label>Repeat</label></div>
+    <div class="option"><input type="radio" name="q6" value="A"><label>0</label></div>
+    <div class="option"><input type="radio" name="q6" value="B"><label>10</label></div>
+    <div class="option"><input type="radio" name="q6" value="C"><label>20</label></div>
+    <div class="option"><input type="radio" name="q6" value="D"><label>Error</label></div>
   </div>
 </div>
 
@@ -938,12 +904,12 @@ f.close()
 
     <script>
       const correctAnswers = {
-        q1: "C", // 3
-    q2: "D", // Python
-    q3: "C", // Hello File
-    q4: "D", // High
-    q5: "C", // StartEnd
-    q6: "D"  // Repeat
+     q1: "B",
+        q2: "B",
+        q3: "C",
+        q4: "B",
+        q5: "A",
+        q6: "C"
       };
 
       const QUIZ_DURATION = 180;
