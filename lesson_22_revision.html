@@ -856,7 +856,7 @@ except:
 </div>
 
 
-<!-- Question 6 (HARD – RAISE WITH LOGIC TRAP) -->
+<!-- Question 6 (HARD – RAISE WITH TRY-EXCEPT) -->
 <div class="question-block">
   <div class="question-number">6</div>
   <div class="question-text">
@@ -865,20 +865,39 @@ except:
 
   <div class="code-box">
     <pre>
-age = 0
+try:
+    age = 0
 
-if age <= 0:
-    raise ValueError("Invalid age")
+    if age <= 0:
+        raise ValueError("Invalid age")
 
-print("Valid user")
+    print("Valid user")
+
+except ValueError:
+    print("Invalid age")
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>"Valid user" is printed</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>ValueError is raised and program stops</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>Error message is printed but program continues</label></div>
-    <div class="option"><input type="radio" name="q6" value="D"><label>Nothing happens</label></div>
+    <div class="option">
+      <input type="radio" name="q6" value="A">
+      <label>"Valid user" is printed</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q6" value="B">
+      <label>"Invalid age" is printed</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q6" value="C">
+      <label>Program crashes</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q6" value="D">
+      <label>Nothing happens</label>
+    </div>
   </div>
 </div>
 
