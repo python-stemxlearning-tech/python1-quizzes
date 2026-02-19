@@ -752,7 +752,7 @@
 f = open("marks.txt", "r")
 count = 0
 
-for line in f:
+for line in f.readlines():
     count = count + 1
 
 print(count)
