@@ -869,11 +869,11 @@ try:
     age = 0
 
     if age <= 0:
-        raise ValueError("Invalid age")
+        Exception("Invalid age")
 
     print("Valid user")
 
-except ValueError:
+except Exception:
     print("Invalid age")
     </pre>
   </div>
