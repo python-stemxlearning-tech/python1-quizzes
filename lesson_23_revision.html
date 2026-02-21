@@ -716,7 +716,7 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 23  Quiz</h1>
+        <h1 class="quiz-title">🎯 Lesson 23 Revision  Quiz</h1>
         <p class="quiz-subtitle">Introduction to OOPs</p>
       </div>
 
@@ -732,160 +732,158 @@
       </div>
 
       <div class="content">
-  <form id="quizForm">
+  <form id="revisionQuizForm">
 
-<!-- Question 1 (MEDIUM – Common Variable) -->
+<!-- Question 1 (MEDIUM – Understanding self) -->
 <div class="question-block">
   <div class="question-number">1</div>
   <div class="question-text">
-    🟠 What will be printed?
-  </div>
-
-  <div class="code-box">
-    <pre>
-class House:
-    rooms = 3
-
-h1 = House()
-print(h1.rooms)
-    </pre>
+    🟠 What does <b>self</b> represent in a class?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q1" value="A"><label>rooms</label></div>
-    <div class="option"><input type="radio" name="q1" value="B"><label>3</label></div>
-    <div class="option"><input type="radio" name="q1" value="C"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q1" value="D"><label>None</label></div>
+    <div class="option"><input type="radio" name="q1" value="A"><label>The class itself</label></div>
+    <div class="option"><input type="radio" name="q1" value="B"><label>The object calling the method</label></div>
+    <div class="option"><input type="radio" name="q1" value="C"><label>A keyword in Python</label></div>
+    <div class="option"><input type="radio" name="q1" value="D"><label>A variable name only</label></div>
   </div>
 </div>
 
-<!-- Question 2 (EASY → MEDIUM) -->
+<!-- Question 2 (MEDIUM – Constructor understanding) -->
 <div class="question-block">
   <div class="question-number">2</div>
   <div class="question-text">
-    🟢 What does this line do?
-  </div>
-
-  <div class="code-box">
-    <pre>
-student1 = Student()
-    </pre>
+    🟠 When is <b>__init__()</b> automatically called?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q2" value="A"><label>Creates a class</label></div>
-    <div class="option"><input type="radio" name="q2" value="B"><label>Creates an object of Student</label></div>
-    <div class="option"><input type="radio" name="q2" value="C"><label>Calls a method</label></div>
-    <div class="option"><input type="radio" name="q2" value="D"><label>Creates an attribute</label></div>
+    <div class="option"><input type="radio" name="q2" value="A"><label>When a class is written</label></div>
+    <div class="option"><input type="radio" name="q2" value="B"><label>When an object is created</label></div>
+    <div class="option"><input type="radio" name="q2" value="C"><label>When a method is called</label></div>
+    <div class="option"><input type="radio" name="q2" value="D"><label>When the program ends</label></div>
   </div>
 </div>
 
-<!-- Question 3 (MEDIUM) -->
+<!-- Question 3 (MEDIUM–HARD – Instance Variable Logic) -->
 <div class="question-block">
   <div class="question-number">3</div>
   <div class="question-text">
-    🟠 Which line correctly accesses the attribute <b>color</b> of object <b>car1</b>?
+    🟠 What will be printed?
+  </div>
+
+  <div class="code-box">
+    <pre>
+class Pen:
+    def __init__(self):
+        self.color = "Blue"
+
+p1 = Pen()
+p2 = Pen()
+
+p1.color = "Red"
+print(p2.color)
+    </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q3" value="A"><label>color.car1</label></div>
-    <div class="option"><input type="radio" name="q3" value="B"><label>car1->color</label></div>
-    <div class="option"><input type="radio" name="q3" value="C"><label>car1.color</label></div>
-    <div class="option"><input type="radio" name="q3" value="D"><label>car1(color)</label></div>
+    <div class="option"><input type="radio" name="q3" value="A"><label>Red</label></div>
+    <div class="option"><input type="radio" name="q3" value="B"><label>Blue</label></div>
+    <div class="option"><input type="radio" name="q3" value="C"><label>color</label></div>
+    <div class="option"><input type="radio" name="q3" value="D"><label>Error</label></div>
   </div>
 </div>
 
-<!-- Question 4 (MEDIUM – Common Variable Logic) -->
+<!-- Question 4 (HARD – Real Life Object State) -->
 <div class="question-block">
   <div class="question-number">4</div>
   <div class="question-text">
-    🟠 What will be printed?
+    🔥 A cinema has multiple seats. Each seat can be booked separately.  
+    What will be printed?
   </div>
 
   <div class="code-box">
     <pre>
-class Flat:
-    building = "Sunshine"
+class Seat:
+    def __init__(self):
+        self.booked = False
 
-f1 = Flat()
-f2 = Flat()
+s1 = Seat()
+s2 = Seat()
 
-f1.building = "Moonlight"
-print(f2.building)
+s1.booked = True
+print(s1.booked, s2.booked)
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q4" value="A"><label>Sunshine</label></div>
-    <div class="option"><input type="radio" name="q4" value="B"><label>Moonlight</label></div>
-    <div class="option"><input type="radio" name="q4" value="C"><label>Error</label></div>
-    <div class="option"><input type="radio" name="q4" value="D"><label>building</label></div>
+    <div class="option"><input type="radio" name="q4" value="A"><label>True True</label></div>
+    <div class="option"><input type="radio" name="q4" value="B"><label>False False</label></div>
+    <div class="option"><input type="radio" name="q4" value="C"><label>True False</label></div>
+    <div class="option"><input type="radio" name="q4" value="D"><label>Error</label></div>
   </div>
 </div>
 
-<!-- Question 5 (MEDIUM – Tricky but DIFFERENT) -->
+<!-- Question 5 (HARD – Method + Instance Variable) -->
 <div class="question-block">
   <div class="question-number">5</div>
-  <div class="question-text">
-    🟠 What will be printed?
-  </div>
-
-  <div class="code-box">
-    <pre>
-class Bag:
-    def __init__(self):
-        self.items = 0
-
-b1 = Bag()
-b2 = Bag()
-
-b1.items = 5
-print(b2.items)
-    </pre>
-  </div>
-
-  <div class="options">
-    <div class="option"><input type="radio" name="q5" value="A"><label>0</label></div>
-    <div class="option"><input type="radio" name="q5" value="B"><label>5</label></div>
-    <div class="option"><input type="radio" name="q5" value="C"><label>items</label></div>
-    <div class="option"><input type="radio" name="q5" value="D"><label>Error</label></div>
-  </div>
-</div>
-
-<!-- Question 6 (HARD) -->
-<div class="question-block">
-  <div class="question-number">6</div>
   <div class="question-text">
     🔥 What will be printed?
   </div>
 
   <div class="code-box">
     <pre>
-class Game:
+class Counter:
     def __init__(self):
-        self.score = 0
+        self.count = 1
 
-    def add(self):
-        self.score += 10
+    def increase(self):
+        self.count += 2
 
-g = Game()
-g.add()
-g.add()
-print(g.score)
+c = Counter()
+c.increase()
+c.increase()
+print(c.count)
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>0</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>10</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>20</label></div>
-    <div class="option"><input type="radio" name="q6" value="D"><label>Error</label></div>
+    <div class="option"><input type="radio" name="q5" value="A"><label>1</label></div>
+    <div class="option"><input type="radio" name="q5" value="B"><label>3</label></div>
+    <div class="option"><input type="radio" name="q5" value="C"><label>5</label></div>
+    <div class="option"><input type="radio" name="q5" value="D"><label>Error</label></div>
   </div>
 </div>
 
-<button type="submit" class="submit-btn" id="submitBtn">
-            <span>🎉 Submit My Answers! 🎉</span>
-          </button>
+<!-- Question 6 (HARD – OOPS Conceptual Thinking) -->
+<div class="question-block">
+  <div class="question-number">6</div>
+  <div class="question-text">
+    🔥 Why is using a <b>class</b> better than using many separate variables in real life programs?
+  </div>
+
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q6" value="A">
+      <label>Because classes run faster than variables</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q6" value="B">
+      <label>Because classes group data and behavior together for real-world entities</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q6" value="C">
+      <label>Because classes avoid using functions</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q6" value="D">
+      <label>Because classes automatically print output</label>
+    </div>
+  </div>
+</div>
+
+<button type="submit" class="submit-btn" id="submitRevisionBtn">
+  <span>🎯 Submit Revision Quiz 🎯</span>
+</button>
 
 </form>
 
@@ -905,10 +903,10 @@ print(g.score)
       const correctAnswers = {
      q1: "B",
         q2: "B",
-        q3: "C",
-        q4: "A",
-        q5: "A",
-        q6: "C"
+        q3: "B",
+        q4: "C",
+        q5: "C",
+        q6: "B"
       };
 
       const QUIZ_DURATION = 180;
