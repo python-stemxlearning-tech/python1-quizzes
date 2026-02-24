@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 26 Quiz</title>
+    <title>STEMxLearning - Lesson 27 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -716,14 +716,14 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 26 Revision Quiz</h1>
-        <p class="quiz-subtitle">Widgets – I</p>
+        <h1 class="quiz-title">🎯 Lesson 27  Quiz</h1>
+        <p class="quiz-subtitle">Widgets – II</p>
       </div>
 
       <div class="timer-section">
         <div class="timer-box">
           <div class="timer-label">⏰ Time Left</div>
-          <div class="timer-value" id="timer">5:00</div>
+          <div class="timer-value" id="timer">3:00</div>
         </div>
         <div class="progress-info">
           <div class="progress-label">📊 Progress:</div>
@@ -734,11 +734,11 @@
       <div class="content">
 <form id="quizForm">
 
-<!-- Question 1 (HARD – GUI Timing & Entry Reading) -->
+<!-- Question 1 (VERY EASY – Visual Understanding) -->
 <div class="question-block">
   <div class="question-number">1</div>
   <div class="question-text">
-    🔥 A student writes the following program:
+    🟢 Consider the following code:
   </div>
 
   <div class="code-box">
@@ -747,52 +747,33 @@ from tkinter import *
 
 root = Tk()
 
-entry = Entry(root)
-entry.pack()
+lbl1 = Label(root, text="A")
+lbl1.pack()
 
-value = entry.get()
-print(value)
+lbl2 = Label(root, text="B")
+lbl2.pack()
 
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    What will be printed in the console when this program runs?
+    What will the window look like?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q1" value="A"><label>The text typed by the user</label></div>
-    <div class="option"><input type="radio" name="q1" value="B"><label>An empty line</label></div>
-    <div class="option"><input type="radio" name="q1" value="C"><label>The word “entry”</label></div>
+    <div class="option"><input type="radio" name="q1" value="A"><label>A and B appear side by side</label></div>
+    <div class="option"><input type="radio" name="q1" value="B"><label>Only B appears</label></div>
+    <div class="option"><input type="radio" name="q1" value="C"><label>A appears above B</label></div>
     <div class="option"><input type="radio" name="q1" value="D"><label>An error occurs</label></div>
   </div>
 </div>
 
-<!-- Question 2 (HARD – Password Handling Logic) -->
+<!-- Question 2 (EASY – Default Checkbox State) -->
 <div class="question-block">
   <div class="question-number">2</div>
   <div class="question-text">
-    🔥 A student wants to take a password from the user such that the characters are hidden.
-  </div>
-
-  <div class="question-text">
-    Which Entry creation is MOST appropriate?
-  </div>
-
-  <div class="options">
-    <div class="option"><input type="radio" name="q2" value="A"><label>password = Entry(root, hide=True)</label></div>
-    <div class="option"><input type="radio" name="q2" value="B"><label>password = Entry(root, text="*")</label></div>
-    <div class="option"><input type="radio" name="q2" value="C"><label>password = Entry(root, show="*")</label></div>
-    <div class="option"><input type="radio" name="q2" value="D"><label>password = Entry(root, password=True)</label></div>
-  </div>
-</div>
-
-<!-- Question 3 (HARD – Real Interaction + get()) -->
-<div class="question-block">
-  <div class="question-number">3</div>
-  <div class="question-text">
-    🔥 Consider the following program:
+    🟢 Observe the program below:
   </div>
 
   <div class="code-box">
@@ -801,14 +782,85 @@ from tkinter import *
 
 root = Tk()
 
-name_entry = Entry(root)
-name_entry.pack()
+state = IntVar()
 
-def show_name():
-    value = name_entry.get()
-    print("Name:", value)
+cb = Checkbutton(root, text="Accept Terms", variable=state)
+cb.pack()
 
-btn = Button(root, text="Submit", command=show_name)
+root.mainloop()
+    </pre>
+  </div>
+
+  <div class="question-text">
+    When the program runs and the user does nothing, what value is stored in <code>state</code>?
+  </div>
+
+  <div class="options">
+    <div class="option"><input type="radio" name="q2" value="A"><label>1</label></div>
+    <div class="option"><input type="radio" name="q2" value="B"><label>True</label></div>
+    <div class="option"><input type="radio" name="q2" value="C"><label>0</label></div>
+    <div class="option"><input type="radio" name="q2" value="D"><label>None</label></div>
+  </div>
+</div>
+
+<!-- Question 3 (EASY – Variable vs GUI Connection) -->
+<div class="question-block">
+  <div class="question-number">3</div>
+  <div class="question-text">
+    🟢 Consider the code below:
+  </div>
+
+  <div class="code-box">
+    <pre>
+from tkinter import *
+
+root = Tk()
+
+text = "Start"
+
+lbl = Label(root, text=text)
+lbl.pack()
+
+text = "End"
+
+root.mainloop()
+    </pre>
+  </div>
+
+  <div class="question-text">
+    What text is shown on the screen?
+  </div>
+
+  <div class="options">
+    <div class="option"><input type="radio" name="q3" value="A"><label>Start</label></div>
+    <div class="option"><input type="radio" name="q3" value="B"><label>End</label></div>
+    <div class="option"><input type="radio" name="q3" value="C"><label>Both Start and End</label></div>
+    <div class="option"><input type="radio" name="q3" value="D"><label>Nothing is shown</label></div>
+  </div>
+</div>
+
+<!-- Question 4 (MEDIUM – Checkbox Logic) -->
+<div class="question-block">
+  <div class="question-number">4</div>
+  <div class="question-text">
+    🟡 Study the program carefully:
+  </div>
+
+  <div class="code-box">
+    <pre>
+from tkinter import *
+
+root = Tk()
+
+v = IntVar()
+
+cb = Checkbutton(root, text="Option", variable=v)
+cb.pack()
+
+def show():
+    print(v.get())
+
+btn = Button(root, text="Check", command=show)
 btn.pack()
 
 root.mainloop()
@@ -816,60 +868,22 @@ root.mainloop()
   </div>
 
   <div class="question-text">
-    What happens if the user types <b>Shweta</b> and clicks the button?
+    The checkbox is checked and the button is clicked. What is printed?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q3" value="A"><label>Nothing happens</label></div>
-    <div class="option"><input type="radio" name="q3" value="B"><label>The Entry box clears automatically</label></div>
-    <div class="option"><input type="radio" name="q3" value="C"><label><code>Name: Shweta</code> is printed in the console</label></div>
-    <div class="option"><input type="radio" name="q3" value="D"><label>An error occurs</label></div>
+    <div class="option"><input type="radio" name="q4" value="A"><label>Option</label></div>
+    <div class="option"><input type="radio" name="q4" value="B"><label>True</label></div>
+    <div class="option"><input type="radio" name="q4" value="C"><label>1</label></div>
+    <div class="option"><input type="radio" name="q4" value="D"><label>checked</label></div>
   </div>
 </div>
 
-<!-- Question 4 (HARD – insert() + delete() Together) -->
-<div class="question-block">
-  <div class="question-number">4</div>
-  <div class="question-text">
-    🔥 A student writes the following code:
-  </div>
-
-  <div class="code-box">
-    <pre>
-from tkinter import *
-
-root = Tk()
-
-entry = Entry(root)
-entry.insert(0, "Type here")
-entry.pack()
-
-def clear_text():
-    entry.delete(0, END)
-
-Button(root, text="Clear", command=clear_text).pack()
-
-root.mainloop()
-    </pre>
-  </div>
-
-  <div class="question-text">
-    Which sequence is correct?
-  </div>
-
-  <div class="options">
-    <div class="option"><input type="radio" name="q4" value="A"><label>Text disappears as soon as the program starts</label></div>
-    <div class="option"><input type="radio" name="q4" value="B"><label>Text disappears when the Entry is clicked</label></div>
-    <div class="option"><input type="radio" name="q4" value="C"><label>Text disappears only after clicking the button</label></div>
-    <div class="option"><input type="radio" name="q4" value="D"><label>Text cannot be deleted once inserted</label></div>
-  </div>
-</div>
-
-<!-- Question 5 (HARD – Widget Order + pack()) -->
+<!-- Question 5 (MEDIUM – Spinbox Default Value) -->
 <div class="question-block">
   <div class="question-number">5</div>
   <div class="question-text">
-    🔥 Look at the code carefully:
+    🟡 What will the following program print?
   </div>
 
   <div class="code-box">
@@ -878,33 +892,32 @@ from tkinter import *
 
 root = Tk()
 
-label = Label(root, text="Username")
-entry = Entry(root)
+s = Spinbox(root, from_=5, to=10)
+s.pack()
 
-entry.pack()
-label.pack()
+def show():
+    print(s.get())
+
+btn = Button(root, text="Show", command=show)
+btn.pack()
 
 root.mainloop()
     </pre>
   </div>
 
-  <div class="question-text">
-    What will the user see on the window?
-  </div>
-
   <div class="options">
-    <div class="option"><input type="radio" name="q5" value="A"><label>Label above Entry</label></div>
-    <div class="option"><input type="radio" name="q5" value="B"><label>Entry above Label</label></div>
-    <div class="option"><input type="radio" name="q5" value="C"><label>Both appear side by side</label></div>
-    <div class="option"><input type="radio" name="q5" value="D"><label>Only Entry appears</label></div>
+    <div class="option"><input type="radio" name="q5" value="A"><label>0</label></div>
+    <div class="option"><input type="radio" name="q5" value="B"><label>5</label></div>
+    <div class="option"><input type="radio" name="q5" value="C"><label>10</label></div>
+    <div class="option"><input type="radio" name="q5" value="D"><label>An empty value</label></div>
   </div>
 </div>
 
-<!-- Question 6 (HARD – Layout + Spacing Understanding) -->
+<!-- Question 6 (HARD – Dynamic Update with StringVar) -->
 <div class="question-block">
   <div class="question-number">6</div>
   <div class="question-text">
-    🔥 A form is created using this code:
+    🔴 Analyze the code below:
   </div>
 
   <div class="code-box">
@@ -913,25 +926,31 @@ from tkinter import *
 
 root = Tk()
 
-label = Label(root, text="Login")
-label.pack(pady=20)
+state = StringVar()
+state.set("OFF")
 
-entry = Entry(root)
-entry.pack(pady=5)
+def change():
+    state.set("ON")
+
+lbl = Label(root, textvariable=state)
+lbl.pack()
+
+btn = Button(root, text="Power", command=change)
+btn.pack()
 
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    What is the role of <b>pady</b> here?
+    What changes after clicking the button?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>It changes the height of widgets</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>It adds vertical space around widgets</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>It moves widgets to the center</label></div>
-    <div class="option"><input type="radio" name="q6" value="D"><label>It changes the font size</label></div>
+    <div class="option"><input type="radio" name="q6" value="A"><label>Button text changes</label></div>
+    <div class="option"><input type="radio" name="q6" value="B"><label>Label text changes</label></div>
+    <div class="option"><input type="radio" name="q6" value="C"><label>Window refreshes only</label></div>
+    <div class="option"><input type="radio" name="q6" value="D"><label>Nothing changes</label></div>
   </div>
 </div>
 
@@ -954,16 +973,16 @@ root.mainloop()
     </div>
 
     <script>
-     const correctAnswers = {
-  q1: "B", 
-  q2: "C", // show="*" hides password characters
-  q3: "C", // get() reads input and prints "Name: Shweta" in console
-  q4: "C", // delete() runs only when the Clear button is clicked
-  q5: "B", // Entry appears above Label due to pack() order
-  q6: "B"  // pady adds vertical space around widgets
+      const correctAnswers = {
+ q1: "C", // A appears above B (pack places widgets vertically)
+q2: "C", // IntVar default value is 0 when checkbox is not clicked
+q3: "A", // Label shows "Start" (GUI reads variable only once)
+q4: "C", // Checked checkbox → IntVar value is 1
+q5: "B", // Default Spinbox value is the starting value (5)
+q6: "B"  // Label text changes from OFF to ON
 };
 
-      const QUIZ_DURATION = 300;
+      const QUIZ_DURATION = 180;
       let timeRemaining = QUIZ_DURATION;
       let timerInterval = null;
       let quizStarted = false;

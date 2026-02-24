@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 26 Quiz</title>
+    <title>STEMxLearning - Lesson 27 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -716,14 +716,14 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 26 Revision Quiz</h1>
-        <p class="quiz-subtitle">Widgets – I</p>
+        <h1 class="quiz-title">🎯 Lesson 27 Revision Quiz</h1>
+        <p class="quiz-subtitle">Widgets – II</p>
       </div>
 
       <div class="timer-section">
         <div class="timer-box">
           <div class="timer-label">⏰ Time Left</div>
-          <div class="timer-value" id="timer">5:00</div>
+          <div class="timer-value" id="timer">3:00</div>
         </div>
         <div class="progress-info">
           <div class="progress-label">📊 Progress:</div>
@@ -734,65 +734,27 @@
       <div class="content">
 <form id="quizForm">
 
-<!-- Question 1 (HARD – GUI Timing & Entry Reading) -->
+<!-- Question 1 (VERY EASY) -->
 <div class="question-block">
   <div class="question-number">1</div>
   <div class="question-text">
-    🔥 A student writes the following program:
-  </div>
-
-  <div class="code-box">
-    <pre>
-from tkinter import *
-
-root = Tk()
-
-entry = Entry(root)
-entry.pack()
-
-value = entry.get()
-print(value)
-
-root.mainloop()
-    </pre>
-  </div>
-
-  <div class="question-text">
-    What will be printed in the console when this program runs?
+    🟢 A GUI application allows the user to select <b>only one payment method</b>
+    (Cash, Card, UPI). Which widget is most appropriate?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q1" value="A"><label>The text typed by the user</label></div>
-    <div class="option"><input type="radio" name="q1" value="B"><label>An empty line</label></div>
-    <div class="option"><input type="radio" name="q1" value="C"><label>The word “entry”</label></div>
-    <div class="option"><input type="radio" name="q1" value="D"><label>An error occurs</label></div>
+    <div class="option"><input type="radio" name="q1" value="A"><label>Checkbox</label></div>
+    <div class="option"><input type="radio" name="q1" value="B"><label>Radio Button</label></div>
+    <div class="option"><input type="radio" name="q1" value="C"><label>Spinbox</label></div>
+    <div class="option"><input type="radio" name="q1" value="D"><label>Entry</label></div>
   </div>
 </div>
 
-<!-- Question 2 (HARD – Password Handling Logic) -->
+<!-- Question 2 (EASY – Radio Button Behavior) -->
 <div class="question-block">
   <div class="question-number">2</div>
   <div class="question-text">
-    🔥 A student wants to take a password from the user such that the characters are hidden.
-  </div>
-
-  <div class="question-text">
-    Which Entry creation is MOST appropriate?
-  </div>
-
-  <div class="options">
-    <div class="option"><input type="radio" name="q2" value="A"><label>password = Entry(root, hide=True)</label></div>
-    <div class="option"><input type="radio" name="q2" value="B"><label>password = Entry(root, text="*")</label></div>
-    <div class="option"><input type="radio" name="q2" value="C"><label>password = Entry(root, show="*")</label></div>
-    <div class="option"><input type="radio" name="q2" value="D"><label>password = Entry(root, password=True)</label></div>
-  </div>
-</div>
-
-<!-- Question 3 (HARD – Real Interaction + get()) -->
-<div class="question-block">
-  <div class="question-number">3</div>
-  <div class="question-text">
-    🔥 Consider the following program:
+    🟢 Consider the following program:
   </div>
 
   <div class="code-box">
@@ -801,14 +763,18 @@ from tkinter import *
 
 root = Tk()
 
-name_entry = Entry(root)
-name_entry.pack()
+choice = StringVar()
 
-def show_name():
-    value = name_entry.get()
-    print("Name:", value)
+rb1 = Radiobutton(root, text="Online", variable=choice, value="Online")
+rb2 = Radiobutton(root, text="Offline", variable=choice, value="Offline")
 
-btn = Button(root, text="Submit", command=show_name)
+rb1.pack()
+rb2.pack()
+
+def submit():
+    print(choice.get())
+
+btn = Button(root, text="Submit", command=submit)
 btn.pack()
 
 root.mainloop()
@@ -816,60 +782,76 @@ root.mainloop()
   </div>
 
   <div class="question-text">
-    What happens if the user types <b>Shweta</b> and clicks the button?
+    Which statement is <b>TRUE</b> about this program?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q3" value="A"><label>Nothing happens</label></div>
-    <div class="option"><input type="radio" name="q3" value="B"><label>The Entry box clears automatically</label></div>
-    <div class="option"><input type="radio" name="q3" value="C"><label><code>Name: Shweta</code> is printed in the console</label></div>
-    <div class="option"><input type="radio" name="q3" value="D"><label>An error occurs</label></div>
+    <div class="option"><input type="radio" name="q2" value="A"><label>Both options can be selected together</label></div>
+    <div class="option"><input type="radio" name="q2" value="B"><label>Only one option can be selected at a time</label></div>
+    <div class="option"><input type="radio" name="q2" value="C"><label>Selection is stored as numbers</label></div>
+    <div class="option"><input type="radio" name="q2" value="D"><label>The program crashes on click</label></div>
   </div>
 </div>
 
-<!-- Question 4 (HARD – insert() + delete() Together) -->
+<!-- Question 3 (EASY – Dropdown Design Choice) -->
+<div class="question-block">
+  <div class="question-number">3</div>
+  <div class="question-text">
+    🟢 Study the code below:
+  </div>
+
+  <div class="code-box">
+    <pre>
+from tkinter import *
+
+root = Tk()
+
+option = StringVar()
+option.set("None")
+
+menu = OptionMenu(root, option, "Low", "Medium", "High")
+menu.pack()
+
+btn = Button(root, text="Confirm")
+btn.pack()
+
+root.mainloop()
+    </pre>
+  </div>
+
+  <div class="question-text">
+    Why is a <b>dropdown menu</b> a better choice here than radio buttons?
+  </div>
+
+  <div class="options">
+    <div class="option"><input type="radio" name="q3" value="A"><label>It allows multiple selections</label></div>
+    <div class="option"><input type="radio" name="q3" value="B"><label>It saves screen space for fixed choices</label></div>
+    <div class="option"><input type="radio" name="q3" value="C"><label>It allows typing custom values</label></div>
+    <div class="option"><input type="radio" name="q3" value="D"><label>It works without a variable</label></div>
+  </div>
+</div>
+
+<!-- Question 4 (MEDIUM – Theory Approved) -->
 <div class="question-block">
   <div class="question-number">4</div>
   <div class="question-text">
-    🔥 A student writes the following code:
-  </div>
-
-  <div class="code-box">
-    <pre>
-from tkinter import *
-
-root = Tk()
-
-entry = Entry(root)
-entry.insert(0, "Type here")
-entry.pack()
-
-def clear_text():
-    entry.delete(0, END)
-
-Button(root, text="Clear", command=clear_text).pack()
-
-root.mainloop()
-    </pre>
-  </div>
-
-  <div class="question-text">
-    Which sequence is correct?
+    🟡 A quiz application allows the user to choose <b>one correct answer</b>.
+    Which setup is correct?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q4" value="A"><label>Text disappears as soon as the program starts</label></div>
-    <div class="option"><input type="radio" name="q4" value="B"><label>Text disappears when the Entry is clicked</label></div>
-    <div class="option"><input type="radio" name="q4" value="C"><label>Text disappears only after clicking the button</label></div>
-    <div class="option"><input type="radio" name="q4" value="D"><label>Text cannot be deleted once inserted</label></div>
+    <div class="option"><input type="radio" name="q4" value="A"><label>Multiple Checkbuttons with different variables</label></div>
+    <div class="option"><input type="radio" name="q4" value="B"><label>One Spinbox with answer numbers</label></div>
+    <div class="option"><input type="radio" name="q4" value="C"><label>Radio buttons sharing one StringVar</label></div>
+    <div class="option"><input type="radio" name="q4" value="D"><label>Dropdown with multiple selection</label></div>
   </div>
 </div>
 
-<!-- Question 5 (HARD – Widget Order + pack()) -->
+<!-- Question 5 (MEDIUM – Spinbox Design Logic) -->
 <div class="question-block">
   <div class="question-number">5</div>
   <div class="question-text">
-    🔥 Look at the code carefully:
+    🟡 Consider the code:
   </div>
 
   <div class="code-box">
@@ -878,33 +860,33 @@ from tkinter import *
 
 root = Tk()
 
-label = Label(root, text="Username")
-entry = Entry(root)
+attempts = Spinbox(root, from_=1, to=3)
+attempts.pack()
 
-entry.pack()
-label.pack()
+btn = Button(root, text="Start Test")
+btn.pack()
 
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    What will the user see on the window?
+    What is the <b>main reason</b> a Spinbox is suitable here?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q5" value="A"><label>Label above Entry</label></div>
-    <div class="option"><input type="radio" name="q5" value="B"><label>Entry above Label</label></div>
-    <div class="option"><input type="radio" name="q5" value="C"><label>Both appear side by side</label></div>
-    <div class="option"><input type="radio" name="q5" value="D"><label>Only Entry appears</label></div>
+    <div class="option"><input type="radio" name="q5" value="A"><label>Allows free text input</label></div>
+    <div class="option"><input type="radio" name="q5" value="B"><label>Restricts values to a fixed range</label></div>
+    <div class="option"><input type="radio" name="q5" value="C"><label>Allows multiple selections</label></div>
+    <div class="option"><input type="radio" name="q5" value="D"><label>Automatically validates answers</label></div>
   </div>
 </div>
 
-<!-- Question 6 (HARD – Layout + Spacing Understanding) -->
+<!-- Question 6 (MEDIUM – Checkbox Behavior) -->
 <div class="question-block">
   <div class="question-number">6</div>
   <div class="question-text">
-    🔥 A form is created using this code:
+    🟡 Observe the code:
   </div>
 
   <div class="code-box">
@@ -913,30 +895,38 @@ from tkinter import *
 
 root = Tk()
 
-label = Label(root, text="Login")
-label.pack(pady=20)
+email = IntVar()
+sms = IntVar()
 
-entry = Entry(root)
-entry.pack(pady=5)
+cb1 = Checkbutton(root, text="Email Alerts", variable=email)
+cb2 = Checkbutton(root, text="SMS Alerts", variable=sms)
+
+cb1.pack()
+cb2.pack()
+
+btn = Button(root, text="Save")
+btn.pack()
 
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    What is the role of <b>pady</b> here?
+    Which user behavior is correctly supported?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>It changes the height of widgets</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>It adds vertical space around widgets</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>It moves widgets to the center</label></div>
-    <div class="option"><input type="radio" name="q6" value="D"><label>It changes the font size</label></div>
+    <div class="option"><input type="radio" name="q6" value="A"><label>Only one alert can be selected</label></div>
+    <div class="option"><input type="radio" name="q6" value="B"><label>Both alerts can be selected together</label></div>
+    <div class="option"><input type="radio" name="q6" value="C"><label>User must select at least one alert</label></div>
+    <div class="option"><input type="radio" name="q6" value="D"><label>User can type custom alerts</label></div>
   </div>
 </div>
 
-<button type="submit" class="submit-btn" id="submitBtn">
-  <span>🎉 Submit My Answers! 🎉</span>
+
+
+<button type="submit" class="submit-btn">
+  <span>🎯 Submit Answers</span>
 </button>
 
 </form>
@@ -954,16 +944,16 @@ root.mainloop()
     </div>
 
     <script>
-     const correctAnswers = {
-  q1: "B", 
-  q2: "C", // show="*" hides password characters
-  q3: "C", // get() reads input and prints "Name: Shweta" in console
-  q4: "C", // delete() runs only when the Clear button is clicked
-  q5: "B", // Entry appears above Label due to pack() order
-  q6: "B"  // pady adds vertical space around widgets
+      const correctAnswers = {
+ q1: "B", // Radio Button → only one option can be selected
+q2: "B", // Radio buttons share one StringVar, so only one can be selected
+q3: "B", // Dropdown saves space for fixed choices
+q4: "C", // One StringVar shared by radio buttons ensures single selection
+q5: "B", // Spinbox restricts values to a fixed numeric range
+q6: "B", // Label text changes from OFF to ON
 };
 
-      const QUIZ_DURATION = 300;
+      const QUIZ_DURATION = 180;
       let timeRemaining = QUIZ_DURATION;
       let timerInterval = null;
       let quizStarted = false;
