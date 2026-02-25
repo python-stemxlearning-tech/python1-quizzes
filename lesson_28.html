@@ -906,11 +906,12 @@ root.mainloop()
   </div>
 </div>
 
-<!-- Question 6 (HARD – Tricky File Dialog Understanding) -->
+<!-- Question 6 (HARD – File Dialog vs File Reading) -->
 <div class="question-block">
   <div class="question-number">6</div>
+
   <div class="question-text">
-    🔴 Carefully analyze the code:
+    🔴 Carefully analyze the following Python code:
   </div>
 
   <div class="code-box">
@@ -936,10 +937,25 @@ root.mainloop()
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>The file content is printed</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>The file is opened only after reading</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>File dialog opens but file is not read</label></div>
-    <div class="option"><input type="radio" name="q6" value="D"><label><code>askopenfilename()</code> reads the file</label></div>
+    <div class="option">
+      <input type="radio" name="q6" value="A">
+      <label>The selected file’s content is printed on the console</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q6" value="B">
+      <label>The file dialog reads the file automatically</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q6" value="C">
+      <label>The file is opened, but its content is not read</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q6" value="D">
+      <label>The file cannot be opened without using <code>read()</code></label>
+    </div>
   </div>
 </div>
 
