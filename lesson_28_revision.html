@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 26 Quiz</title>
+    <title>STEMxLearning - Lesson 28 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -716,14 +716,14 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 26 Revision Quiz</h1>
-        <p class="quiz-subtitle">Widgets – I</p>
+        <h1 class="quiz-title">🎯 Lesson 28 Revision Quiz</h1>
+        <p class="quiz-subtitle">Pop-up Dialogue Box</p>
       </div>
 
       <div class="timer-section">
         <div class="timer-box">
           <div class="timer-label">⏰ Time Left</div>
-          <div class="timer-value" id="timer">5:00</div>
+          <div class="timer-value" id="timer">3:00</div>
         </div>
         <div class="progress-info">
           <div class="progress-label">📊 Progress:</div>
@@ -734,13 +734,10 @@
       <div class="content">
 <form id="quizForm">
 
-<!-- Question 1 (EASY – Entry and Button) -->
+<!-- Question 1 (EASY – Color Logic) -->
 <div class="question-block">
   <div class="question-number">1</div>
-
-  <div class="question-text">
-    🟢 Consider the following program:
-  </div>
+  <div class="question-text">🟢 Consider the following code:</div>
 
   <div class="code-box">
     <pre>
@@ -748,70 +745,63 @@ from tkinter import *
 
 root = Tk()
 
-def show_text():
-    print(entry.get())
+def choose():
+    color = colorchooser.askcolor()
+    print(color[1])
 
-entry = Entry(root)
-entry.pack()
-
-Button(root, text="Show", command=show_text).pack()
-
+Button(root, text="Pick", command=choose).pack()
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    What happens when the user types text in the entry box and clicks the button?
+    If the user opens the color chooser and clicks Cancel, what is printed?
   </div>
 
   <div class="options">
-    <div class="option">
-      <input type="radio" name="q1" value="A">
-      <label>The text is printed on the console</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q1" value="B">
-      <label>The window closes</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q1" value="C">
-      <label>A message box appears</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q1" value="D">
-      <label>An error occurs</label>
-    </div>
+    <div class="option"><input type="radio" name="q1" value="A"><label>An error</label></div>
+    <div class="option"><input type="radio" name="q1" value="B"><label>None</label></div>
+    <div class="option"><input type="radio" name="q1" value="C"><label>'#000000'</label></div>
+    <div class="option"><input type="radio" name="q1" value="D"><label>Nothing</label></div>
   </div>
 </div>
 
-<!-- Question 2 (HARD – Password Handling Logic) -->
+<!-- Question 2 (EASY – Message Box Flow) -->
 <div class="question-block">
   <div class="question-number">2</div>
-  <div class="question-text">
-    🔥 A student wants to take a password from the user such that the characters are hidden.
+  <div class="question-text">🟢 Observe the code below:</div>
+
+  <div class="code-box">
+    <pre>
+from tkinter import *
+
+root = Tk()
+
+def show():
+    messagebox.showwarning("Alert", "Check input")
+    print("Done")
+
+Button(root, text="Run", command=show).pack()
+root.mainloop()
+    </pre>
   </div>
 
   <div class="question-text">
-    Which Entry creation is MOST appropriate?
+    What happens after clicking the button?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q2" value="A"><label>password = Entry(root, hide=True)</label></div>
-    <div class="option"><input type="radio" name="q2" value="B"><label>password = Entry(root, text="*")</label></div>
-    <div class="option"><input type="radio" name="q2" value="C"><label>password = Entry(root, show="*")</label></div>
-    <div class="option"><input type="radio" name="q2" value="D"><label>password = Entry(root, password=True)</label></div>
+    <div class="option"><input type="radio" name="q2" value="A"><label>Only "Done" is printed</label></div>
+    <div class="option"><input type="radio" name="q2" value="B"><label>Only a warning message box appears</label></div>
+    <div class="option"><input type="radio" name="q2" value="C"><label>Warning message box appears, then "Done" is printed</label></div>
+    <div class="option"><input type="radio" name="q2" value="D"><label>Program stops after the message box</label></div>
   </div>
 </div>
 
-<!-- Question 3 (HARD – Real Interaction + get()) -->
+<!-- Question 3 (MEDIUM – File Dialog + Condition) -->
 <div class="question-block">
   <div class="question-number">3</div>
-  <div class="question-text">
-    🔥 Consider the following program:
-  </div>
+  <div class="question-text">🟡 Analyze the following program:</div>
 
   <div class="code-box">
     <pre>
@@ -819,38 +809,34 @@ from tkinter import *
 
 root = Tk()
 
-name_entry = Entry(root)
-name_entry.pack()
+def open_file():
+    path = filedialog.askopenfilename()
+    if path:
+        with open(path, "r") as file:
+            print("Selected")
+    print("Finished")
 
-def show_name():
-    value = name_entry.get()
-    print("Name:", value)
-
-btn = Button(root, text="Submit", command=show_name)
-btn.pack()
-
+Button(root, text="Open", command=open_file).pack()
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    What happens if the user types <b>Shweta</b> and clicks the button?
+    If the user cancels the file dialog, what is printed?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q3" value="A"><label>Nothing happens</label></div>
-    <div class="option"><input type="radio" name="q3" value="B"><label>The Entry box clears automatically</label></div>
-    <div class="option"><input type="radio" name="q3" value="C"><label><code>Name: Shweta</code> is printed in the console</label></div>
-    <div class="option"><input type="radio" name="q3" value="D"><label>An error occurs</label></div>
+    <div class="option"><input type="radio" name="q3" value="A"><label>Only Selected</label></div>
+    <div class="option"><input type="radio" name="q3" value="B"><label>Only Finished</label></div>
+    <div class="option"><input type="radio" name="q3" value="C"><label>Selected then Finished</label></div>
+    <div class="option"><input type="radio" name="q3" value="D"><label>Nothing</label></div>
   </div>
 </div>
 
-<!-- Question 4 (HARD – insert() + delete() Together) -->
+<!-- Question 4 (MEDIUM – Message Box Condition) -->
 <div class="question-block">
   <div class="question-number">4</div>
-  <div class="question-text">
-    🔥 A student writes the following code:
-  </div>
+  <div class="question-text">🟡 Consider this code:</div>
 
   <div class="code-box">
     <pre>
@@ -858,37 +844,32 @@ from tkinter import *
 
 root = Tk()
 
-entry = Entry(root)
-entry.insert(0, "Type here")
-entry.pack()
+def action():
+    path = filedialog.askopenfilename()
+    if path:
+        messagebox.showinfo("Info", "File chosen")
 
-def clear_text():
-    entry.delete(0, END)
-
-Button(root, text="Clear", command=clear_text).pack()
-
+Button(root, text="Start", command=action).pack()
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    Which sequence is correct?
+    When does the message box appear?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q4" value="A"><label>Text disappears as soon as the program starts</label></div>
-    <div class="option"><input type="radio" name="q4" value="B"><label>Text disappears when the Entry is clicked</label></div>
-    <div class="option"><input type="radio" name="q4" value="C"><label>Text disappears only after clicking the button</label></div>
-    <div class="option"><input type="radio" name="q4" value="D"><label>Text cannot be deleted once inserted</label></div>
+    <div class="option"><input type="radio" name="q4" value="A"><label>Always when the button is clicked</label></div>
+    <div class="option"><input type="radio" name="q4" value="B"><label>Only when the dialog opens</label></div>
+    <div class="option"><input type="radio" name="q4" value="C"><label>Only when a file is selected</label></div>
+    <div class="option"><input type="radio" name="q4" value="D"><label>Never</label></div>
   </div>
 </div>
 
-<!-- Question 5 (HARD – Widget Order + pack()) -->
+<!-- Question 5 (HARD – Message Box Sequence) -->
 <div class="question-block">
   <div class="question-number">5</div>
-  <div class="question-text">
-    🔥 Look at the code carefully:
-  </div>
+  <div class="question-text">🔴 Study the program carefully:</div>
 
   <div class="code-box">
     <pre>
@@ -896,34 +877,31 @@ from tkinter import *
 
 root = Tk()
 
-label = Label(root, text="Username")
-entry = Entry(root)
+def notify():
+    messagebox.showinfo("Step 1", "Process started")
+    messagebox.showerror("Step 2", "Error occurred")
 
-entry.pack()
-label.pack()
-
+Button(root, text="Run", command=notify).pack()
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    What will the user see on the window?
+    What happens when the button is clicked?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q5" value="A"><label>Label above Entry</label></div>
-    <div class="option"><input type="radio" name="q5" value="B"><label>Entry above Label</label></div>
-    <div class="option"><input type="radio" name="q5" value="C"><label>Both appear side by side</label></div>
-    <div class="option"><input type="radio" name="q5" value="D"><label>Only Entry appears</label></div>
+    <div class="option"><input type="radio" name="q5" value="A"><label>Only one message box appears</label></div>
+    <div class="option"><input type="radio" name="q5" value="B"><label>Error message appears first</label></div>
+    <div class="option"><input type="radio" name="q5" value="C"><label>Two message boxes appear one after another</label></div>
+    <div class="option"><input type="radio" name="q5" value="D"><label>Program stops after the first message</label></div>
   </div>
 </div>
 
-<!-- Question 6 (HARD – Layout + Spacing Understanding) -->
+<!-- Question 6 (HARD – Tricky File Logic) -->
 <div class="question-block">
   <div class="question-number">6</div>
-  <div class="question-text">
-    🔥 A form is created using this code:
-  </div>
+  <div class="question-text">🔴 Analyze the code below:</div>
 
   <div class="code-box">
     <pre>
@@ -931,35 +909,32 @@ from tkinter import *
 
 root = Tk()
 
-label = Label(root, text="Login")
-label.pack(pady=20)
+def process():
+    path = filedialog.askopenfilename()
+    if path == "":
+        messagebox.showwarning("Warning", "No file selected")
 
-entry = Entry(root)
-entry.pack(pady=5)
-
+Button(root, text="Start", command=process).pack()
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    What is the role of <b>pady</b> here?
+    When will the warning message box appear?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>It changes the height of widgets</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>It adds vertical space around widgets</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>It moves widgets to the center</label></div>
-    <div class="option"><input type="radio" name="q6" value="D"><label>It changes the font size</label></div>
+    <div class="option"><input type="radio" name="q6" value="A"><label>When a file is selected</label></div>
+    <div class="option"><input type="radio" name="q6" value="B"><label>When the dialog opens</label></div>
+    <div class="option"><input type="radio" name="q6" value="C"><label>When the user cancels the dialog</label></div>
+    <div class="option"><input type="radio" name="q6" value="D"><label>Every time the button is clicked</label></div>
   </div>
 </div>
 
 <button type="submit" class="submit-btn" id="submitBtn">
   <span>🎉 Submit My Answers! 🎉</span>
 </button>
-
 </form>
-
-
 
 
         <div class="result" id="result">
@@ -972,16 +947,16 @@ root.mainloop()
     </div>
 
     <script>
-     const correctAnswers = {
-  q1: "A", 
-  q2: "C", // show="*" hides password characters
-  q3: "C", // get() reads input and prints "Name: Shweta" in console
-  q4: "C", // delete() runs only when the Clear button is clicked
-  q5: "B", // Entry appears above Label due to pack() order
-  q6: "B"  // pady adds vertical space around widgets
+      const correctAnswers = {
+    q1: "D",
+        q2: "C",
+        q3: "B",
+        q4: "C",
+        q5: "C",
+        q6: "C"
 };
 
-      const QUIZ_DURATION = 300;
+      const QUIZ_DURATION = 180;
       let timeRemaining = QUIZ_DURATION;
       let timerInterval = null;
       let quizStarted = false;

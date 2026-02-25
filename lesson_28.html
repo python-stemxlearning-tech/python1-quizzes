@@ -851,9 +851,8 @@ root = Tk()
 def save():
     path = filedialog.asksaveasfilename(defaultextension=".txt")
     if path:
-        file = open(path, "w")
-        file.write("Data")
-        file.close()
+        with open(path, "w") as file:
+            file.write("Data")
 
 Button(root, text="Save", command=save).pack()
 root.mainloop()
@@ -923,9 +922,8 @@ root = Tk()
 def read():
     path = filedialog.askopenfilename()
     if path:
-        file = open(path, "r")
-        print("File opened")
-        file.close()
+        with open(path, "r") as file:
+            print("File opened")
 
 Button(root, text="Read", command=read).pack()
 root.mainloop()
