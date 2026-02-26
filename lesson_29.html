@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 27 Quiz</title>
+    <title>STEMxLearning - Lesson 29 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -716,14 +716,14 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 27  Quiz</h1>
-        <p class="quiz-subtitle">Widgets – II</p>
+        <h1 class="quiz-title">🎯 Lesson 29 Quiz</h1>
+        <p class="quiz-subtitle"> Tkinter Canvas & Drawing Applications</p>
       </div>
 
       <div class="timer-section">
         <div class="timer-box">
           <div class="timer-label">⏰ Time Left</div>
-          <div class="timer-value" id="timer">5:00</div>
+          <div class="timer-value" id="timer">3:00</div>
         </div>
         <div class="progress-info">
           <div class="progress-label">📊 Progress:</div>
@@ -734,9 +734,24 @@
       <div class="content">
 <form id="quizForm">
 
-<!-- Question 1 (VERY EASY – Visual Understanding) -->
+<!-- Question 1 (VERY EASY – Canvas Identification) -->
 <div class="question-block">
   <div class="question-number">1</div>
+  <div class="question-text">
+    🟢 Which widget is mainly used in Tkinter for drawing shapes and displaying images?
+  </div>
+
+  <div class="options">
+    <div class="option"><input type="radio" name="q1" value="A"><label>Label</label></div>
+    <div class="option"><input type="radio" name="q1" value="B"><label>Frame</label></div>
+    <div class="option"><input type="radio" name="q1" value="C"><label>Canvas</label></div>
+    <div class="option"><input type="radio" name="q1" value="D"><label>Entry</label></div>
+  </div>
+</div>
+
+<!-- Question 2 (EASY – Canvas Visibility) -->
+<div class="question-block">
+  <div class="question-number">2</div>
   <div class="question-text">
     🟢 Consider the following code:
   </div>
@@ -746,194 +761,105 @@
 from tkinter import *
 
 root = Tk()
-
-lbl1 = Label(root, text="A")
-lbl1.pack()
-
-lbl2 = Label(root, text="B")
-lbl2.pack()
-
+canvas = Canvas(root, width=300, height=200, bg="lightyellow")
+canvas.pack()
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    What will the window look like?
+    What will be visible when this program runs?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q1" value="A"><label>A and B appear side by side</label></div>
-    <div class="option"><input type="radio" name="q1" value="B"><label>Only B appears</label></div>
-    <div class="option"><input type="radio" name="q1" value="C"><label>A appears above B</label></div>
-    <div class="option"><input type="radio" name="q1" value="D"><label>An error occurs</label></div>
+    <div class="option"><input type="radio" name="q2" value="A"><label>A window with a light yellow rectangular area</label></div>
+    <div class="option"><input type="radio" name="q2" value="B"><label>A blank window with no visible widget</label></div>
+    <div class="option"><input type="radio" name="q2" value="C"><label>Only the title bar of the window</label></div>
+    <div class="option"><input type="radio" name="q2" value="D"><label>An error because no shapes are drawn</label></div>
   </div>
 </div>
 
-<!-- Question 2 (EASY – Default Checkbox State) -->
-<div class="question-block">
-  <div class="question-number">2</div>
-  <div class="question-text">
-    🟢 Observe the program below:
-  </div>
-
-  <div class="code-box">
-    <pre>
-from tkinter import *
-
-root = Tk()
-
-state = IntVar()
-
-cb = Checkbutton(root, text="Accept Terms", variable=state)
-cb.pack()
-
-root.mainloop()
-    </pre>
-  </div>
-
-  <div class="question-text">
-    When the program runs and the user does nothing, what value is stored in <code>state</code>?
-  </div>
-
-  <div class="options">
-    <div class="option"><input type="radio" name="q2" value="A"><label>1</label></div>
-    <div class="option"><input type="radio" name="q2" value="B"><label>True</label></div>
-    <div class="option"><input type="radio" name="q2" value="C"><label>0</label></div>
-    <div class="option"><input type="radio" name="q2" value="D"><label>None</label></div>
-  </div>
-</div>
-
-<!-- Question 3 (EASY – Variable vs GUI Connection) -->
+<!-- Question 3 (EASY – Oval vs Circle) -->
 <div class="question-block">
   <div class="question-number">3</div>
   <div class="question-text">
-    🟢 Consider the code below:
+    🟢 Study the code below:
   </div>
 
   <div class="code-box">
     <pre>
-from tkinter import *
-
-root = Tk()
-
-text = "Start"
-
-lbl = Label(root, text=text)
-lbl.pack()
-
-text = "End"
-
-root.mainloop()
+canvas.create_oval(50, 50, 200, 120)
     </pre>
   </div>
 
   <div class="question-text">
-    What text is shown on the screen?
+    Why does this code draw an oval and not a circle?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q3" value="A"><label>Start</label></div>
-    <div class="option"><input type="radio" name="q3" value="B"><label>End</label></div>
-    <div class="option"><input type="radio" name="q3" value="C"><label>Both Start and End</label></div>
-    <div class="option"><input type="radio" name="q3" value="D"><label>Nothing is shown</label></div>
+    <div class="option"><input type="radio" name="q3" value="A"><label><code>create_oval()</code> cannot draw circles</label></div>
+    <div class="option"><input type="radio" name="q3" value="B"><label>The fill color is missing</label></div>
+    <div class="option"><input type="radio" name="q3" value="C"><label>The difference between the width and height of the bounding box are different</label></div>
+    <div class="option"><input type="radio" name="q3" value="D"><label>Canvas always draws ovals by default</label></div>
   </div>
 </div>
 
-<!-- Question 4 (MEDIUM – Checkbox Logic) -->
+<!-- Question 4 (MEDIUM – Coordinate Change Effect) -->
 <div class="question-block">
   <div class="question-number">4</div>
   <div class="question-text">
-    🟡 Study the program carefully:
+    🟡 Observe the following code:
   </div>
 
   <div class="code-box">
     <pre>
-from tkinter import *
-
-root = Tk()
-
-v = IntVar()
-
-cb = Checkbutton(root, text="Option", variable=v)
-cb.pack()
-
-def show():
-    print(v.get())
-
-btn = Button(root, text="Check", command=show)
-btn.pack()
-
-root.mainloop()
+canvas.create_rectangle(40, 60, 190, 160, outline="red", width=3)
     </pre>
   </div>
 
   <div class="question-text">
-    The checkbox is checked and the button is clicked. What is printed?
+    What will happen if only the value <code>190</code> is changed to <code>240</code>?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q4" value="A"><label>Option</label></div>
-    <div class="option"><input type="radio" name="q4" value="B"><label>True</label></div>
-    <div class="option"><input type="radio" name="q4" value="C"><label>1</label></div>
-    <div class="option"><input type="radio" name="q4" value="D"><label>checked</label></div>
+    <div class="option"><input type="radio" name="q4" value="A"><label>The rectangle moves downward</label></div>
+    <div class="option"><input type="radio" name="q4" value="B"><label>The rectangle expands towards the positive x-direction</label></div>
+    <div class="option"><input type="radio" name="q4" value="C"><label>The rectangle expands towards the positive y-direction</label></div>
+    <div class="option"><input type="radio" name="q4" value="D"><label>The rectangle shifts left along the x-axis</label></div>
   </div>
 </div>
 
-<!-- Question 5 (VERY EASY – Spinbox) -->
+<!-- Question 5 (MEDIUM – Image Placement) -->
 <div class="question-block">
   <div class="question-number">5</div>
-
   <div class="question-text">
-    🟢 Look at the program:
+    🟡 Analyze the code:
   </div>
 
   <div class="code-box">
     <pre>
-from tkinter import *
-
-root = Tk()
-
-s = Spinbox(root, from_=5, to=10)
-s.pack()
-
-Button(root, text="Show", command=lambda: print(s.get())).pack()
-
-root.mainloop()
+img = PhotoImage(file="logo.png")
+canvas.create_image(150, 100, image=img)
     </pre>
   </div>
 
   <div class="question-text">
-    What value is shown in the spinbox when the program starts?
+    Which statement is TRUE?
   </div>
 
   <div class="options">
-    <div class="option">
-      <input type="radio" name="q5" value="A">
-      <label>5</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q5" value="B">
-      <label>10</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q5" value="C">
-      <label>0</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="q5" value="D">
-      <label>Empty</label>
-    </div>
+    <div class="option"><input type="radio" name="q5" value="A"><label>The image is placed using its top-left corner</label></div>
+    <div class="option"><input type="radio" name="q5" value="B"><label>The image will be shown only if bg is set</label></div>
+    <div class="option"><input type="radio" name="q5" value="C"><label>(150, 100) represents the center of the image</label></div>
+    <div class="option"><input type="radio" name="q5" value="D"><label>PhotoImage directly draws the image on canvas</label></div>
   </div>
 </div>
 
-<!-- Question 6 (HARD – Dynamic Update with StringVar) -->
+<!-- Question 6 (HARD – Multi-Concept Canvas Logic) -->
 <div class="question-block">
   <div class="question-number">6</div>
   <div class="question-text">
-    🔴 Analyze the code below:
+    🔴 Carefully analyze the following code:
   </div>
 
   <div class="code-box">
@@ -942,31 +868,25 @@ from tkinter import *
 
 root = Tk()
 
-state = StringVar()
-state.set("OFF")
+canvas = Canvas(root, width=300, height=200, bg="white")
+canvas.pack()
 
-def change():
-    state.set("ON")
-
-lbl = Label(root, textvariable=state)
-lbl.pack()
-
-btn = Button(root, text="Power", command=change)
-btn.pack()
+canvas.create_rectangle(50, 50, 200, 150, fill="blue")
+canvas.create_oval(220, 50, 320, 150, fill="green")
 
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    What changes after clicking the button?
+    Which statement is TRUE?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>Button text changes</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>Label text changes</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>Window refreshes only</label></div>
-    <div class="option"><input type="radio" name="q6" value="D"><label>Nothing changes</label></div>
+    <div class="option"><input type="radio" name="q6" value="A"><label>Both the rectangle and oval are fully drawn inside the canvas</label></div>
+    <div class="option"><input type="radio" name="q6" value="B"><label>The oval is partially drawn because part of it lies outside the canvas area</label></div>
+    <div class="option"><input type="radio" name="q6" value="C"><label>The rectangle and oval overlap each other</label></div>
+    <div class="option"><input type="radio" name="q6" value="D"><label>Canvas automatically resizes to fit all shapes</label></div>
   </div>
 </div>
 
@@ -975,7 +895,6 @@ root.mainloop()
 </button>
 
 </form>
-
 
 
 
@@ -990,15 +909,15 @@ root.mainloop()
 
     <script>
       const correctAnswers = {
- q1: "C", // A appears above B (pack places widgets vertically)
-q2: "C", // IntVar default value is 0 when checkbox is not clicked
-q3: "A", // Label shows "Start" (GUI reads variable only once)
-q4: "C", // Checked checkbox → IntVar value is 1
-q5: "A", // Default Spinbox value is the starting value (5)
-q6: "B"  // Label text changes from OFF to ON
+   q1: "C",
+  q2: "A",
+  q3: "C",
+  q4: "B",
+  q5: "C",
+  q6: "B"
 };
 
-      const QUIZ_DURATION = 300;
+      const QUIZ_DURATION = 180;
       let timeRemaining = QUIZ_DURATION;
       let timerInterval = null;
       let quizStarted = false;
