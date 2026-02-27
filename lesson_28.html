@@ -744,7 +744,7 @@
   <div class="code-box">
     <pre>
 from tkinter import *
-
+from tkinter import messagebox
 root = Tk()
 
 def show():
@@ -777,6 +777,7 @@ root.mainloop()
   <div class="code-box">
     <pre>
 from tkinter import *
+from tkinter import filedialog
 
 root = Tk()
 
@@ -811,12 +812,15 @@ root.mainloop()
   <div class="code-box">
     <pre>
 from tkinter import *
-
+from tkinter import messagebox   
 
 root = Tk()
 
 def check():
-    messagebox.showwarning(title="Warning", message="Low Battery")
+    messagebox.showwarning(
+        title="Warning",
+        message="Low Battery"
+    )
 
 Button(root, text="Check", command=check).pack()
 root.mainloop()
@@ -824,35 +828,54 @@ root.mainloop()
   </div>
 
   <div class="question-text">
-    Which statement is correct?
+    What happens when the <b>Check</b> button is clicked?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q3" value="A"><label>The program stops permanently</label></div>
-    <div class="option"><input type="radio" name="q3" value="B"><label>A warning dialog is shown</label></div>
-    <div class="option"><input type="radio" name="q3" value="C"><label>A value is returned</label></div>
-    <div class="option"><input type="radio" name="q3" value="D"><label>The window background changes</label></div>
+    <div class="option">
+      <input type="radio" name="q3" value="A">
+      <label>A warning dialog appears and the main window remains active</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q3" value="B">
+      <label>The warning message replaces the main window</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q3" value="C">
+      <label>The program pauses until the warning window is closed</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q3" value="D">
+      <label>The warning message is printed in the console</label>
+    </div>
   </div>
 </div>
 
-<!-- Question 4 (MEDIUM – File Saving Logic) -->
+<!-- Question 4 (MEDIUM – Cancel Button Logic in File Dialog) -->
 <div class="question-block">
   <div class="question-number">4</div>
   <div class="question-text">
-    🟡 Observe the following code:
+    🟡 Observe the code below:
   </div>
 
   <div class="code-box">
     <pre>
 from tkinter import *
+from tkinter import filedialog
 
 root = Tk()
 
 def save():
-    path = filedialog.asksaveasfilename(defaultextension=".txt")
+    path = filedialog.asksaveasfilename(
+        defaultextension=".txt"
+    )
     if path:
-        with open(path, "w") as file:
-            file.write("Data")
+        print("File selected")
+    else:
+        print("Save cancelled")
 
 Button(root, text="Save", command=save).pack()
 root.mainloop()
@@ -860,17 +883,31 @@ root.mainloop()
   </div>
 
   <div class="question-text">
-    When is the file actually created?
+    What will be printed in the console if the user clicks <b>Cancel</b> in the save dialog?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q4" value="A"><label>When the save dialog opens</label></div>
-    <div class="option"><input type="radio" name="q4" value="B"><label>When the user selects a location</label></div>
-    <div class="option"><input type="radio" name="q4" value="C"><label>When <code>open(path, "w")</code> executes</label></div>
-    <div class="option"><input type="radio" name="q4" value="D"><label>When the button is clicked</label></div>
+    <div class="option">
+      <input type="radio" name="q4" value="A">
+      <label>File selected</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q4" value="B">
+      <label>Save cancelled</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q4" value="C">
+      <label>An error message</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q4" value="D">
+      <label>Nothing is printed</label>
+    </div>
   </div>
 </div>
-
 <!-- Question 5 (MEDIUM – Color Chooser Return Value) -->
 <div class="question-block">
   <div class="question-number">5</div>
@@ -881,6 +918,7 @@ root.mainloop()
   <div class="code-box">
     <pre>
 from tkinter import *
+from tkinter import colorchooser
 
 root = Tk()
 
@@ -916,6 +954,7 @@ root.mainloop()
   <div class="code-box">
     <pre>
 from tkinter import *
+from tkinter import filedialog
 
 root = Tk()
 
@@ -979,8 +1018,8 @@ root.mainloop()
       const correctAnswers = {
    q1: "B",
         q2: "C",
-        q3: "B",
-        q4: "C",
+        q3: "A",
+        q4: "B",
         q5: "C",
         q6: "C"
 };

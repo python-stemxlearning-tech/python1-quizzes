@@ -793,7 +793,7 @@ root.mainloop()
   </div>
 </div>
 
-<!-- Question 3 (EASY – Dropdown Design Choice) -->
+<!-- Question 3 (EASY – Dropdown Working) -->
 <div class="question-block">
   <div class="question-number">3</div>
   <div class="question-text">
@@ -820,14 +820,29 @@ root.mainloop()
   </div>
 
   <div class="question-text">
-    Why is a <b>dropdown menu</b> a better choice here than radio buttons?
+    What is the purpose of using <b>StringVar()</b> with the dropdown menu?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q3" value="A"><label>It allows multiple selections</label></div>
-    <div class="option"><input type="radio" name="q3" value="B"><label>It saves screen space for fixed choices</label></div>
-    <div class="option"><input type="radio" name="q3" value="C"><label>It allows typing custom values</label></div>
-    <div class="option"><input type="radio" name="q3" value="D"><label>It works without a variable</label></div>
+    <div class="option">
+      <input type="radio" name="q3" value="A">
+      <label>To store the value selected from the dropdown</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q3" value="B">
+      <label>To display the dropdown options</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q3" value="C">
+      <label>To create the button widget</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q3" value="D">
+      <label>To start the Tkinter window</label>
+    </div>
   </div>
 </div>
 
@@ -925,8 +940,8 @@ root.mainloop()
 
 
 
-<button type="submit" class="submit-btn">
-  <span>🎯 Submit Answers</span>
+<button type="submit" class="submit-btn" id="submitBtn">
+  <span>🎉 Submit My Answers! 🎉</span>
 </button>
 
 </form>
@@ -947,7 +962,7 @@ root.mainloop()
       const correctAnswers = {
  q1: "B", // Radio Button → only one option can be selected
 q2: "B", // Radio buttons share one StringVar, so only one can be selected
-q3: "B", // Dropdown saves space for fixed choices
+q3: "A", 
 q4: "C", // One StringVar shared by radio buttons ensures single selection
 q5: "B", // Spinbox restricts values to a fixed numeric range
 q6: "B", // Label text changes from OFF to ON
