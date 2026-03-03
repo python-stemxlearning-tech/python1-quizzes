@@ -806,7 +806,7 @@ root.mainloop()
   </div>
 </div>
 
-<!-- Question 3 (HARD – Real Interaction + get()) -->
+<!-- Question 3 (HARD – Frame + get() + Screen Logic) -->
 <div class="question-block">
   <div class="question-number">3</div>
   <div class="question-text">
@@ -819,29 +819,37 @@ from tkinter import *
 
 root = Tk()
 
-name_entry = Entry(root)
-name_entry.pack()
+frame1 = Frame(root)
+frame2 = Frame(root)
 
-def show_name():
-    value = name_entry.get()
-    print("Name:", value)
+entry = Entry(frame1)
+entry.pack()
 
-btn = Button(root, text="Submit", command=show_name)
-btn.pack()
+def show_text():
+    text = entry.get()
+    print(text)
+    frame1.pack_forget()
+    frame2.pack()
+
+Button(frame1, text="Next", command=show_text).pack()
+
+Label(frame2, text="Second Screen").pack()
+
+frame1.pack()
 
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    What happens if the user types <b>Shweta</b> and clicks the button?
+    What happens when the user types <b>Hello</b> and clicks the <b>Next</b> button?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q3" value="A"><label>Nothing happens</label></div>
-    <div class="option"><input type="radio" name="q3" value="B"><label>The Entry box clears automatically</label></div>
-    <div class="option"><input type="radio" name="q3" value="C"><label><code>Name: Shweta</code> is printed in the console</label></div>
-    <div class="option"><input type="radio" name="q3" value="D"><label>An error occurs</label></div>
+    <div class="option"><input type="radio" name="q3" value="A"><label><code>Hello</code> is shown on the second screen</label></div>
+    <div class="option"><input type="radio" name="q3" value="B"><label><code>Hello</code> is printed in the console and the screen changes</label></div>
+    <div class="option"><input type="radio" name="q3" value="C"><label>The Entry text is cleared automatically</label></div>
+    <div class="option"><input type="radio" name="q3" value="D"><label>An error occurs because get() cannot be used with frames</label></div>
   </div>
 </div>
 
@@ -918,11 +926,11 @@ root.mainloop()
   </div>
 </div>
 
-<!-- Question 6 (HARD – Layout + Spacing Understanding) -->
+<!-- Question 6 (HARD – Frame Parenting + Layout Reasoning) -->
 <div class="question-block">
   <div class="question-number">6</div>
   <div class="question-text">
-    🔥 A form is created using this code:
+    🔥 Consider the following program:
   </div>
 
   <div class="code-box">
@@ -931,25 +939,27 @@ from tkinter import *
 
 root = Tk()
 
-label = Label(root, text="Login")
-label.pack(pady=20)
+frame1 = Frame(root, bg="lightblue", padx=10, pady=10)
+frame2 = Frame(frame1, bg="lightgreen", padx=10, pady=10)
 
-entry = Entry(root)
-entry.pack(pady=5)
+Label(frame2, text="Hello").pack()
+
+frame2.pack()
+frame1.pack()
 
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    What is the role of <b>pady</b> here?
+    Which statement correctly describes the output?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>It changes the height of widgets</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>It adds vertical space around widgets</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>It moves widgets to the center</label></div>
-    <div class="option"><input type="radio" name="q6" value="D"><label>It changes the font size</label></div>
+    <div class="option"><input type="radio" name="q6" value="A"><label>Only a light green box with text appears</label></div>
+    <div class="option"><input type="radio" name="q6" value="B"><label>A light blue frame contains a light green frame with text</label></div>
+    <div class="option"><input type="radio" name="q6" value="C"><label>Two separate frames appear one below the other</label></div>
+    <div class="option"><input type="radio" name="q6" value="D"><label>An error occurs due to incorrect packing order</label></div>
   </div>
 </div>
 
@@ -975,7 +985,7 @@ root.mainloop()
      const correctAnswers = {
   q1: "A", 
   q2: "C", // show="*" hides password characters
-  q3: "C", // get() reads input and prints "Name: Shweta" in console
+  q3: "B", // get() reads input and prints "Name: Shweta" in console
   q4: "C", // delete() runs only when the Clear button is clicked
   q5: "B", // Entry appears above Label due to pack() order
   q6: "B"  // pady adds vertical space around widgets

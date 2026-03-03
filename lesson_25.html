@@ -806,18 +806,35 @@ window.geometry("400x300")
   </div>
 </div>
 
-<!-- Question 5 (MEDIUM – Widget Concept Check) -->
+<!-- Question 5 (HARD – Layout Understanding) -->
 <div class="question-block">
   <div class="question-number">5</div>
   <div class="question-text">
-    🟠 Which of the following best defines a widget in Tkinter?
+    🔥 Consider the following code:
+  </div>
+
+  <div class="code-box">
+    <pre>
+from tkinter import *
+
+root = Tk()
+
+label = Label(root, text="Hello", bg="blue")
+label.pack(padx=20, pady=10)
+
+root.mainloop()
+    </pre>
+  </div>
+
+  <div class="question-text">
+    What is the role of <b>padx</b> and <b>pady</b> in this program?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q5" value="A"><label>A Python keyword used for GUI</label></div>
-    <div class="option"><input type="radio" name="q5" value="B"><label>A tool used only to take input</label></div>
-    <div class="option"><input type="radio" name="q5" value="C"><label>A GUI object used to display or control elements</label></div>
-    <div class="option"><input type="radio" name="q5" value="D"><label>A replacement for the Tk() function</label></div>
+    <div class="option"><input type="radio" name="q5" value="A"><label>They increase the text size</label></div>
+    <div class="option"><input type="radio" name="q5" value="B"><label>They increase the label box size</label></div>
+    <div class="option"><input type="radio" name="q5" value="C"><label>They add space around the label</label></div>
+    <div class="option"><input type="radio" name="q5" value="D"><label>They change the background color</label></div>
   </div>
 </div>
 

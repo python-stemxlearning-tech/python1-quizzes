@@ -734,43 +734,57 @@
       <div class="content">
 <form id="quizForm">
 
-<!-- Question 1 (VERY EASY – Arc Method) -->
+<!-- Question 1 (CONCEPTUAL – Canvas Arc Understanding) -->
 <div class="question-block">
   <div class="question-number">1</div>
   <div class="question-text">
-    🟢 Which Canvas method is used to draw a curved shape?
+    🟢 What does the <b>start</b> and <b>extent</b> parameter control when drawing an arc on a Canvas?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q1" value="A"><label>create_line()</label></div>
-    <div class="option"><input type="radio" name="q1" value="B"><label>create_arc()</label></div>
-    <div class="option"><input type="radio" name="q1" value="C"><label>create_oval()</label></div>
-    <div class="option"><input type="radio" name="q1" value="D"><label>create_polygon()</label></div>
+    <div class="option">
+      <input type="radio" name="q1" value="A">
+      <label>The position of the arc on the window</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q1" value="B">
+      <label>The color and thickness of the arc</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q1" value="C">
+      <label>The starting angle and the amount of the curve drawn</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q1" value="D">
+      <label>The radius of the arc</label>
+    </div>
   </div>
 </div>
 
-<!-- Question 2 (EASY – PhotoImage Format) -->
+<!-- Question 2 (CONCEPTUAL – Canvas Purpose, Non-Obvious Options) -->
 <div class="question-block">
   <div class="question-number">2</div>
   <div class="question-text">
-    🟢 Consider the code:
-  </div>
-
-  <div class="code-box">
-    <pre>
-img = PhotoImage(file="image.png")
-    </pre>
-  </div>
-
-  <div class="question-text">
-    Which image file format is safest and directly supported by <code>PhotoImage</code>?
+    🟢 What is the main reason for using a <code>Canvas</code> widget in Tkinter?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q2" value="A"><label>JPG</label></div>
-    <div class="option"><input type="radio" name="q2" value="B"><label>PNG</label></div>
-    <div class="option"><input type="radio" name="q2" value="C"><label>BMP</label></div>
-    <div class="option"><input type="radio" name="q2" value="D"><label>TIFF</label></div>
+    <div class="option">
+      <input type="radio" name="q2" value="A">
+      <label>It provides methods to draw and manage graphical objects</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q2" value="B">
+      <label>It is required to place widgets at exact pixel positions</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q2" value="C">
+      <label>It is used to store images and text permanently</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q2" value="D">
+      <label>It works only when shapes need to be colored</label>
+    </div>
   </div>
 </div>
 
@@ -799,29 +813,55 @@ canvas.create_rectangle(20, 30, 120, 130, outline="black", width=5)
   </div>
 </div>
 
-<!-- Question 4 (MEDIUM – Image Reference Rule) -->
+<!-- Question 4 (MEDIUM–HARD – Dash Pattern Interpretation) -->
 <div class="question-block">
   <div class="question-number">4</div>
   <div class="question-text">
-    🟡 Analyze the code:
+    🟡 The following code draws two horizontal lines on a Canvas:
   </div>
 
   <div class="code-box">
     <pre>
-img = PhotoImage(file="photo.png")
-canvas.create_image(150, 100, image=img)
+canvas = Canvas(root)
+canvas.pack()
+
+canvas.create_line(20, 40, 200, 40, dash=(2, 6))
+canvas.create_line(20, 80, 200, 80, dash=(6, 2))
     </pre>
   </div>
 
   <div class="question-text">
-    Which statement is TRUE?
+    Which observation about the two lines is MOST accurate?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q4" value="A"><label>The image appears even if <code>img</code> is not stored</label></div>
-    <div class="option"><input type="radio" name="q4" value="B"><label>The image must be stored in a variable to stay visible</label></div>
-    <div class="option"><input type="radio" name="q4" value="C"><label>The image resizes automatically</label></div>
-    <div class="option"><input type="radio" name="q4" value="D"><label>Images appear only after drawing shapes</label></div>
+    <div class="option">
+      <input type="radio" name="q4" value="A">
+      <label>
+        The first line appears more fragmented overall, while the second appears more continuous
+      </label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q4" value="B">
+      <label>
+        Both lines contain the same number of drawn segments, but the spacing pattern differs
+      </label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q4" value="C">
+      <label>
+        The second line visually dominates because its dash pattern repeats less frequently
+      </label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q4" value="D">
+      <label>
+        The two lines differ only in thickness due to different dash values
+      </label>
+    </div>
   </div>
 </div>
 
@@ -851,32 +891,65 @@ canvas.pack()
   </div>
 </div>
 
-<!-- Question 6 (HARD – Canvas Default Behavior) -->
+<!-- Question 6 (HARD – Function + List + Canvas Logic) -->
 <div class="question-block">
   <div class="question-number">6</div>
   <div class="question-text">
-    🔴 Carefully analyze the code:
+    🔴 Analyze the following Python program:
   </div>
 
   <div class="code-box">
     <pre>
-canvas = Canvas(root, width=300, height=200)
-canvas.pack()
+from tkinter import *
 
-canvas.create_rectangle(50, 50, 150, 150)
+def draw(canvas, values):
+    for v in values:
+        canvas.create_line(20, v, 200, v)
+
+root = Tk()
+c = Canvas(root)
+c.pack()
+
+numbers = [30, 60, 90]
+draw(c, numbers)
+
+root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    Which statement is TRUE?
+    Which statement best explains what the <code>draw</code> function does in this program?
   </div>
 
-  <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>The rectangle will not appear without bg</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>The rectangle appears even without bg</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>Canvas resizes to fit the rectangle</label></div>
-    <div class="option"><input type="radio" name="q6" value="D"><label>Rectangle needs mainloop before drawing</label></div>
+ <div class="options">
+  <div class="option">
+    <input type="radio" name="q6" value="A">
+    <label>
+      It draws one line for each value in the list using the same Canvas
+    </label>
   </div>
+
+  <div class="option">
+    <input type="radio" name="q6" value="B">
+    <label>
+      It redraws a single line multiple times during the loop execution
+    </label>
+  </div>
+
+  <div class="option">
+    <input type="radio" name="q6" value="C">
+    <label>
+      It processes all values in the list but draws only one line
+    </label>
+  </div>
+
+  <div class="option">
+    <input type="radio" name="q6" value="D">
+    <label>
+      It draws lines only after <code>mainloop()</code> begins execution
+    </label>
+  </div>
+</div>
 </div>
 
 <button type="submit" class="submit-btn" id="submitBtn">
@@ -898,12 +971,12 @@ canvas.create_rectangle(50, 50, 150, 150)
 
     <script>
       const correctAnswers = {
-    q1: "B",
-  q2: "B",
+    q1: "C",
+  q2: "A",
   q3: "B",
-  q4: "B",
+  q4: "A",
   q5: "C",
-  q6: "B"
+  q6: "A"
 };
 
       const QUIZ_DURATION = 180;

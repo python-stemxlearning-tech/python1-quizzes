@@ -734,11 +734,11 @@
       <div class="content">
  <form id="quizForm">
 
-<!-- Question 1 (HARD – Layout Understanding) -->
+<!-- Question 1 (BASIC – Frame Concept) -->
 <div class="question-block">
   <div class="question-number">1</div>
   <div class="question-text">
-    🔥 Consider the following code:
+    📦 Consider the following code:
   </div>
 
   <div class="code-box">
@@ -747,22 +747,24 @@ from tkinter import *
 
 root = Tk()
 
-label = Label(root, text="Hello", bg="blue")
-label.pack(padx=20, pady=10)
+frame = Frame(root, bg="lightblue")
+frame.pack()
+
+Label(frame, text="Hello").pack()
 
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    What is the role of <b>padx</b> and <b>pady</b> in this program?
+    What is the main role of the <b>Frame</b> in this program?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q1" value="A"><label>They increase the text size</label></div>
-    <div class="option"><input type="radio" name="q1" value="B"><label>They increase the label box size</label></div>
-    <div class="option"><input type="radio" name="q1" value="C"><label>They add space around the label</label></div>
-    <div class="option"><input type="radio" name="q1" value="D"><label>They change the background color</label></div>
+    <div class="option"><input type="radio" name="q1" value="A"><label>It displays text on the screen</label></div>
+    <div class="option"><input type="radio" name="q1" value="B"><label>It groups widgets together</label></div>
+    <div class="option"><input type="radio" name="q1" value="C"><label>It changes the window size</label></div>
+    <div class="option"><input type="radio" name="q1" value="D"><label>It replaces the root window</label></div>
   </div>
 </div>
 
@@ -891,7 +893,7 @@ root.mainloop()
   </div>
 </div>
 
-<!-- Question 6 (HARD – Multiple Widgets + Python Variables) -->
+<!-- Question 6 (HARD – Frame Switching Logic Trap) -->
 <div class="question-block">
   <div class="question-number">6</div>
   <div class="question-text">
@@ -904,26 +906,30 @@ from tkinter import *
 
 root = Tk()
 
-label_text = "Username"
+frame1 = Frame(root)
+frame2 = Frame(root)
 
-lbl = Label(root, text=label_text)
-lbl.pack()
+def change_screen():
+    frame2.pack_forget()
+    frame1.pack()
 
-entry = Entry(root)
-entry.pack()
+Label(frame1, text="Frame 1").pack()
+Label(frame2, text="Frame 2").pack()
 
-btn = Button(root, text="Submit")
-btn.pack()
+frame1.pack()
+frame2.pack()
+
+Button(frame2, text="Next", command=change_screen).pack()
 
 root.mainloop()
     </pre>
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>The label text changes when user types</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>Three widgets appear one below another</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>The Entry appears inside the Label</label></div>
-    <div class="option"><input type="radio" name="q6" value="D"><label>The program gives an error</label></div>
+    <div class="option"><input type="radio" name="q6" value="A"><label>Only Frame 1 appears at the start</label></div>
+    <div class="option"><input type="radio" name="q6" value="B"><label>Only Frame 2 appears at the start</label></div>
+    <div class="option"><input type="radio" name="q6" value="C"><label>Both frames appear at the start, then Frame 2 hides on button click</label></div>
+    <div class="option"><input type="radio" name="q6" value="D"><label>Frame 1 hides when the button is clicked</label></div>
   </div>
 </div>
 
@@ -947,12 +953,12 @@ root.mainloop()
 
     <script>
       const correctAnswers = {
-  q1: "C", // padx & pady add space around the label
-  q2: "C", // Entry shows editable text already inside
-  q3: "C", // value of variable 'message' is printed
-  q4: "C", // width & height control button box size
-  q5: "B", // three Entry boxes appear vertically
-  q6: "B"  // label, entry, button appear one below another
+  q1: "B", 
+  q2: "C", 
+  q3: "C", 
+  q4: "C", 
+  q5: "B", 
+  q6: "C" 
 };
 
       const QUIZ_DURATION = 180;
