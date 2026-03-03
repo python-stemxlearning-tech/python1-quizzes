@@ -961,30 +961,44 @@ finally:
   </div>
 </div>
 
-<!-- Q10 -->
+<!-- Q10 (HARD – Frame Nesting with Visible Separation) -->
 <div class="question-block">
   <div class="question-number">10</div>
-  <div class="question-text">🧠 What will happen when the button is clicked?</div>
+  <div class="question-text">
+    🧠 What will the window look like when this program runs?
+  </div>
+
   <div class="code-box"><pre>
 from tkinter import *
-from tkinter import messagebox
-
-def show(msg=[]):
-    msg.append("Hi")
-    messagebox.showinfo("Message", msg)
 
 root = Tk()
-Button(root, text="Click", command=show).pack()
+
+frameA = Frame(root, bg="lightblue")
+frameB = Frame(root, bg="lightgreen")
+frameC = Frame(frameA, bg="pink")
+
+Label(frameA, text="A").pack(pady=5)
+Label(frameC, text="C").pack(padx=10, pady=10)
+Label(frameB, text="B").pack(pady=5)
+
+frameC.pack(pady=10)
+frameA.pack(pady=10)
+frameB.pack(pady=10)
+
 root.mainloop()
 </pre></div>
+
   <div class="options">
-    <div class="option"><input type="radio" name="q10" value="A"><label>Popup shows ['Hi'] every time</label></div>
-    <div class="option"><input type="radio" name="q10" value="B"><label>Popup shows growing list ['Hi'], ['Hi','Hi'], ...</label></div>
-    <div class="option"><input type="radio" name="q10" value="C"><label>Error occurs on button click</label></div>
-    <div class="option"><input type="radio" name="q10" value="D"><label>Nothing happens</label></div>
+    <div class="option"><input type="radio" name="q10" value="A">
+      <label>Frame A contains Frame C, and Frame B appears below them</label></div>
+    <div class="option"><input type="radio" name="q10" value="B">
+      <label>Frame C appears separately above Frame A</label></div>
+    <div class="option"><input type="radio" name="q10" value="C">
+      <label>All three frames appear side by side</label></div>
+    <div class="option"><input type="radio" name="q10" value="D">
+      <label>An error occurs because frameC is packed before frameA</label></div>
   </div>
 </div>
-
 <!-- Q11 -->
 <div class="question-block">
   <div class="question-number">11</div>
@@ -1081,9 +1095,9 @@ print(count)
   q7: "A",   // Done (finally overrides return)
   q8: "C",   // ValueError + End
   q9: "B",   // Correct file read using variable
-  q10: "B",  // Half circle (ARC)
+  q10: "A",  // Half circle (ARC)
   q11: "A",  // 105 (StringVar string concatenation)
-  q12: "A;"   // Program crashes (file not defined in finally)
+  q12: "A"   // Program crashes (file not defined in finally)
 };
 
       const QUIZ_DURATION = 900;

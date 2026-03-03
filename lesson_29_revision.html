@@ -880,14 +880,29 @@ canvas.pack()
   </div>
 
   <div class="question-text">
-    Which statement is CORRECT?
+    Which statement correctly describes this Canvas?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q5" value="A"><label>Canvas resizes automatically</label></div>
-    <div class="option"><input type="radio" name="q5" value="B"><label>Canvas size depends on window size</label></div>
-    <div class="option"><input type="radio" name="q5" value="C"><label>Canvas size is fixed by width and height</label></div>
-    <div class="option"><input type="radio" name="q5" value="D"><label>Canvas needs bg to draw shapes</label></div>
+    <div class="option">
+      <input type="radio" name="q5" value="A">
+      <label>The Canvas will always be 300×200 pixels unless changed later.</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q5" value="B">
+      <label>The Canvas automatically adjusts its size based on shapes drawn inside it.</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q5" value="C">
+      <label>The Canvas size is controlled only by the root window size.</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="q5" value="D">
+      <label>The Canvas cannot display shapes unless a background color is provided.</label>
+    </div>
   </div>
 </div>
 
@@ -918,38 +933,38 @@ root.mainloop()
   </div>
 
   <div class="question-text">
-    Which statement best explains what the <code>draw</code> function does in this program?
+    What will be the visible result of calling <code>draw(c, numbers)</code>?
   </div>
 
- <div class="options">
-  <div class="option">
-    <input type="radio" name="q6" value="A">
-    <label>
-      It draws one line for each value in the list using the same Canvas
-    </label>
-  </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q6" value="A">
+      <label>
+        Three horizontal lines will be drawn at different vertical positions.
+      </label>
+    </div>
 
-  <div class="option">
-    <input type="radio" name="q6" value="B">
-    <label>
-      It redraws a single line multiple times during the loop execution
-    </label>
-  </div>
+    <div class="option">
+      <input type="radio" name="q6" value="B">
+      <label>
+        Only one horizontal line will appear because each new line replaces the previous one.
+      </label>
+    </div>
 
-  <div class="option">
-    <input type="radio" name="q6" value="C">
-    <label>
-      It processes all values in the list but draws only one line
-    </label>
-  </div>
+    <div class="option">
+      <input type="radio" name="q6" value="C">
+      <label>
+        No lines will appear because drawing happens only inside mainloop().
+      </label>
+    </div>
 
-  <div class="option">
-    <input type="radio" name="q6" value="D">
-    <label>
-      It draws lines only after <code>mainloop()</code> begins execution
-    </label>
+    <div class="option">
+      <input type="radio" name="q6" value="D">
+      <label>
+        Three vertical lines will be drawn.
+      </label>
+    </div>
   </div>
-</div>
 </div>
 
 <button type="submit" class="submit-btn" id="submitBtn">
@@ -975,7 +990,7 @@ root.mainloop()
   q2: "A",
   q3: "B",
   q4: "A",
-  q5: "C",
+  q5: "A",
   q6: "A"
 };
 
