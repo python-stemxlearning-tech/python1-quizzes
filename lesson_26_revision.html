@@ -926,7 +926,7 @@ root.mainloop()
   </div>
 </div>
 
-<!-- Question 6 (HARD – Frame Parenting + Layout Reasoning) -->
+<!-- Question 6 (HARD – Frame Parenting + Missing pack() Logic) -->
 <div class="question-block">
   <div class="question-number">6</div>
   <div class="question-text">
@@ -939,27 +939,27 @@ from tkinter import *
 
 root = Tk()
 
-frame1 = Frame(root, bg="lightblue", padx=10, pady=10)
-frame2 = Frame(frame1, bg="lightgreen", padx=10, pady=10)
+frame1 = Frame(root, bg="lightblue")
+frame2 = Frame(root, bg="lightgreen")
 
-Label(frame2, text="Hello").pack()
+Label(frame1, text="Frame 1").pack()
+Label(frame2, text="Frame 2").pack()
 
 frame2.pack()
-frame1.pack()
 
 root.mainloop()
     </pre>
   </div>
 
   <div class="question-text">
-    Which statement correctly describes the output?
+    What will appear on the screen?
   </div>
 
   <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>Only a light green box with text appears</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>A light blue frame contains a light green frame with text</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>Two separate frames appear one below the other</label></div>
-    <div class="option"><input type="radio" name="q6" value="D"><label>An error occurs due to incorrect packing order</label></div>
+    <div class="option"><input type="radio" name="q6" value="A"><label>Both Frame 1 and Frame 2 appear</label></div>
+    <div class="option"><input type="radio" name="q6" value="B"><label>Only Frame 1 appears</label></div>
+    <div class="option"><input type="radio" name="q6" value="C"><label>Only Frame 2 appears</label></div>
+    <div class="option"><input type="radio" name="q6" value="D"><label>An error occurs because frame1 is not packed</label></div>
   </div>
 </div>
 
@@ -988,7 +988,7 @@ root.mainloop()
   q3: "B", // get() reads input and prints "Name: Shweta" in console
   q4: "C", // delete() runs only when the Clear button is clicked
   q5: "B", // Entry appears above Label due to pack() order
-  q6: "B"  // pady adds vertical space around widgets
+  q6: "C"  // pady adds vertical space around widgets
 };
 
       const QUIZ_DURATION = 300;
