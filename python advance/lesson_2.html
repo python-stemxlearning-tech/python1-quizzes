@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 1 Quiz</title>
+    <title>STEMxLearning - Lesson 2 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -716,8 +716,8 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 1 Quiz</h1>
-        <p class="quiz-subtitle">Basic Revision -I </p>
+        <h1 class="quiz-title">🎯 Lesson 2 Quiz</h1>
+        <p class="quiz-subtitle">Functions and Recursion  </p>
       </div>
 
       <div class="timer-section">
@@ -732,9 +732,9 @@
       </div>
 
       <div class="content">
-      <form id="quizForm">
+    <form id="quizForm">
 
-<!-- Question 1 (VERY EASY – Tuple Confusion) -->
+<!-- Question 1 (EASY–MEDIUM – Function + String Length) -->
 <div class="question-block">
   <div class="question-number">1</div>
   <div class="question-text">
@@ -742,19 +742,21 @@
   </div>
   <div class="code-box">
 <pre>
-data = (5)
-print(type(data))
+def process(text):
+    return len(text + "AI")
+
+print(process("Code"))
 </pre>
   </div>
   <div class="options">
     <div class="option">
-      <input type="radio" name="q1" value="A" /><label>&lt;class 'tuple'&gt;</label>
+      <input type="radio" name="q1" value="A" /><label>4</label>
     </div>
     <div class="option">
-      <input type="radio" name="q1" value="B" /><label>&lt;class 'int'&gt;</label>
+      <input type="radio" name="q1" value="B" /><label>5</label>
     </div>
     <div class="option">
-      <input type="radio" name="q1" value="C" /><label>&lt;class 'list'&gt;</label>
+      <input type="radio" name="q1" value="C" /><label>6</label>
     </div>
     <div class="option">
       <input type="radio" name="q1" value="D" /><label>Error</label>
@@ -762,7 +764,7 @@ print(type(data))
   </div>
 </div>
 
-<!-- Question 2 (EASY – Negative Indexing) -->
+<!-- Question 2 (EASY–MEDIUM – List Modification in Function) -->
 <div class="question-block">
   <div class="question-number">2</div>
   <div class="question-text">
@@ -770,27 +772,32 @@ print(type(data))
   </div>
   <div class="code-box">
 <pre>
-nums = [10, 20, 30, 40]
-print(nums[-3])
+def add_item(lst):
+    lst.append(50)
+
+nums = [10, 20]
+add_item(nums)
+
+print(nums)
 </pre>
   </div>
   <div class="options">
     <div class="option">
-      <input type="radio" name="q2" value="A" /><label>10</label>
+      <input type="radio" name="q2" value="A" /><label>[10, 20]</label>
     </div>
     <div class="option">
-      <input type="radio" name="q2" value="B" /><label>20</label>
+      <input type="radio" name="q2" value="B" /><label>[10, 20, 50]</label>
     </div>
     <div class="option">
-      <input type="radio" name="q2" value="C" /><label>30</label>
+      <input type="radio" name="q2" value="C" /><label>[50]</label>
     </div>
     <div class="option">
-      <input type="radio" name="q2" value="D" /><label>40</label>
+      <input type="radio" name="q2" value="D" /><label>Error</label>
     </div>
   </div>
 </div>
 
-<!-- Question 3 (EASY – String Slicing with Step) -->
+<!-- Question 3 (EASY–MEDIUM – Missing Return Value) -->
 <div class="question-block">
   <div class="question-number">3</div>
   <div class="question-text">
@@ -798,48 +805,55 @@ print(nums[-3])
   </div>
   <div class="code-box">
 <pre>
-text = "PythonProgramming"
-print(text[2:10:2])
+def multiply(a, b):
+    result = a * b
+
+print(multiply(3, 4))
 </pre>
   </div>
   <div class="options">
     <div class="option">
-      <input type="radio" name="q3" value="A" /><label>toPg</label>
+      <input type="radio" name="q3" value="A" /><label>12</label>
     </div>
     <div class="option">
-      <input type="radio" name="q3" value="B" /><label>toPo</label>
+      <input type="radio" name="q3" value="B" /><label>None</label>
     </div>
     <div class="option">
-      <input type="radio" name="q3" value="C" /><label>thoP</label>
+      <input type="radio" name="q3" value="C" /><label>0</label>
     </div>
     <div class="option">
-      <input type="radio" name="q3" value="D" /><label>thoPgr</label>
+      <input type="radio" name="q3" value="D" /><label>Error</label>
     </div>
   </div>
 </div>
 
-<!-- Question 4 (MEDIUM – Append Behavior) -->
+<!-- Question 4 (MEDIUM – Variable Scope) -->
 <div class="question-block">
   <div class="question-number">4</div>
   <div class="question-text">
-    📊 What will be the output?
+    🧠 What will be the output?
   </div>
   <div class="code-box">
 <pre>
-nums = [1, 2, 3]
-nums.append([4, 5])
-print(nums[3])
+x = 10
+
+def change():
+    x = 20
+    print(x)
+
+change()
+print(x)
 </pre>
   </div>
   <div class="options">
     <div class="option">
-      <input type="radio" name="q4" value="A" /><label>4</label>
+      <input type="radio" name="q4" value="A" /><label>20 <br/> 20</label>
     </div>
     <div class="option">
-      <input type="radio" name="q4" value="B" /><label>5</label>
+      <input type="radio" name="q4" value="B" /><label>20 <br/>10</label>
     </div>
     <div class="option">
-      <input type="radio" name="q4" value="C" /><label>[4, 5]</label>
+      <input type="radio" name="q4" value="C" /><label>10 <br/>20</label>
     </div>
     <div class="option">
       <input type="radio" name="q4" value="D" /><label>Error</label>
@@ -847,28 +861,30 @@ print(nums[3])
   </div>
 </div>
 
-<!-- Question 5 (MEDIUM – Dictionary Logic) -->
+<!-- Question 5 (MEDIUM–HARD – Lambda + Map) -->
 <div class="question-block">
   <div class="question-number">5</div>
   <div class="question-text">
-    🧠 What will be the output?
+    🔥 What will be the output?
   </div>
   <div class="code-box">
 <pre>
-data = {"a": 10, "b": 20}
-data["c"] = data["a"] + data["b"]
-print(data["c"])
+nums = [1, 2, 3]
+
+result = list(map(lambda x: x + 2, nums))
+
+print(result)
 </pre>
   </div>
   <div class="options">
     <div class="option">
-      <input type="radio" name="q5" value="A" /><label>10</label>
+      <input type="radio" name="q5" value="A" /><label>[1, 2, 3]</label>
     </div>
     <div class="option">
-      <input type="radio" name="q5" value="B" /><label>20</label>
+      <input type="radio" name="q5" value="B" /><label>[3, 4, 5]</label>
     </div>
     <div class="option">
-      <input type="radio" name="q5" value="C" /><label>30</label>
+      <input type="radio" name="q5" value="C" /><label>[2, 3, 4]</label>
     </div>
     <div class="option">
       <input type="radio" name="q5" value="D" /><label>Error</label>
@@ -876,30 +892,31 @@ print(data["c"])
   </div>
 </div>
 
-<!-- Question 6 (HARD – List Copy vs Reference) -->
+<!-- Question 6 (MEDIUM–HARD – Recursion Counting) -->
 <div class="question-block">
   <div class="question-number">6</div>
   <div class="question-text">
-    🔥 What will be the output?
+    🚀 What will be the output?
   </div>
   <div class="code-box">
 <pre>
-nums = [1, 2, 3]
-new = nums[:]
-new[0] = 100
+def count(n):
+    if n == 0:
+        return 0
+    return 1 + count(n-1)
 
-print(nums)
+print(count(4))
 </pre>
   </div>
   <div class="options">
     <div class="option">
-      <input type="radio" name="q6" value="A" /><label>[100, 2, 3]</label>
+      <input type="radio" name="q6" value="A" /><label>3</label>
     </div>
     <div class="option">
-      <input type="radio" name="q6" value="B" /><label>[1, 2, 3]</label>
+      <input type="radio" name="q6" value="B" /><label>4</label>
     </div>
     <div class="option">
-      <input type="radio" name="q6" value="C" /><label>[100]</label>
+      <input type="radio" name="q6" value="C" /><label>5</label>
     </div>
     <div class="option">
       <input type="radio" name="q6" value="D" /><label>Error</label>
@@ -923,11 +940,11 @@ print(nums)
 
     <script>
       const correctAnswers = {
-        q1: "B",
+       q1: "C",
 q2: "B",
-q3: "A",
-q4: "C",
-q5: "C",
+q3: "B",
+q4: "B",
+q5: "B",
 q6: "B",
       };
 
