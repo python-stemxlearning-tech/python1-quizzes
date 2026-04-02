@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STEMxLearning – Lesson 2 Quiz</title>
+  <title>STEMxLearning – Lesson 6 Quiz</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -437,11 +437,11 @@
 
   <!-- HEADER -->
   <div class="hdr">
-    <div class="quiz-label">Lesson 2 Quiz</div>
+    <div class="quiz-label">Lesson 6 Revision Quiz</div>
     <div class="brand">
       <span class="s">S</span><span class="t">T</span><span class="e">E</span><span class="m">M</span><span class="x">x</span><span class="l">L</span><span class="rest">earning</span>
     </div>
-    <h1>Data Cleaning/h1>
+    <h1>Linear Regression & Logistic Regression 
     <p>Answer all 6 questions · Timer starts on first answer</p>
   </div>
 
@@ -465,73 +465,183 @@
 
     <!-- Q1 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 01 · Very Easy</div>
-      <div class="q-text">What is <strong>dirty data</strong>?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 01 · Easy</div>
+      <div class="q-text">A linear regression model is trained on this data and learns the equation:<br><br>
+        <div style="background:rgba(0,0,0,0.25);border-radius:12px;padding:16px 20px;margin-bottom:14px;font-size:19px;font-weight:800;text-align:center;letter-spacing:1px;color:#f7c948;">
+          Salary = 10,000 + (20,000 × Years)
+        </div>
+        <table style="border-collapse:collapse;width:100%;margin-bottom:14px;font-size:15px;">
+          <thead>
+            <tr style="background:rgba(255,255,255,0.07);">
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Years of Experience</th>
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Salary (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">1</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">30,000</td></tr>
+            <tr style="background:rgba(255,255,255,0.03);"><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">2</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">50,000</td></tr>
+            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">3</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">70,000</td></tr>
+            <tr style="background:rgba(255,255,255,0.03);"><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">4</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">90,000</td></tr>
+          </tbody>
+        </table>
+        What salary will it predict for someone with <strong>5 years</strong> of experience?
+      </div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Data stored in a computer</span></label>
-        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">Data that has errors, gaps or mistakes</span></label>
-        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">Data that is too large</span></label>
-        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">Data collected from social media</span></label>
+        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">₹1,10,000</span></label>
+        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">₹1,50,000</span></label>
+        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">₹90,000</span></label>
+        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">₹1,00,000</span></label>
       </div>
     </div>
 
     <!-- Q2 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 02 · Easy</div>
-      <div class="q-text">A hospital is recording patient details but the <strong>blood group column</strong> for several patients is left empty. What type of dirty data is this?</div>
+      <div class="q-text">A logistic regression model outputs these probabilities for 4 patients using a decision boundary of <strong style="color:#f7c948;">0.5</strong>. How many patients will the model predict as <strong>Positive (1)</strong>?<br><br>
+        <table style="border-collapse:collapse;width:100%;margin-bottom:14px;font-size:15px;">
+          <thead>
+            <tr style="background:rgba(255,255,255,0.07);">
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Patient</th>
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Probability Output</th>
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Prediction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">P1</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#34d399;font-weight:700;">0.91</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">?</td></tr>
+            <tr style="background:rgba(255,255,255,0.03);"><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">P2</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#f87171;font-weight:700;">0.34</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">?</td></tr>
+            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">P3</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#f7c948;font-weight:700;">0.50</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">?</td></tr>
+            <tr style="background:rgba(255,255,255,0.03);"><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">P4</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#34d399;font-weight:700;">0.67</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">?</td></tr>
+          </tbody>
+        </table>
+      </div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">Outlier</span></label>
-        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">Duplicate Entry</span></label>
-        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">Missing Value</span></label>
-        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">Incorrect Label</span></label>
+        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">4</span></label>
+        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">3</span></label>
+        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">1</span></label>
+        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">2</span></label>
       </div>
     </div>
 
     <!-- Q3 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 03 · Easy</div>
-      <div class="q-text">A shopping app has a customer database. The same customer <strong>"Rahul Sharma"</strong> appears three times with the exact same phone number and address. What type of dirty data is this?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 03 · Medium-Easy</div>
+      <div class="q-text">Four scenarios are listed below. Identify which one is the <strong>wrong</strong> use of Logistic Regression:</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Missing Value</span></label>
-        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Inconsistent Format</span></label>
-        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Outlier</span></label>
-        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Duplicate Entry</span></label>
+        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Predicting if a patient has a disease — Positive or Negative</span></label>
+        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Predicting if a customer will churn — Stay or Leave</span></label>
+        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Predicting the exact temperature of a city tomorrow</span></label>
+        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Predicting if a bank transaction is fraudulent — Yes or No</span></label>
       </div>
     </div>
 
     <!-- Q4 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 04 · Medium</div>
-      <div class="q-text">A weather app records daily temperature in Delhi. One day it shows <strong>15°C</strong>, next day <strong>17°C</strong>, then suddenly <strong>850°C</strong>, then back to <strong>14°C</strong>. What should a Data Scientist do <strong>first</strong>?</div>
+      <div class="q-text">A data scientist has two problems to solve:<br><br>
+        <table style="border-collapse:collapse;width:100%;margin-bottom:14px;font-size:15px;">
+          <thead>
+            <tr style="background:rgba(255,255,255,0.07);">
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Problem</th>
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Task</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);font-weight:800;color:#6ee7f7;">Problem 1</td>
+              <td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Predict how much rain will fall tomorrow in mm</td>
+            </tr>
+            <tr style="background:rgba(255,255,255,0.03);">
+              <td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);font-weight:800;color:#a78bfa;">Problem 2</td>
+              <td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Predict whether it will rain tomorrow — Yes or No</td>
+            </tr>
+          </tbody>
+        </table>
+        Which models should she use for each problem?
+      </div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Delete 850°C immediately</span></label>
-        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Keep 850°C as it is genuine data</span></label>
-        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Investigate first — is it a recording error or a real value?</span></label>
-        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">Replace it with the average temperature</span></label>
+        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Logistic Regression for Problem 1 · Linear Regression for Problem 2</span></label>
+        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Logistic Regression for both</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Linear Regression for both</span></label>
+        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">Linear Regression for Problem 1 · Logistic Regression for Problem 2</span></label>
       </div>
     </div>
 
     <!-- Q5 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 05 · Medium</div>
-      <div class="q-text">A Data Scientist is cleaning a hospital dataset. The <strong>age column</strong> has a few empty cells. Which of the following is the <strong>BEST</strong> way to handle this?</div>
+      <div class="q-text">A logistic regression model is trained to detect whether a mango is <strong>Ripe or Unripe</strong>. Here are the results:<br><br>
+        <table style="border-collapse:collapse;width:100%;margin-bottom:14px;font-size:15px;">
+          <thead>
+            <tr style="background:rgba(255,255,255,0.07);">
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Color Score</th>
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Actual</th>
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Probability</th>
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Prediction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">8.5</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#34d399;font-weight:700;">Ripe</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">0.91</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#34d399;">Ripe ✓</td></tr>
+            <tr style="background:rgba(255,255,255,0.03);"><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">3.2</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#f87171;font-weight:700;">Unripe</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">0.28</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#34d399;">Unripe ✓</td></tr>
+            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">5.1</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#34d399;font-weight:700;">Ripe</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">0.48</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#f87171;">Unripe ✗</td></tr>
+            <tr style="background:rgba(255,255,255,0.03);"><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">7.8</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#34d399;font-weight:700;">Ripe</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">0.85</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#34d399;">Ripe ✓</td></tr>
+          </tbody>
+        </table>
+        The model got 3 out of 4 correct. A student says <em>"If we lower the decision boundary to 0.45 all 4 would be correct."</em> Is this a good idea and why?
+      </div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Delete the entire dataset and start fresh</span></label>
-        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">Fill every empty cell with the number 0</span></label>
-        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Fill the empty cells with the average age of all other patients</span></label>
-        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">Leave them empty and start analysis anyway</span></label>
+        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">No — the decision boundary can never be changed once the model is trained</span></label>
+        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">Yes — 0.45 is a standard decision boundary used in all logistic regression models</span></label>
+        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Yes — always adjust the decision boundary to get 100% on training data</span></label>
+        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">No — changing the decision boundary just to fit training data perfectly can cause the model to perform poorly on new unseen data</span></label>
       </div>
     </div>
 
     <!-- Q6 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 06 · 🔥 Hard & Tricky</div>
-      <div class="q-text">A Data Scientist is given a cricket dataset. <strong>Virat Kohli's</strong> batting average is listed as <strong>89.5</strong> while all other players average between <strong>25 and 45</strong>. A junior analyst flags this as an outlier and wants to remove it. What is the correct decision?</div>
+      <div class="q-text">A student is comparing Linear and Logistic Regression and makes this summary table. His teacher says <em>"Three rows are correct but one row has a mistake."</em> Which row has the mistake?<br><br>
+        <table style="border-collapse:collapse;width:100%;margin-bottom:14px;font-size:14px;">
+          <thead>
+            <tr style="background:rgba(255,255,255,0.07);">
+              <th style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Row</th>
+              <th style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Feature</th>
+              <th style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Linear Regression</th>
+              <th style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Logistic Regression</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);font-weight:800;color:#f7c948;">1</td>
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);">Output</td>
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);">Continuous number</td>
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);">Probability 0 to 1</td>
+            </tr>
+            <tr style="background:rgba(255,255,255,0.03);">
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);font-weight:800;color:#f7c948;">2</td>
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);">Used for</td>
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);">Regression problems</td>
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);">Classification problems</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);font-weight:800;color:#f87171;">3</td>
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);">Uses a line</td>
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);">Yes</td>
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);color:#f87171;font-weight:700;">No — uses a curve</td>
+            </tr>
+            <tr style="background:rgba(255,255,255,0.03);">
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);font-weight:800;color:#f7c948;">4</td>
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);">Example</td>
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);">Predicting price</td>
+              <td style="padding:8px 12px;border:1px solid rgba(255,255,255,0.1);">Predicting spam or not</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Remove it — any value this different is always an error</span></label>
-        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Keep it — outliers should never be removed</span></label>
-        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Keep it — it is a genuine value as Kohli is an exceptional player</span></label>
-        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Replace it with the average of all other players</span></label>
+        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Row 2 is wrong — both models are used for regression problems only</span></label>
+        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Row 4 is wrong — Linear Regression is used for spam detection not Logistic Regression</span></label>
+        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Row 1 is wrong — Linear Regression also outputs probabilities</span></label>
+        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Row 3 is wrong — Logistic Regression also uses a linear equation underneath, it just produces a curve shaped output through transformation</span></label>
       </div>
     </div>
 
@@ -682,7 +792,7 @@ function firePoppers(){
 }
 
 /* ── QUIZ LOGIC ── */
-const ANSWERS = { q1:'B', q2:'C', q3:'D', q4:'C', q5:'C', q6:'C' };
+const ANSWERS = { q1:'A', q2:'B', q3:'C', q4:'D', q5:'D', q6:'D' };
 const TOTAL = Object.keys(ANSWERS).length;
 let timeLeft=180, timerID=null, started=false, submitted=false;
 

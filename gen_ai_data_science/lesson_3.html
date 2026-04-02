@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STEMxLearning – Lesson 2 Quiz</title>
+  <title>STEMxLearning – Lesson 3 Quiz</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -437,11 +437,11 @@
 
   <!-- HEADER -->
   <div class="hdr">
-    <div class="quiz-label">Lesson 2 Quiz</div>
+    <div class="quiz-label">Lesson 3 Quiz</div>
     <div class="brand">
       <span class="s">S</span><span class="t">T</span><span class="e">E</span><span class="m">M</span><span class="x">x</span><span class="l">L</span><span class="rest">earning</span>
     </div>
-    <h1>Data Cleaning/h1>
+    <h1>Exploratory Data Analysis /h1>
     <p>Answer all 6 questions · Timer starts on first answer</p>
   </div>
 
@@ -465,73 +465,91 @@
 
     <!-- Q1 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 01 · Very Easy</div>
-      <div class="q-text">What is <strong>dirty data</strong>?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 01 · Easy</div>
+      <div class="q-text">A dataset of 5 students has these test scores: <strong>45, 60, 70, 80, 95</strong>. What is the <strong>mean</strong> of this dataset?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Data stored in a computer</span></label>
-        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">Data that has errors, gaps or mistakes</span></label>
-        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">Data that is too large</span></label>
-        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">Data collected from social media</span></label>
+        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">60</span></label>
+        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">70</span></label>
+        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">75</span></label>
+        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">80</span></label>
       </div>
     </div>
 
     <!-- Q2 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 02 · Easy</div>
-      <div class="q-text">A hospital is recording patient details but the <strong>blood group column</strong> for several patients is left empty. What type of dirty data is this?</div>
+      <div class="q-text">A teacher wants to find the <strong>middle value</strong> of her students' height data when all values are arranged in order. What measure is she looking for?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">Outlier</span></label>
-        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">Duplicate Entry</span></label>
-        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">Missing Value</span></label>
-        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">Incorrect Label</span></label>
+        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">Mean</span></label>
+        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">Standard Deviation</span></label>
+        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">Median</span></label>
+        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">Correlation</span></label>
       </div>
     </div>
 
     <!-- Q3 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 03 · Easy</div>
-      <div class="q-text">A shopping app has a customer database. The same customer <strong>"Rahul Sharma"</strong> appears three times with the exact same phone number and address. What type of dirty data is this?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 03 · Medium-Easy</div>
+      <div class="q-text">A data scientist has just received a brand new dataset. She has not built any model yet. Which of the following describes what <strong>EDA</strong> is?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Missing Value</span></label>
-        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Inconsistent Format</span></label>
-        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Outlier</span></label>
-        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Duplicate Entry</span></label>
+        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Training a machine learning model on the data</span></label>
+        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Cleaning and removing all outliers permanently</span></label>
+        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Exploring the data to understand patterns, distributions and problems before modelling</span></label>
+        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Predicting future values using past data</span></label>
       </div>
     </div>
 
     <!-- Q4 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 04 · Medium</div>
-      <div class="q-text">A weather app records daily temperature in Delhi. One day it shows <strong>15°C</strong>, next day <strong>17°C</strong>, then suddenly <strong>850°C</strong>, then back to <strong>14°C</strong>. What should a Data Scientist do <strong>first</strong>?</div>
+      <div class="q-text">A student checks the correlation between hours studied and marks scored. The result shows a correlation of <strong>0.92</strong>. What does this mean?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Delete 850°C immediately</span></label>
-        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Keep 850°C as it is genuine data</span></label>
-        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Investigate first — is it a recording error or a real value?</span></label>
-        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">Replace it with the average temperature</span></label>
+        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Students who study more tend to score less</span></label>
+        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">There is no relationship between studying and marks</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">There is a strong positive relationship — more hours means higher marks</span></label>
+        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">The data has too many outliers to conclude anything</span></label>
       </div>
     </div>
 
     <!-- Q5 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 05 · Medium</div>
-      <div class="q-text">A Data Scientist is cleaning a hospital dataset. The <strong>age column</strong> has a few empty cells. Which of the following is the <strong>BEST</strong> way to handle this?</div>
+      <div class="q-text">A dataset of daily ice cream sales shows these values:<br><br>
+        <div style="background:rgba(0,0,0,0.2);border-radius:12px;padding:14px 20px;margin-bottom:14px;font-size:18px;font-weight:700;letter-spacing:2px;text-align:center;">
+          120 &nbsp;·&nbsp; 135 &nbsp;·&nbsp; 118 &nbsp;·&nbsp; 129 &nbsp;·&nbsp; 122 &nbsp;·&nbsp; 131 &nbsp;·&nbsp; <span style="color:#f87171;">4</span> &nbsp;·&nbsp; 128
+        </div>
+        What should a data scientist do when they spot the value <strong>4</strong> in this dataset?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Delete the entire dataset and start fresh</span></label>
-        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">Fill every empty cell with the number 0</span></label>
-        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Fill the empty cells with the average age of all other patients</span></label>
-        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">Leave them empty and start analysis anyway</span></label>
+        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Delete it immediately — it is clearly wrong</span></label>
+        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">Ignore it — small values are normal in any dataset</span></label>
+        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Investigate it first — check if it was a data entry error, a holiday, or a genuine slow day</span></label>
+        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">Replace it with the mean of the other values straight away</span></label>
       </div>
     </div>
 
     <!-- Q6 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 06 · 🔥 Hard & Tricky</div>
-      <div class="q-text">A Data Scientist is given a cricket dataset. <strong>Virat Kohli's</strong> batting average is listed as <strong>89.5</strong> while all other players average between <strong>25 and 45</strong>. A junior analyst flags this as an outlier and wants to remove it. What is the correct decision?</div>
+      <div class="q-text">A data scientist is analysing two datasets:<br><br>
+        <table style="border-collapse:collapse;width:100%;margin-bottom:10px;font-size:15px;">
+          <thead>
+            <tr style="background:rgba(255,255,255,0.07);">
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Dataset</th>
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Mean</th>
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Standard Deviation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Dataset A</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">50</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">2</td></tr>
+            <tr style="background:rgba(255,255,255,0.03);"><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Dataset B</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">50</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">35</td></tr>
+          </tbody>
+        </table>
+        Which statement is correct?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Remove it — any value this different is always an error</span></label>
-        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Keep it — outliers should never be removed</span></label>
-        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Keep it — it is a genuine value as Kohli is an exceptional player</span></label>
-        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Replace it with the average of all other players</span></label>
+        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Both datasets are identical because their means are equal</span></label>
+        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Dataset A has more outliers because its standard deviation is smaller</span></label>
+        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Mean is not useful here so no comparison can be made</span></label>
+        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Dataset B has much more variation in values even though the average is the same as Dataset A</span></label>
       </div>
     </div>
 
@@ -682,7 +700,7 @@ function firePoppers(){
 }
 
 /* ── QUIZ LOGIC ── */
-const ANSWERS = { q1:'B', q2:'C', q3:'D', q4:'C', q5:'C', q6:'C' };
+const ANSWERS = { q1:'B', q2:'C', q3:'C', q4:'C', q5:'C', q6:'D' };
 const TOTAL = Object.keys(ANSWERS).length;
 let timeLeft=180, timerID=null, started=false, submitted=false;
 

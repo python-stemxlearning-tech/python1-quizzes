@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STEMxLearning – Lesson 2 Quiz</title>
+  <title>STEMxLearning – Lesson 4 Quiz</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -437,11 +437,11 @@
 
   <!-- HEADER -->
   <div class="hdr">
-    <div class="quiz-label">Lesson 2 Quiz</div>
+    <div class="quiz-label">Lesson 4 Quiz</div>
     <div class="brand">
       <span class="s">S</span><span class="t">T</span><span class="e">E</span><span class="m">M</span><span class="x">x</span><span class="l">L</span><span class="rest">earning</span>
     </div>
-    <h1>Data Cleaning/h1>
+    <h1>🐍 String & Its Operations</h1>
     <p>Answer all 6 questions · Timer starts on first answer</p>
   </div>
 
@@ -466,72 +466,80 @@
     <!-- Q1 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 01 · Very Easy</div>
-      <div class="q-text">What is <strong>dirty data</strong>?</div>
+      <div class="q-text">Which of the following is a valid string in Python?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Data stored in a computer</span></label>
-        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">Data that has errors, gaps or mistakes</span></label>
-        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">Data that is too large</span></label>
-        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">Data collected from social media</span></label>
+        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Hello</span></label>
+        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">'Hello'</span></label>
+        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">Hello"</span></label>
+        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">@Hello</span></label>
       </div>
     </div>
 
     <!-- Q2 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 02 · Easy</div>
-      <div class="q-text">A hospital is recording patient details but the <strong>blood group column</strong> for several patients is left empty. What type of dirty data is this?</div>
+      <div class="q-text">Which of the following can be used to create a string in Python?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">Outlier</span></label>
-        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">Duplicate Entry</span></label>
-        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">Missing Value</span></label>
-        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">Incorrect Label</span></label>
+        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">' '  (single quotes)</span></label>
+        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">" "  (double quotes)</span></label>
+        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">""" """  (triple quotes)</span></label>
+        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">All of the above</span></label>
       </div>
     </div>
 
     <!-- Q3 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 03 · Easy</div>
-      <div class="q-text">A shopping app has a customer database. The same customer <strong>"Rahul Sharma"</strong> appears three times with the exact same phone number and address. What type of dirty data is this?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 03 · Medium</div>
+      <div class="q-text">What will be the output?</div>
+      <pre>word = "PROGRAM"
+print(word[1:5])</pre>
       <div class="options">
-        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Missing Value</span></label>
-        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Inconsistent Format</span></label>
-        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Outlier</span></label>
-        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Duplicate Entry</span></label>
+        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">PROG</span></label>
+        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">ROGR</span></label>
+        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">ROGRA</span></label>
+        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">ROG</span></label>
       </div>
     </div>
 
     <!-- Q4 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 04 · Medium</div>
-      <div class="q-text">A weather app records daily temperature in Delhi. One day it shows <strong>15°C</strong>, next day <strong>17°C</strong>, then suddenly <strong>850°C</strong>, then back to <strong>14°C</strong>. What should a Data Scientist do <strong>first</strong>?</div>
+      <div class="q-text">What will be printed?</div>
+      <pre>print("Hi\nPython")</pre>
       <div class="options">
-        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Delete 850°C immediately</span></label>
-        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Keep 850°C as it is genuine data</span></label>
-        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Investigate first — is it a recording error or a real value?</span></label>
-        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">Replace it with the average temperature</span></label>
+        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">HiPython</span></label>
+        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Hi Python</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Hi &nbsp; (newline) &nbsp; Python</span></label>
+        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">Error</span></label>
       </div>
     </div>
 
     <!-- Q5 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 05 · Medium</div>
-      <div class="q-text">A Data Scientist is cleaning a hospital dataset. The <strong>age column</strong> has a few empty cells. Which of the following is the <strong>BEST</strong> way to handle this?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 05 · Medium+</div>
+      <div class="q-text">What will be printed?</div>
+      <pre>a = "Py"
+b = "thon"
+print(a + b.upper())</pre>
       <div class="options">
-        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Delete the entire dataset and start fresh</span></label>
-        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">Fill every empty cell with the number 0</span></label>
-        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Fill the empty cells with the average age of all other patients</span></label>
-        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">Leave them empty and start analysis anyway</span></label>
+        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Python</span></label>
+        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">PyTHON</span></label>
+        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">PYTHON</span></label>
+        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">Error</span></label>
       </div>
     </div>
 
     <!-- Q6 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 06 · 🔥 Hard & Tricky</div>
-      <div class="q-text">A Data Scientist is given a cricket dataset. <strong>Virat Kohli's</strong> batting average is listed as <strong>89.5</strong> while all other players average between <strong>25 and 45</strong>. A junior analyst flags this as an outlier and wants to remove it. What is the correct decision?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 06 · 🔥 Hard</div>
+      <div class="q-text">What will be printed?</div>
+      <pre>name = "python"
+print(f"Lang:\n{name[1:4].upper()}")</pre>
       <div class="options">
-        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Remove it — any value this different is always an error</span></label>
-        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Keep it — outliers should never be removed</span></label>
-        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Keep it — it is a genuine value as Kohli is an exceptional player</span></label>
-        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Replace it with the average of all other players</span></label>
+        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Lang: YTH</span></label>
+        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Lang: &nbsp; (newline) &nbsp; YTH</span></label>
+        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Lang: yth</span></label>
+        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Error</span></label>
       </div>
     </div>
 
@@ -539,6 +547,7 @@
       <button type="submit" class="submit-btn" id="submitBtn">🎉 Submit Answers</button>
     </div>
   </form>
+
   <!-- RESULT -->
   <div class="result-panel" id="resultPanel">
     <span class="res-emoji" id="resEmoji"></span>
@@ -682,7 +691,7 @@ function firePoppers(){
 }
 
 /* ── QUIZ LOGIC ── */
-const ANSWERS = { q1:'B', q2:'C', q3:'D', q4:'C', q5:'C', q6:'C' };
+const ANSWERS = { q1:'B', q2:'D', q3:'B', q4:'C', q5:'B', q6:'B' };
 const TOTAL = Object.keys(ANSWERS).length;
 let timeLeft=180, timerID=null, started=false, submitted=false;
 
