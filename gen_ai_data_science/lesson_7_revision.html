@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STEMxLearning – Lesson 3 Quiz</title>
+  <title>STEMxLearning – Lesson 7 Quiz</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -437,11 +437,12 @@
 
   <!-- HEADER -->
   <div class="hdr">
-    <div class="quiz-label">Lesson 3 Revision Quiz</div>
+    <div class="quiz-label">Lesson 7 Revision  Quiz</div>
     <div class="brand">
       <span class="s">S</span><span class="t">T</span><span class="e">E</span><span class="m">M</span><span class="x">x</span><span class="l">L</span><span class="rest">earning</span>
     </div>
-    <h1>Exploratory Data Analysis 
+    <h1>Model Testing & Evaluation
+
     <p>Answer all 6 questions · Timer starts on first answer</p>
   </div>
 
@@ -461,91 +462,104 @@
   <div class="prog-wrap"><div class="prog-fill" id="progFill"></div></div>
 
   <!-- QUIZ FORM -->
-  <form id="quizForm">
+<form id="quizForm">
 
     <!-- Q1 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 01 · Easy</div>
-      <div class="q-text">A dataset has these 5 values: <strong>10, 20, 30, 40, 200</strong><br><br>The mean is <strong>60</strong> but the median is <strong>30</strong>. Why is the median so much lower than the mean here?</div>
+      <div class="q-text">A dataset has <strong>800 healthy patients</strong> and <strong>200 sick patients</strong>. A model always predicts <strong>"Healthy"</strong> for everyone. What accuracy does it get?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">The median was calculated wrongly</span></label>
-        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">The value 200 is pulling the mean upward making it unrepresentative</span></label>
-        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">Mean and median are always different in every dataset</span></label>
-        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">The dataset is too small to calculate mean correctly</span></label>
+        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">50%</span></label>
+        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">70%</span></label>
+        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">80%</span></label>
+        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">100%</span></label>
       </div>
     </div>
 
     <!-- Q2 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 02 · Easy</div>
-      <div class="q-text">Which of these correlation values shows the <strong>strongest relationship</strong> between two columns?</div>
+      <div class="q-text">In a confusion matrix, the model predicted <strong>YES</strong> but the actual answer was <strong>NO</strong>. What is this called?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">0.3</span></label>
-        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">-0.1</span></label>
-        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">0.6</span></label>
-        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">-0.95</span></label>
+        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">True Positive</span></label>
+        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">True Negative</span></label>
+        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">False Positive</span></label>
+        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">False Negative</span></label>
       </div>
     </div>
 
     <!-- Q3 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 03 · Medium-Easy</div>
-      <div class="q-text">A data scientist finds that <strong>ice cream sales</strong> and <strong>number of drownings</strong> are strongly correlated. She concludes: <em>"Ice cream causes drowning."</em> What is wrong with her thinking?</div>
+      <div class="q-text">A model is built to detect <strong>fraudulent bank transactions</strong>. There are <strong>50 actual fraud cases</strong>. The model caught <strong>35 of them</strong>. What is the recall and which direction should the team push it?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Correlation value must be above 0.99 to be valid</span></label>
-        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Correlation can only be measured between numerical columns</span></label>
-        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Correlation shows relationship between two things but does not mean one causes the other</span></label>
-        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">She should have used median instead of correlation here</span></label>
+        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Recall = 60%, push precision higher instead</span></label>
+        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Recall = 70%, push it higher because missing fraud is costly</span></label>
+        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Recall = 70%, it is already good enough</span></label>
+        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Recall = 35%, precision matters more in fraud detection</span></label>
       </div>
     </div>
 
     <!-- Q4 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 04 · Medium</div>
-      <div class="q-text">A data scientist generates summary statistics for a salary dataset and gets this:<br><br>
-        <table style="border-collapse:collapse;width:100%;margin-bottom:10px;font-size:15px;">
-          <thead>
-            <tr style="background:rgba(255,255,255,0.07);">
-              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Statistic</th>
-              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Mean</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">₹85,000</td></tr>
-            <tr style="background:rgba(255,255,255,0.03);"><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Median</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">₹42,000</td></tr>
-            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Standard Deviation</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">₹1,20,000</td></tr>
-          </tbody>
-        </table>
-        What can she correctly conclude from this?</div>
+      <div class="q-text">A model has <strong>Precision = 0.72</strong> and <strong>Recall = 0.68</strong>. A data scientist calculates the F1 Score. Which range does it fall in?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">The dataset is perfectly balanced with no unusual values</span></label>
-        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Most employees earn around ₹85,000 per month</span></label>
-        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">A few very high salaries are skewing the mean upward and the data is highly spread out</span></label>
-        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">Standard deviation of ₹1,20,000 means the data has errors and must be cleaned first</span></label>
+        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Below 0.50</span></label>
+        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Between 0.50 and 0.65</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Between 0.65 and 0.75</span></label>
+        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">Above 0.90</span></label>
       </div>
     </div>
 
     <!-- Q5 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 05 · Medium</div>
-      <div class="q-text">A student is doing EDA on an exam results dataset. She finds that students who sleep less than 5 hours consistently score below 40 marks, while students who sleep 7 to 9 hours mostly score above 70. What has she discovered during EDA?</div>
+      <div class="q-text">A student trains a model and gets these results:<br><br>
+        <table style="border-collapse:collapse;width:100%;margin-bottom:10px;font-size:15px;">
+          <thead>
+            <tr style="background:rgba(255,255,255,0.07);">
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;"></th>
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Training</th>
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Test</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Accuracy</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">62%</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">59%</td></tr>
+          </tbody>
+        </table>
+        What is the problem and what is the root cause?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">An outlier in the sleep column</span></label>
-        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">A pattern — a relationship between sleep hours and exam performance</span></label>
-        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">A duplicate entry in the marks column</span></label>
-        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">The standard deviation of sleep hours is too high</span></label>
+        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Overfitting — high variance</span></label>
+        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">Underfitting — high bias</span></label>
+        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Overfitting — high bias</span></label>
+        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">The model is performing well — no problem here</span></label>
       </div>
     </div>
 
     <!-- Q6 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 06 · 🔥 Hard & Tricky</div>
-      <div class="q-text">A data scientist is analysing a hospital dataset. She notices that patient age has a standard deviation of <strong>2.1</strong> and patient bill amount has a standard deviation of <strong>₹1,40,000</strong>. A colleague says <em>"The bill amount column is full of errors because its standard deviation is so high compared to age."</em> Is the colleague correct?</div>
+      <div class="q-text">A data scientist builds two models for the same problem:<br><br>
+        <table style="border-collapse:collapse;width:100%;margin-bottom:10px;font-size:15px;">
+          <thead>
+            <tr style="background:rgba(255,255,255,0.07);">
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;"></th>
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Training Accuracy</th>
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Test Accuracy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Model A</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">97%</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">61%</td></tr>
+            <tr style="background:rgba(255,255,255,0.03);"><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Model B</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">74%</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">72%</td></tr>
+          </tbody>
+        </table>
+        The manager says <em>"Model A is better because it has higher overall accuracy."</em> Why is the manager wrong?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Yes — a high standard deviation always means the data has errors</span></label>
-        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Yes — both columns should have a similar standard deviation</span></label>
-        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">No — standard deviation depends on the scale of the data. Bills naturally vary by lakhs while ages vary by a few years</span></label>
-        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">No — standard deviation cannot be calculated on money columns</span></label>
+        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Training accuracy is always irrelevant so Model A cannot be evaluated</span></label>
+        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Model A is overfitting — the huge gap between training and test means it memorized the data and will fail in the real world. Model B generalizes far better.</span></label>
+        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Model B is underfitting because its training accuracy is only 74%</span></label>
+        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Both models have the same problem — neither has above 80% test accuracy</span></label>
       </div>
     </div>
 
@@ -697,7 +711,7 @@ function firePoppers(){
 }
 
 /* ── QUIZ LOGIC ── */
-const ANSWERS = { q1:'B', q2:'D', q3:'C', q4:'C', q5:'B', q6:'C' };
+const ANSWERS = { q1:'C', q2:'C', q3:'B', q4:'C', q5:'B', q6:'B' };
 const TOTAL = Object.keys(ANSWERS).length;
 let timeLeft=180, timerID=null, started=false, submitted=false;
 

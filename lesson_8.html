@@ -854,20 +854,20 @@ print(a and b)
 </div>
 
 
-<!-- Question 6 (MEDIUM – escape sequence + slicing) -->
+<!-- Question 6 (MEDIUM – escape sequence) -->
 <div class="question-block">
   <div class="question-number">6</div>
   <div class="question-text">🧪 What will be printed?</div>
   <div class="code-box">
     <pre>
-text = "Hello\\nWorld"
-print(text[5:])
+text = "Hello\nWorld"
+print(text)
 </pre>
   </div>
   <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>\nWorld</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>World</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>nWorld</label></div>
+    <div class="option"><input type="radio" name="q6" value="A"><label>Hello\nWorld</label></div>
+    <div class="option"><input type="radio" name="q6" value="B"><label>Hello World</label></div>
+    <div class="option"><input type="radio" name="q6" value="C"><label>Hello<br>World</label></div>
     <div class="option"><input type="radio" name="q6" value="D"><label>Error</label></div>
   </div>
 </div>
@@ -1051,7 +1051,7 @@ print(x * y)
   q3: "B", // YTH
   q4: "B", // No
   q5: "B", // False
-  q6: "A", // \nWorld
+  q6: "C", // \nWorld
   q7: "B", // 7
   q8: "B", // False
   q9: "A", // (empty string)
