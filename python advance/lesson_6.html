@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 10 Revision Quiz</title>
+    <title>STEMxLearning - Lesson 6 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -27,6 +27,18 @@
         animation: gradientShift 15s ease infinite;
         min-height: 100vh;
         padding: 20px;
+      }
+      pre {
+        background: #0f172a;
+        color: #e5e7eb;
+        padding: 16px 20px;
+        border-radius: 12px;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 15px 0;
+        overflow-x: auto;
+        font-family: "Poppins", monospace;
+        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.1);
       }
 
       @keyframes gradientShift {
@@ -640,18 +652,6 @@
         left: 80%;
         animation-delay: 2s;
       }
-      pre {
-        background: #0f172a;
-        color: #e5e7eb;
-        padding: 16px 20px;
-        border-radius: 12px;
-        font-size: 20px;
-        font-weight: 600;
-        margin: 15px 0;
-        overflow-x: auto;
-        font-family: "Poppins", monospace;
-        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.1);
-      }
 
       .shape:nth-child(3) {
         top: 30%;
@@ -716,8 +716,8 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 10 Revision Quiz</h1>
-        <p class="quiz-subtitle">Advanced List Concepts & Tuples</p>
+        <h1 class="quiz-title">🎯 Lesson 6 Quiz</h1>
+        <p class="quiz-subtitle">Searching Algorithms – II</p>
       </div>
 
       <div class="timer-section">
@@ -733,201 +733,249 @@
 
       <div class="content">
         <form id="quizForm">
-          <!-- Question 1 (VERY EASY – tuple vs list visual trap) -->
-          <div class="question-block">
-            <div class="question-number">1</div>
-            <div class="question-text">🧩 What will be printed?</div>
-            <div class="code-box">
-              <pre>
-x = (1, 2)
-y = [1, 2]
-print(type(x) == type(y))
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q1" value="A" />
-                <label>True</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q1" value="B" />
-                <label>False</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q1" value="C" />
-                <label>Error</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q1" value="D" />
-                <label>None</label>
-              </div>
-            </div>
-          </div>
 
-          <!-- Question 2 (EASY – list containing tuple + negative index) -->
-          <div class="question-block">
-            <div class="question-number">2</div>
-            <div class="question-text">📋 What will this code print?</div>
-            <div class="code-box">
-              <pre>
-data = [100, (200, 300, 400), 500]
-print(data[1][-2])
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q2" value="A" />
-                <label>200</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q2" value="B" />
-                <label>300</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q2" value="C" />
-                <label>400</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q2" value="D" />
-                <label>Error</label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Question 3 (EASY – tuple inside list, reassignment vs mutation) -->
-          <div class="question-block">
-            <div class="question-number">3</div>
-            <div class="question-text">🧠 What will be printed?</div>
-            <div class="code-box">
-              <pre>
-a = [(1, 2), (3, 4)]
-a[0] = (9, 9)
-print(a)
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q3" value="A" />
-                <label>[(1, 2), (3, 4)]</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q3" value="B" />
-                <label>[(9, 9), (3, 4)]</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q3" value="C" />
-                <label>Error</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q3" value="D" />
-                <label>[(9, 2), (3, 4)]</label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Question 4 (MEDIUM – tuple containing list containing tuple) -->
-          <div class="question-block">
-  <div class="question-number">4</div>
-  <div class="question-text">⚠️ What will be the output?</div>
+<!-- Question 1 -->
+<div class="question-block">
+  <div class="question-number">1</div>
+  <div class="question-text">
+    💡 What will be the output?
+  </div>
   <div class="code-box">
-    <pre>
-t = ([1, 2, 3], 4)
-t[0][1] = 99
-print(t)
+<pre>
+numbers = [1, 3, 5, 8, 12, 16, 23]
+target = 1
+
+low = 0
+high = len(numbers) - 1
+
+while low <= high:
+    mid = (low + high) // 2
+    if numbers[mid] == target:
+        print("Found at index:", mid)
+        break
+    elif numbers[mid] < target:
+        low = mid + 1
+    else:
+        high = mid - 1
+else:
+    print("Not found")
+</pre>
+  </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q1" value="A" />
+      <label>Found at index: 0</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q1" value="B" />
+      <label>Found at index: 1</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q1" value="C" />
+      <label>Found at index: 3</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q1" value="D" />
+      <label>Not found</label>
+    </div>
+  </div>
+</div>
+
+
+<!-- Question 2 -->
+<div class="question-block">
+  <div class="question-number">2</div>
+  <div class="question-text">
+    🔎 A binary search is performed on a sorted list of 1024 elements. What is the maximum number of steps it will take?
+  </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q2" value="A" />
+      <label>1024</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q2" value="B" />
+      <label>512</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q2" value="C" />
+      <label>20</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q2" value="D" />
+      <label>10</label>
+    </div>
+  </div>
+</div>
+
+
+<!-- Question 3 -->
+<div class="question-block">
+  <div class="question-number">3</div>
+  <div class="question-text">
+    ⚙️ What will be the output?
+  </div>
+  <div class="code-box">
+<pre>
+numbers = [2, 4, 6, 8, 10]
+target = 7
+
+low = 0
+high = len(numbers) - 1
+
+while low <= high:
+    mid = (low + high) // 2
+    if numbers[mid] == target:
+        print("Found at index:", mid)
+        break
+    elif numbers[mid] < target:
+        low = mid + 1
+    else:
+        high = mid - 1
+else:
+    print("Not found")
+</pre>
+  </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q3" value="A" />
+      <label>Found at index: 3</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q3" value="B" />
+      <label>Found at index: 2</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q3" value="C" />
+      <label>Not found</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q3" value="D" />
+      <label>Error</label>
+    </div>
+  </div>
+</div>
+
+
+<!-- Question 4 -->
+<div class="question-block">
+  <div class="question-number">4</div>
+  <div class="question-text">
+    🧠 Binary search is applied on this list to find 9. What happens?
+  </div>
+  <div class="code-box">
+<pre>
+numbers = [9, 3, 1, 7, 5]
 </pre>
   </div>
   <div class="options">
     <div class="option">
       <input type="radio" name="q4" value="A" />
-      <label>([1, 99, 3], 4)</label>
+      <label>Found at index 0</label>
     </div>
     <div class="option">
       <input type="radio" name="q4" value="B" />
-      <label>Error</label>
+      <label>Found at index 4</label>
     </div>
     <div class="option">
       <input type="radio" name="q4" value="C" />
-      <label>([1, 2, 3], 4)</label>
+      <label>Not found</label>
     </div>
     <div class="option">
       <input type="radio" name="q4" value="D" />
-      <label>(99, 4)</label>
+      <label>Wrong result because list is not sorted</label>
     </div>
   </div>
 </div>
 
-          <!-- Question 5 (MEDIUM – slicing + built-ins + order confusion) -->
-          <div class="question-block">
-            <div class="question-number">5</div>
-            <div class="question-text">🔢 What will this print?</div>
-            <div class="code-box">
-              <pre>
-t = (7, 2, 9, 4, 1)
-x = sorted(t[1:4])
-print(x[0] + x[-1])
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q5" value="A" />
-                <label>6</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q5" value="B" />
-                <label>11</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q5" value="C" />
-                <label>13</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q5" value="D" />
-                <label>Error</label>
-              </div>
-            </div>
-          </div>
 
-          <!-- Question 6 (HARD – deep nesting + slice + len trap) -->
-          <div class="question-block">
-            <div class="question-number">6</div>
-            <div class="question-text">🔥 What will be the output?</div>
-            <div class="code-box">
-              <pre>
-data = [(1, 2), [3, (4, 5, 6)], 7]
-x = data[1][1][1:]
-print(len(x), x)
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q6" value="A" />
-                <label>2 (5, 6)</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q6" value="B" />
-                <label>3 (4, 5, 6)</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q6" value="C" />
-                <label>2 [5, 6]</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q6" value="D" />
-                <label>Error</label>
-              </div>
-            </div>
-          </div>
+<!-- Question 5 -->
+<div class="question-block">
+  <div class="question-number">5</div>
+  <div class="question-text">
+    🚀 What will be the output?
+  </div>
+  <div class="code-box">
+<pre>
+numbers = [1, 3, 5, 8, 12, 16, 23]
 
-          <button type="submit" class="submit-btn" id="submitBtn">
-            <span>🎉 Submit My Answers! 🎉</span>
-          </button>
-        </form>
+low = 0
+high = len(numbers) - 1
+mid = (low + high) // 2
 
+print(numbers[mid])
+</pre>
+  </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q5" value="A" />
+      <label>1</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q5" value="B" />
+      <label>8</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q5" value="C" />
+      <label>12</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q5" value="D" />
+      <label>23</label>
+    </div>
+  </div>
+</div>
+
+
+<!-- Question 6 -->
+<div class="question-block">
+  <div class="question-number">6</div>
+  <div class="question-text">
+    🔥 What will be the output?
+  </div>
+  <div class="code-box">
+<pre>
+def binary_search(numbers, low, high, target):
+    if low > high:
+        return -1
+    mid = (low + high) // 2
+    if numbers[mid] == target:
+        return mid
+    elif numbers[mid] < target:
+        return binary_search(numbers, mid + 1, high, target)
+    else:
+        return binary_search(numbers, low, mid - 1, target)
+
+numbers = [1, 3, 5, 8, 12, 16, 23]
+print(binary_search(numbers, 0, len(numbers) - 1, 16))
+</pre>
+  </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q6" value="A" />
+      <label>4</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q6" value="B" />
+      <label>5</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q6" value="C" />
+      <label>16</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q6" value="D" />
+      <label>-1</label>
+    </div>
+  </div>
+</div>
+
+
+<button type="submit" class="submit-btn" id="submitBtn">
+  <span>🎉 Submit My Answers! 🎉</span>
+</button>
+
+</form>
         <div class="result" id="result">
           <div class="result-emoji" id="resultEmoji">🎉</div>
           <div class="score-message" id="scoreMessage"></div>
@@ -939,12 +987,7 @@ print(len(x), x)
 
     <script>
       const correctAnswers = {
-        q1: "B", // tuple and list are different types → False
-        q2: "B", // data[1] = (200,300,400) → -2 index = 300
-        q3: "B", // tuple replaced inside list
-        q4: "A", // list inside tuple is mutable
-        q5: "B", // sorted(2,9,4) → [2,4,9] → 2+9 = 11
-        q6: "A", // (4,5,6)[1:] → (5,6), len = 2
+         q1:"A", q2:"D", q3:"C", q4:"D", q5:"B", q6:"B"
       };
 
       const QUIZ_DURATION = 180;
