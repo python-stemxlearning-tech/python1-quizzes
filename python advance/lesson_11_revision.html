@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 10 Revision Quiz</title>
+    <title>STEMxLearning - Lesson 11 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -27,6 +27,18 @@
         animation: gradientShift 15s ease infinite;
         min-height: 100vh;
         padding: 20px;
+      }
+      pre {
+        background: #0f172a;
+        color: #e5e7eb;
+        padding: 16px 20px;
+        border-radius: 12px;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 15px 0;
+        overflow-x: auto;
+        font-family: "Poppins", monospace;
+        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.1);
       }
 
       @keyframes gradientShift {
@@ -640,18 +652,6 @@
         left: 80%;
         animation-delay: 2s;
       }
-      pre {
-        background: #0f172a;
-        color: #e5e7eb;
-        padding: 16px 20px;
-        border-radius: 12px;
-        font-size: 20px;
-        font-weight: 600;
-        margin: 15px 0;
-        overflow-x: auto;
-        font-family: "Poppins", monospace;
-        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.1);
-      }
 
       .shape:nth-child(3) {
         top: 30%;
@@ -716,8 +716,8 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 10 Revision Quiz</h1>
-        <p class="quiz-subtitle">Advanced List Concepts & Tuples</p>
+        <h1 class="quiz-title">🎯 Lesson 11 Revision  Quiz</h1>
+        <p class="quiz-subtitle">Queue  Data Structure-I</p>
       </div>
 
       <div class="timer-section">
@@ -732,191 +732,235 @@
       </div>
 
       <div class="content">
-        <form id="quizForm">
-          <!-- Question 1 (VERY EASY – tuple vs list visual trap) -->
-          <div class="question-block">
-            <div class="question-number">1</div>
-            <div class="question-text">🧩 What will be printed?</div>
-            <div class="code-box">
-              <pre>
-x = (1, 2)
-y = [1, 2]
-print(type(x) == type(y))
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q1" value="A" />
-                <label>True</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q1" value="B" />
-                <label>False</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q1" value="C" />
-                <label>Error</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q1" value="D" />
-                <label>None</label>
-              </div>
-            </div>
-          </div>
+     <form id="quizForm">
 
-          <!-- Question 2 (EASY – list containing tuple + negative index) -->
-          <div class="question-block">
-            <div class="question-number">2</div>
-            <div class="question-text">📋 What will this code print?</div>
-            <div class="code-box">
-              <pre>
-data = [100, (200, 300, 400), 500]
-print(data[1][-2])
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q2" value="A" />
-                <label>200</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q2" value="B" />
-                <label>300</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q2" value="C" />
-                <label>400</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q2" value="D" />
-                <label>Error</label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Question 3 (EASY – tuple inside list, reassignment vs mutation) -->
-          <div class="question-block">
-            <div class="question-number">3</div>
-            <div class="question-text">🧠 What will be printed?</div>
-            <div class="code-box">
-              <pre>
-a = [(1, 2), (3, 4)]
-a[0] = (9, 9)
-print(a)
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q3" value="A" />
-                <label>[(1, 2), (3, 4)]</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q3" value="B" />
-                <label>[(9, 9), (3, 4)]</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q3" value="C" />
-                <label>Error</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q3" value="D" />
-                <label>[(9, 2), (3, 4)]</label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Question 4 (MEDIUM – tuple containing list containing tuple) -->
-     <div class="question-block">
-  <div class="question-number">4</div>
-  <div class="question-text">What will be the output?</div>
-
-  <div class="code-box">
-    <pre>
-lst = [1, 2, 3]
-lst[1] = 99
-print(lst)
-    </pre>
+<!-- Question 1 -->
+<div class="question-block">
+  <div class="question-number">1</div>
+  <div class="question-text">
+    💡 What will be the output?
   </div>
+  <div class="code-box">
+<pre>
+from collections import deque
 
+queue = deque()
+
+queue.append("A")
+queue.append("B")
+queue.append("C")
+
+queue.append(queue.popleft())
+
+print(list(queue))
+</pre>
+  </div>
   <div class="options">
-    <label><input type="radio" name="q4" /> A) [1, 99, 3]</label><br />
-    <label><input type="radio" name="q4" /> B) Error</label><br />
-    <label><input type="radio" name="q4" /> C) [1, 2, 3]</label><br />
-    <label><input type="radio" name="q4" /> D) 99</label>
+    <div class="option">
+      <input type="radio" name="q1" value="A" />
+      <label>['A', 'B', 'C']</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q1" value="B" />
+      <label>['B', 'C', 'A']</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q1" value="C" />
+      <label>['A', 'C', 'B']</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q1" value="D" />
+      <label>['C', 'B', 'A']</label>
+    </div>
   </div>
 </div>
-          <!-- Question 5 (MEDIUM – slicing + built-ins + order confusion) -->
-          <div class="question-block">
-            <div class="question-number">5</div>
-            <div class="question-text">🔢 What will this print?</div>
-            <div class="code-box">
-              <pre>
-t = (7, 2, 9, 4, 1)
-x = sorted(t[1:4])
-print(x[0] + x[-1])
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q5" value="A" />
-                <label>6</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q5" value="B" />
-                <label>11</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q5" value="C" />
-                <label>13</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q5" value="D" />
-                <label>Error</label>
-              </div>
-            </div>
-          </div>
 
-          <!-- Question 6 (HARD – deep nesting + slice + len trap) -->
-          <div class="question-block">
-            <div class="question-number">6</div>
-            <div class="question-text">🔥 What will be the output?</div>
-            <div class="code-box">
-              <pre>
-data = [(1, 2), [3, (4, 5, 6)], 7]
-x = data[1][1][1:]
-print(len(x), x)
-</pre
-              >
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q6" value="A" />
-                <label>2 (5, 6)</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q6" value="B" />
-                <label>3 (4, 5, 6)</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q6" value="C" />
-                <label>2 [5, 6]</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q6" value="D" />
-                <label>Error</label>
-              </div>
-            </div>
-          </div>
 
-          <button type="submit" class="submit-btn" id="submitBtn">
-            <span>🎉 Submit My Answers! 🎉</span>
-          </button>
-        </form>
+<!-- Question 2 -->
+<div class="question-block">
+  <div class="question-number">2</div>
+  <div class="question-text">
+    🔎 What will be the output?
+  </div>
+  <div class="code-box">
+<pre>
+from collections import deque
 
+queue = deque()
+
+sentence = "hello world"
+
+for char in sentence:
+    if char != " ":
+        queue.append(char)
+
+print(queue.popleft(), queue[-1])
+</pre>
+  </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q2" value="A" />
+      <label>h and d</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q2" value="B" />
+      <label>h and l</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q2" value="C" />
+      <label>e and d</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q2" value="D" />
+      <label>Error</label>
+    </div>
+  </div>
+</div>
+
+
+<!-- Question 3 -->
+<div class="question-block">
+  <div class="question-number">3</div>
+  <div class="question-text">
+    ⚙️ What is the key difference between how a stack and a queue remove elements?
+  </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q3" value="A" />
+      <label>Stack removes from front, Queue removes from rear</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q3" value="B" />
+      <label>Stack removes from rear, Queue removes from front</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q3" value="C" />
+      <label>Both remove from the front</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q3" value="D" />
+      <label>Both remove from the rear</label>
+    </div>
+  </div>
+</div>
+
+
+<!-- Question 4 -->
+<div class="question-block">
+  <div class="question-number">4</div>
+  <div class="question-text">
+    🧠 What will be the output?
+  </div>
+  <div class="code-box">
+<pre>
+from collections import deque
+
+q1 = deque([1, 2, 3])
+q2 = deque([4, 5, 6])
+
+while len(q2) > 0:
+    q1.append(q2.popleft())
+
+print(q1[0], q1[-1])
+</pre>
+  </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q4" value="A" />
+      <label>1 and 6</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q4" value="B" />
+      <label>4 and 6</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q4" value="C" />
+      <label>1 and 4</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q4" value="D" />
+      <label>6 and 1</label>
+    </div>
+  </div>
+</div>
+
+
+<!-- Question 5 -->
+<div class="question-block">
+  <div class="question-number">5</div>
+  <div class="question-text">
+    🚀 A student says that deque and list give the same output when used as a queue. Is the student correct?
+  </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q5" value="A" />
+      <label>No because deque uses popleft() while list uses pop(0) and they give different results</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q5" value="B" />
+      <label>Yes they give the same output but deque is faster for large data</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q5" value="C" />
+      <label>No because deque cannot store strings</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q5" value="D" />
+      <label>Yes they are exactly the same in every way</label>
+    </div>
+  </div>
+</div>
+
+
+<!-- Question 6 -->
+<div class="question-block">
+  <div class="question-number">6</div>
+  <div class="question-text">
+    🔥 What will be the output?
+  </div>
+  <div class="code-box">
+<pre>
+from collections import deque
+
+queue = deque()
+
+data = [5, 10, 15, 20, 25]
+
+for i in range(len(data)):
+    if i % 2 == 0:
+        queue.appendleft(data[i])
+    else:
+        queue.append(data[i])
+
+print(queue[0], queue[-1])
+</pre>
+  </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q6" value="A" />
+      <label>25 and 10</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q6" value="B" />
+      <label>5 and 25</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q6" value="C" />
+      <label>25 and 20</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q6" value="D" />
+      <label>15 and 10</label>
+    </div>
+  </div>
+</div>
+
+
+<button type="submit" class="submit-btn" id="submitBtn">
+  <span>🎉 Submit My Answers! 🎉</span>
+</button>
+
+</form>
         <div class="result" id="result">
           <div class="result-emoji" id="resultEmoji">🎉</div>
           <div class="score-message" id="scoreMessage"></div>
@@ -928,12 +972,7 @@ print(len(x), x)
 
     <script>
       const correctAnswers = {
-        q1: "B", // tuple and list are different types → False
-        q2: "B", // data[1] = (200,300,400) → -2 index = 300
-        q3: "B", // tuple replaced inside list
-        q4: "A", // list inside tuple is mutable
-        q5: "B", // sorted(2,9,4) → [2,4,9] → 2+9 = 11
-        q6: "A", // (4,5,6)[1:] → (5,6), len = 2
+          q1:"B", q2:"A", q3:"B", q4:"A", q5:"B", q6:"C" 
       };
 
       const QUIZ_DURATION = 180;
