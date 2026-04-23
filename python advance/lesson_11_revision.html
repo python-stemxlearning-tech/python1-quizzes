@@ -788,27 +788,25 @@ from collections import deque
 
 queue = deque()
 
-sentence = "hello world"
+queue.append(10)
+queue.appendleft(5)
+queue.append(20)
 
-for char in sentence:
-    if char != " ":
-        queue.append(char)
-
-print(queue.popleft(), queue[-1])
+print(queue[0], queue[-1])
 </pre>
   </div>
   <div class="options">
     <div class="option">
       <input type="radio" name="q2" value="A" />
-      <label>h and d</label>
+      <label>5 and 20</label>
     </div>
     <div class="option">
       <input type="radio" name="q2" value="B" />
-      <label>h and l</label>
+      <label>10 and 20</label>
     </div>
     <div class="option">
       <input type="radio" name="q2" value="C" />
-      <label>e and d</label>
+      <label>5 and 10</label>
     </div>
     <div class="option">
       <input type="radio" name="q2" value="D" />
@@ -855,31 +853,33 @@ print(queue.popleft(), queue[-1])
 <pre>
 from collections import deque
 
-q1 = deque([1, 2, 3])
-q2 = deque([4, 5, 6])
+queue = deque()
 
-while len(q2) > 0:
-    q1.append(q2.popleft())
+for i in range(1, 6):
+    if i % 2 == 0:
+        queue.appendleft(i)
+    else:
+        queue.append(i)
 
-print(q1[0], q1[-1])
+print(queue.popleft(), queue.pop())
 </pre>
   </div>
   <div class="options">
     <div class="option">
       <input type="radio" name="q4" value="A" />
-      <label>1 and 6</label>
+      <label>4 and 1</label>
     </div>
     <div class="option">
       <input type="radio" name="q4" value="B" />
-      <label>4 and 6</label>
+      <label>2 and 5</label>
     </div>
     <div class="option">
       <input type="radio" name="q4" value="C" />
-      <label>1 and 4</label>
+      <label>4 and 5</label>
     </div>
     <div class="option">
       <input type="radio" name="q4" value="D" />
-      <label>6 and 1</label>
+      <label>Error</label>
     </div>
   </div>
 </div>
@@ -924,33 +924,31 @@ from collections import deque
 
 queue = deque()
 
-data = [5, 10, 15, 20, 25]
+sentence = "hello world"
 
-for i in range(len(data)):
-    if i % 2 == 0:
-        queue.appendleft(data[i])
-    else:
-        queue.append(data[i])
+for char in sentence:
+    if char != " ":
+        queue.append(char)
 
-print(queue[0], queue[-1])
+print(queue.popleft(), queue[-1])
 </pre>
   </div>
   <div class="options">
     <div class="option">
       <input type="radio" name="q6" value="A" />
-      <label>25 and 10</label>
+      <label>h and d</label>
     </div>
     <div class="option">
       <input type="radio" name="q6" value="B" />
-      <label>5 and 25</label>
+      <label>h and l</label>
     </div>
     <div class="option">
       <input type="radio" name="q6" value="C" />
-      <label>25 and 20</label>
+      <label>e and d</label>
     </div>
     <div class="option">
       <input type="radio" name="q6" value="D" />
-      <label>15 and 10</label>
+      <label>Error</label>
     </div>
   </div>
 </div>
@@ -972,7 +970,7 @@ print(queue[0], queue[-1])
 
     <script>
       const correctAnswers = {
-          q1:"B", q2:"A", q3:"B", q4:"A", q5:"B", q6:"C" 
+          q1:"B", q2:"A", q3:"B", q4:"C", q5:"B", q6:"A"
       };
 
       const QUIZ_DURATION = 180;

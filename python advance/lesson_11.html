@@ -747,27 +747,24 @@ from collections import deque
 queue = deque()
 
 queue.append(10)
+queue.appendleft(5)
 queue.append(20)
-queue.append(30)
 
-queue.popleft()
-queue.popleft()
-
-print(queue[0])
+print(queue[0], queue[-1])
 </pre>
   </div>
   <div class="options">
     <div class="option">
       <input type="radio" name="q1" value="A" />
-      <label>10</label>
+      <label>5 and 20</label>
     </div>
     <div class="option">
       <input type="radio" name="q1" value="B" />
-      <label>20</label>
+      <label>10 and 20</label>
     </div>
     <div class="option">
       <input type="radio" name="q1" value="C" />
-      <label>30</label>
+      <label>5 and 10</label>
     </div>
     <div class="option">
       <input type="radio" name="q1" value="D" />
@@ -866,34 +863,33 @@ print(queue[0])
 <pre>
 from collections import deque
 
-queue1 = deque()
-queue2 = deque()
+queue = deque()
 
-for i in range(1, 5):
-    queue1.append(i)
+queue.append(1)
+queue.append(2)
+queue.appendleft(0)
+queue.append(3)
+queue.popleft()
 
-while len(queue1) > 0:
-    queue2.append(queue1.popleft())
-
-print(queue2[0], queue2[-1])
+print(list(queue))
 </pre>
   </div>
   <div class="options">
     <div class="option">
       <input type="radio" name="q4" value="A" />
-      <label>1 and 4</label>
+      <label>[0, 1, 2, 3]</label>
     </div>
     <div class="option">
       <input type="radio" name="q4" value="B" />
-      <label>4 and 1</label>
+      <label>[1, 2, 3]</label>
     </div>
     <div class="option">
       <input type="radio" name="q4" value="C" />
-      <label>1 and 1</label>
+      <label>[0, 2, 3]</label>
     </div>
     <div class="option">
       <input type="radio" name="q4" value="D" />
-      <label>Error</label>
+      <label>[1, 2, 0, 3]</label>
     </div>
   </div>
 </div>
@@ -954,32 +950,31 @@ from collections import deque
 
 queue = deque()
 
-words = ["hello", "world", "python", "queue"]
+data = {"name": "Aryan", "age": 20, "city": "Delhi"}
 
-for word in words:
-    if len(word) > 4:
-        queue.append(word)
+for key in data:
+    queue.append(data[key])
 
 print(queue.popleft())
-print(len(queue))
+print(queue[-1])
 </pre>
   </div>
   <div class="options">
     <div class="option">
       <input type="radio" name="q6" value="A" />
-      <label>hello and 2</label>
+      <label>Aryan and Delhi</label>
     </div>
     <div class="option">
       <input type="radio" name="q6" value="B" />
-      <label>world and 2</label>
+      <label>name and city</label>
     </div>
     <div class="option">
       <input type="radio" name="q6" value="C" />
-      <label>python and 1</label>
+      <label>Aryan and 20</label>
     </div>
     <div class="option">
       <input type="radio" name="q6" value="D" />
-      <label>queue and 1</label>
+      <label>Error</label>
     </div>
   </div>
 </div>
@@ -1001,7 +996,7 @@ print(len(queue))
 
     <script>
       const correctAnswers = {
-          q1:"C", q2:"C", q3:"C", q4:"A", q5:"A", q6:"B" 
+          q1:"A", q2:"C", q3:"C", q4:"B", q5:"A", q6:"A"
       };
 
       const QUIZ_DURATION = 180;
