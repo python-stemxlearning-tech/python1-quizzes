@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STEMxLearning – Lesson 2 Quiz</title>
+  <title>STEMxLearning – Lesson 1 Quiz</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -437,11 +437,11 @@
 
   <!-- HEADER -->
   <div class="hdr">
-    <div class="quiz-label">Lesson 2 Revision Quiz</div>
+    <div class="quiz-label">Lesson 1 Quiz</div>
     <div class="brand">
       <span class="s">S</span><span class="t">T</span><span class="e">E</span><span class="m">M</span><span class="x">x</span><span class="l">L</span><span class="rest">earning</span>
     </div>
-    <h1>Data Cleaning
+    <h1>Introduction to Data Analysis with Pandas
     <p>Answer all 6 questions · Timer starts on first answer</p>
   </div>
 
@@ -461,99 +461,113 @@
   <div class="prog-wrap"><div class="prog-fill" id="progFill"></div></div>
 
   <!-- QUIZ FORM -->
-  <form id="quizForm">
+<form id="quizForm">
 
     <!-- Q1 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 01 </div>
-      <div class="q-text">A student dataset has a column called <strong>"Gender"</strong>. Some rows have <strong>"Male"</strong>, some have <strong>"male"</strong>, and some have <strong>"M"</strong>. All mean the same thing but are written differently. What type of dirty data is this?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 01</div>
+      <div class="q-text">A student loads a dataset and runs <strong>df.isnull().sum()</strong>. The output shows Marks: 3. What does this mean and what are the two ways he can handle this?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Outlier</span></label>
-        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">Inconsistent Format</span></label>
-        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">Missing Value</span></label>
-        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">Duplicate Entry</span></label>
+        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">3 duplicate rows — use drop_duplicates() or fillna()</span></label>
+        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">3 missing values in Marks column — use fillna() to replace or dropna() to remove those rows</span></label>
+        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">3 incorrect values — use replace() or map()</span></label>
+        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">3 extra columns — use drop() or pop()</span></label>
       </div>
     </div>
 
     <!-- Q2 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 02 </div>
-      <div class="q-text">A school database has a column <strong>"Subject"</strong> but instead of writing <strong>"Mathematics"</strong> it shows <strong>"Maths123"</strong> and <strong>"M@th"</strong>. These are clearly wrong labels. What type of dirty data is this?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 02</div>
+      <div class="q-text">A school wants to store student performance levels — <strong>Beginner, Intermediate and Advanced</strong>. A student applies One Hot Encoding on this column. His senior says this is the wrong choice. Why?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">Missing Value</span></label>
-        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">Inconsistent Format</span></label>
-        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">Outlier</span></label>
-        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">Incorrect Label</span></label>
+        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">One Hot Encoding does not work with more than 2 categories</span></label>
+        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">These categories have a clear order — Beginner is lower than Intermediate which is lower than Advanced — One Hot Encoding will lose this order information</span></label>
+        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">get_dummies() cannot handle text with more than 5 characters</span></label>
+        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">One Hot Encoding only works with numerical columns</span></label>
       </div>
     </div>
 
     <!-- Q3 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 03 </div>
-      <div class="q-text">An e-commerce dataset records the date of purchase. Some rows show <strong>"12/05/2024"</strong>, some show <strong>"05-12-2024"</strong> and some show <strong>"May 12, 2024"</strong> — all referring to the same date. What is the problem here?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 03</div>
+      <div class="q-text">A student runs <strong>print(df.isnull().sum())</strong> and gets this output:<br><br>
+        <table style="border-collapse:collapse;width:100%;margin-bottom:10px;font-size:15px;">
+          <thead>
+            <tr style="background:rgba(255,255,255,0.07);">
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Column</th>
+              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Missing Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Name</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">0</td></tr>
+            <tr style="background:rgba(255,255,255,0.03);"><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Age</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">2</td></tr>
+            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Marks</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">0</td></tr>
+            <tr style="background:rgba(255,255,255,0.03);"><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">City</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">1</td></tr>
+          </tbody>
+        </table>
+        He runs <strong>df.dropna(inplace=True)</strong>. How many rows will be removed?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Missing Value</span></label>
-        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Inconsistent Format</span></label>
-        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Duplicate Entry</span></label>
-        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Outlier</span></label>
+        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">3 rows — one for each missing value</span></label>
+        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">2 rows — only the rows where Age is missing</span></label>
+        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">It depends — a row is dropped if it has at least one missing value — so maximum 3 rows but could be less if the same row has both Age and City missing</span></label>
+        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">1 row — dropna() only removes the first missing row it finds</span></label>
       </div>
     </div>
 
     <!-- Q4 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 04 </div>
-      <div class="q-text">A Data Scientist is cleaning a student marks dataset. She notices one student has <strong>-45 marks out of 100</strong>. The rest of the students have marks between <strong>30 and 98</strong>. What type of dirty data is this most likely to be?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 04</div>
+      <div class="q-text">A student runs this code. How many columns will the output DataFrame have?<br><br>
+      <pre>import pandas as pd
+import numpy as np
+
+data = {
+    "Name":  ["Riya", "Arjun", "Meera", "Karan", "Sneha"],
+    "Age":   [16, None, 15, 16, 17],
+    "Marks": [85, 90, None, 92, 88],
+    "City":  ["Delhi", "Mumbai", "Pune", "Delhi", None]
+}
+
+df = pd.DataFrame(data)
+df.fillna(0, inplace=True)
+df_encoded = pd.get_dummies(df, columns=["City"], dtype=int)
+print(df_encoded.shape)</pre></div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Incorrect Label</span></label>
-        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Outlier caused by a data entry error</span></label>
-        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Duplicate Entry</span></label>
-        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">Missing Value</span></label>
+        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">6 — Name, Age, Marks, City_Delhi, City_Mumbai, City_Pune</span></label>
+        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">7 — Name, Age, Marks, City_Delhi, City_Mumbai, City_Pune, City_0</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">5 — original columns only since fillna does not affect get_dummies</span></label>
+        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">8 — one column for every unique value including the original City column</span></label>
       </div>
     </div>
 
     <!-- Q5 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 05 </div>
-      <div class="q-text">Look at this employee dataset carefully. A new analyst says <em>"This dataset has 4 employees."</em> Is the analyst correct and what is the data problem here?<br><br>
-        <table style="border-collapse:collapse;width:100%;margin-bottom:10px;font-size:15px;">
-          <thead>
-            <tr style="background:rgba(255,255,255,0.07);">
-              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Emp ID</th>
-              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Name</th>
-              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Department</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">E01</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Priya</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">HR</td></tr>
-            <tr style="background:rgba(255,255,255,0.03);"><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">E02</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Arjun</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">IT</td></tr>
-            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#f87171;font-weight:700;">E01</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#f87171;font-weight:700;">Priya</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);color:#f87171;font-weight:700;">HR</td></tr>
-            <tr style="background:rgba(255,255,255,0.03);"><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">E03</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Meena</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Finance</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <div class="q-num"><div class="q-dot"></div> Question 05</div>
+      <div class="q-text">A student has a <strong>Blood Group</strong> column with values A, B, AB and O. He applies Label Encoding and assigns A=0, B=1, AB=2, O=3. Why will this mislead the model and what is the correct solution?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">No — the Department column has missing values</span></label>
-        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">Yes correct — all 4 rows are valid entries</span></label>
-        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">No — Emp ID E01 is an incorrect label</span></label>
-        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">No — E01 Priya appears twice, this is a duplicate entry</span></label>
+        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Use Label Encoding but start from 1 instead of 0</span></label>
+        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">Use One Hot Encoding — Blood Group has no order so the model should not think O is greater than A</span></label>
+        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Use map() with alphabetical order — A=1, AB=2, B=3, O=4</span></label>
+        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">Blood Group cannot be encoded at all — it must be removed from the dataset</span></label>
       </div>
     </div>
 
     <!-- Q6 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 06 </div>
-      <div class="q-text">A Data Scientist is cleaning an online food delivery dataset. She finds these five delivery times <strong>(in minutes)</strong>:<br><br>
-        <div style="background:rgba(0,0,0,0.2);border-radius:12px;padding:14px 20px;margin-bottom:14px;font-size:18px;font-weight:700;letter-spacing:2px;text-align:center;">
-          22 &nbsp;·&nbsp; 25 &nbsp;·&nbsp; 19 &nbsp;·&nbsp; 28 &nbsp;·&nbsp; <span style="color:#f87171;">105</span>
-        </div>
-        She wants to remove <strong>105</strong> immediately. Her manager says: <em>"Don't remove it yet — first check if there was a system outage, a wrong entry, or a genuine late delivery that day."</em><br><br>
-        <strong>Who is applying better data science thinking?</strong>
-      </div>
+      <div class="q-num"><div class="q-dot"></div> Question 06</div>
+      <div class="q-text">A student runs this code. His friend says count for Marks will be 5. His senior says it will be 4. Who is correct and why?<br><br>
+      <pre>data = {
+    "Name":  ["Riya", "Arjun", "Meera", "Karan", "Sneha"],
+    "Age":   [16, 17, 15, 16, 17],
+    "Marks": [85, None, 78, 92, 88]
+}
+df = pd.DataFrame(data)
+print(df.describe())</pre></div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Both — removing outliers is always the right first step</span></label>
-        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Neither — delivery time data should never have outliers</span></label>
-        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">The Manager — context must be checked before deciding to remove or keep an outlier</span></label>
-        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">The Data Scientist — 105 is clearly wrong and must be deleted immediately</span></label>
+        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Friend is correct — describe() counts all rows including None</span></label>
+        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Senior is correct — describe() skips None values so count will be 4</span></label>
+        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Both are wrong — describe() will throw an error because of None in Marks</span></label>
+        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Senior is correct — but only if we use dropna() before describe()</span></label>
       </div>
     </div>
 
@@ -705,7 +719,7 @@ function firePoppers(){
 }
 
 /* ── QUIZ LOGIC ── */
-const ANSWERS = { q1:'B', q2:'D', q3:'B', q4:'B', q5:'D', q6:'C' };
+const ANSWERS = { q1:'B', q2:'B', q3:'C', q4:'B', q5:'B', q6:'B' };
 const TOTAL = Object.keys(ANSWERS).length;
 let timeLeft=180, timerID=null, started=false, submitted=false;
 
