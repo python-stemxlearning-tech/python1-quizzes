@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STEMxLearning – Lesson 10 Quiz</title>
+  <title>STEMxLearning – Lesson 6 Quiz</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -437,12 +437,11 @@
 
   <!-- HEADER -->
   <div class="hdr">
-    <div class="quiz-label">Lesson 10 Quiz</div>
+    <div class="quiz-label">Lesson 6 Revision Quiz</div>
     <div class="brand">
       <span class="s">S</span><span class="t">T</span><span class="e">E</span><span class="m">M</span><span class="x">x</span><span class="l">L</span><span class="rest">earning</span>
     </div>
-    <h1>Speech Recognition
-
+    <h1>Feature Engineering
     <p>Answer all 6 questions · Timer starts on first answer</p>
   </div>
 
@@ -466,73 +465,78 @@
 
     <!-- Q1 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 01 </div>
-      <div class="q-text">A student records herself saying "Hey Google play music" ten times and it works every time. Her friend says the exact same words and it fails three out of ten times. What is the most likely reason?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 01</div>
+      <div class="q-text">A company has two columns in their dataset — Date of Joining and Date of Leaving. A data scientist creates a new column called Years of Experience by subtracting the two. After this the model accuracy improved significantly. What does this tell us about Feature Engineering?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Google only recognizes the voice of the person who set it up</span></label>
-        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">The model learned the specific wave pattern of the first student's voice</span></label>
-        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">The microphone can only record one person's voice at a time</span></label>
-        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">Voice assistants require the same accent to work properly</span></label>
+        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Feature Engineering always requires creating at least 3 new columns</span></label>
+        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">A single well engineered feature can improve model performance more than changing the algorithm</span></label>
+        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">The model improved because unnecessary columns were removed</span></label>
+        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">Feature Engineering only works when date columns are involved</span></label>
       </div>
     </div>
 
     <!-- Q2 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 02 </div>
-      <div class="q-text">Zoom automatically generates captions during a video call. A student turns on some music in the background and the captions start showing random wrong words. Which part of the speech recognition process got affected?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 02</div>
+      <div class="q-text">Aditya trains a linear model to predict ice cream sales based on temperature. The model performs poorly. He plots the data and notices sales rise sharply at first then flatten out at higher temperatures. What should he apply and why?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">The text output was corrupted</span></label>
-        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">The spectrogram pattern got mixed with extra sound waves</span></label>
-        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">The microphone stopped detecting the voice completely</span></label>
-        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">The model ran out of classes to identify</span></label>
+        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">Correlation Analysis — because temperature may not be related to sales</span></label>
+        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">Feature Selection — because temperature is a useless feature</span></label>
+        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">Polynomial Features — because the relationship is a curve not a straight line</span></label>
+        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">IQR method — because high temperatures are outliers</span></label>
       </div>
     </div>
 
     <!-- Q3 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 03 </div>
-      <div class="q-text">A spectrogram and a pixel grid are both used by AI models. What do they have in common?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 03</div>
+      <div class="q-text">A dataset has these correlation values with the target — hours_watched = 0.88, button_colour = -0.02, screen_size = -0.79, account_age = 0.61. A student says "We should drop screen_size because it has a negative value." Is the student correct?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Both are types of datasets</span></label>
-        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Both convert sound into numbers</span></label>
-        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Both are visual patterns that a model reads to find meaning</span></label>
-        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Both are used only in speech recognition</span></label>
+        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Yes — negative correlation means the feature is useless</span></label>
+        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">No — correlation of -0.79 shows a strong relationship — negative or positive both matter</span></label>
+        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Yes — only positive correlations are useful for ML models</span></label>
+        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">No — but screen_size should be dropped because it is a device feature</span></label>
       </div>
     </div>
 
     <!-- Q4 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 04 </div>
-      <div class="q-text">Google Translate can listen to someone speaking in Hindi and instantly show English text on screen. Which steps are happening here in order?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 04</div>
+      <div class="q-text">Meera is building a model to predict student performance. She has 15 features. Three features have correlation values of 0.01, -0.03 and 0.02 with the target. Two other features contain identical values as another column already in the dataset. How many features should she drop in total and why?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Translation then Speech Recognition then Text Output</span></label>
-        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Speech Recognition then Translation then Text Output</span></label>
-        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Text Output then Translation then Speech Recognition</span></label>
-        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">Spectrogram then Pixel Reading then Translation</span></label>
+        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Drop only the 3 low correlation features — identical columns do not matter</span></label>
+        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Drop all 5 — 3 for near zero correlation and 2 for carrying duplicate information</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Drop only the 2 identical columns — low correlation features may still be useful</span></label>
+        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">Keep all 15 — removing features always hurts model performance</span></label>
       </div>
     </div>
 
     <!-- Q5 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 05 </div>
-      <div class="q-text">A speech recognition model was trained only on American English speakers. A person from Punjab speaks into it and it fails. What is the root cause?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 05</div>
+      <div class="q-text">Kabir runs this code on his dataset. His dataset had 500 rows before this code. After running it he has 487 rows. What happened to the missing 13 rows?<br><br>
+      <pre>Q1 = df['price'].quantile(0.25)
+Q3 = df['price'].quantile(0.75)
+IQR = Q3 - Q1
+df = df[df['price'] >= Q1 - 1.5 * IQR]
+df = df[df['price'] <= Q3 + 1.5 * IQR]</pre></div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Punjabi language is too complex for any model</span></label>
-        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">The microphone could not detect the accent</span></label>
-        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">The training data lacked variety in accents and speech patterns</span></label>
-        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">Speech recognition does not support non English languages</span></label>
+        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">They were duplicates and were automatically removed</span></label>
+        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">They were rows where price was empty or null</span></label>
+        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">They were outliers that fell outside the IQR boundary and were removed</span></label>
+        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">The quantile function randomly removes rows to balance the dataset</span></label>
       </div>
     </div>
 
     <!-- Q6 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 06 </div>
-      <div class="q-text">A company uses speech recognition to automatically flag dangerous words in customer calls. The model works well for male voices but constantly misses the same words when spoken by female voices. What is the most likely cause and fix?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 06</div>
+      <div class="q-text">Nisha is working on a fraud detection project. Her dataset has a column called is_fraud which is the target. She runs correlation analysis and gets — transaction_amount = 0.84, device_age = 0.06, location_risk_score = 0.79. She then applies IQR on transaction_amount and removes outliers. Finally she drops device_age. Before training she splits the data 80-20. Which of the following correctly describes everything she did in order?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Female voices have higher pitch which microphones cannot record — replace the microphone</span></label>
-        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">The training dataset had more male voice samples than female — retrain with balanced data</span></label>
-        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">The model needs more classes to handle different genders — add more categories</span></label>
-        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Speech recognition models can only process one voice type — build two separate models</span></label>
+        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Feature Selection → Outlier Removal → Correlation Analysis → Train Test Split</span></label>
+        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Correlation Analysis → Outlier Removal → Feature Selection → Train Test Split</span></label>
+        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Outlier Removal → Feature Selection → Correlation Analysis → Train Test Split</span></label>
+        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Train Test Split → Correlation Analysis → Outlier Removal → Feature Selection</span></label>
       </div>
     </div>
 
@@ -684,9 +688,8 @@ function firePoppers(){
 }
 
 /* ── QUIZ LOGIC ── */
-const ANSWERS = { q1:'B', q2:'B', q3:'C', q4:'B', q5:'C', q6:'B' };
-
-const TOTAL = Object.keys(ANSWERS).length;
+const ANSWERS = { q1:'B', q2:'C', q3:'B', q4:'B', q5:'C', q6:'B' };
+L = Object.keys(ANSWERS).length;
 let timeLeft=180, timerID=null, started=false, submitted=false;
 
 const timerEl=document.getElementById('timer');
