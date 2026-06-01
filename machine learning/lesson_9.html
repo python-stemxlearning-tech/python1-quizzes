@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STEMxLearning – Lesson 10 Quiz</title>
+  <title>STEMxLearning – Lesson 9 Quiz</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -437,12 +437,11 @@
 
   <!-- HEADER -->
   <div class="hdr">
-    <div class="quiz-label">Lesson 10 Quiz</div>
+    <div class="quiz-label">Lesson 9 Quiz</div>
     <div class="brand">
       <span class="s">S</span><span class="t">T</span><span class="e">E</span><span class="m">M</span><span class="x">x</span><span class="l">L</span><span class="rest">earning</span>
     </div>
-    <h1>Speech Recognition
-
+    <h1>Supervised Learning — Linear Regression
     <p>Answer all 6 questions · Timer starts on first answer</p>
   </div>
 
@@ -466,73 +465,101 @@
 
     <!-- Q1 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 01 </div>
-      <div class="q-text">A student records herself saying "Hey Google play music" ten times and it works every time. Her friend says the exact same words and it fails three out of ten times. What is the most likely reason?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 01</div>
+      <div class="q-text">Meera runs correlation analysis on a medical dataset and gets — age = 0.91, blood_pressure = 0.89, hospital_id = 0.04. The target is treatment_cost. She wants to build the simplest possible model that still predicts well. What should she do?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Google only recognizes the voice of the person who set it up</span></label>
-        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">The model learned the specific wave pattern of the first student's voice</span></label>
-        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">The microphone can only record one person's voice at a time</span></label>
-        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">Voice assistants require the same accent to work properly</span></label>
+        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Use all three in Multiple Linear Regression for best accuracy</span></label>
+        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">Drop age and blood_pressure — they are too similar to each other</span></label>
+        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">Use age and blood_pressure in Multiple Linear Regression and drop hospital_id</span></label>
+        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">Use only age in Simple Linear Regression since it has the highest correlation</span></label>
       </div>
     </div>
 
     <!-- Q2 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 02 </div>
-      <div class="q-text">Zoom automatically generates captions during a video call. A student turns on some music in the background and the captions start showing random wrong words. Which part of the speech recognition process got affected?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 02</div>
+      <div class="q-text">What will be the output?<br><br>
+      <pre>m = 3
+c = 5
+values = [1, 2, 3]
+results = [m * x + c for x in values]
+print(results)</pre></div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">The text output was corrupted</span></label>
-        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">The spectrogram pattern got mixed with extra sound waves</span></label>
-        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">The microphone stopped detecting the voice completely</span></label>
-        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">The model ran out of classes to identify</span></label>
+        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">[8, 11, 14]</span></label>
+        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">[3, 6, 9]</span></label>
+        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">[6, 9, 12]</span></label>
+        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">[8, 10, 12]</span></label>
       </div>
     </div>
 
     <!-- Q3 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 03 </div>
-      <div class="q-text">A spectrogram and a pixel grid are both used by AI models. What do they have in common?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 03</div>
+      <div class="q-text">What will be the output?<br><br>
+      <pre>from sklearn.preprocessing import PolynomialFeatures
+import numpy as np
+
+X = np.array([[1], [2], [3]])
+poly = PolynomialFeatures(degree=3, include_bias=False)
+result = poly.fit_transform(X)
+print(result.shape)</pre></div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Both are types of datasets</span></label>
-        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Both convert sound into numbers</span></label>
-        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Both are visual patterns that a model reads to find meaning</span></label>
-        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Both are used only in speech recognition</span></label>
+        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">(3, 2)</span></label>
+        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">(3, 4)</span></label>
+        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">(3, 3)</span></label>
+        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">(4, 3)</span></label>
       </div>
     </div>
 
     <!-- Q4 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 04 </div>
-      <div class="q-text">Google Translate can listen to someone speaking in Hindi and instantly show English text on screen. Which steps are happening here in order?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 04</div>
+      <div class="q-text">Rohan plots study hours against exam scores. The points rise steeply at first then flatten out completely after 6 hours. His Linear Regression model is consistently predicting too high for students who studied more than 6 hours. What is the most likely reason?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Translation then Speech Recognition then Text Output</span></label>
-        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Speech Recognition then Translation then Text Output</span></label>
-        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Text Output then Translation then Speech Recognition</span></label>
-        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">Spectrogram then Pixel Reading then Translation</span></label>
+        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">He needs to add more features — this is a Multiple Linear Regression problem</span></label>
+        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">His training data is too small</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">The relationship is a curve — a straight line cannot capture what happens after 6 hours</span></label>
+        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">He should drop study hours using correlation analysis</span></label>
       </div>
     </div>
 
     <!-- Q5 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 05 </div>
-      <div class="q-text">A speech recognition model was trained only on American English speakers. A person from Punjab speaks into it and it fails. What is the root cause?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 05</div>
+      <div class="q-text">What will be the output?<br><br>
+      <pre>from sklearn.linear_model import LinearRegression
+import pandas as pd
+
+df = pd.DataFrame({
+    'x': [1, 2, 3, 4, 5],
+    'y': [2, 4, 6, 8, 10]
+})
+
+X = df[['x']]
+y = df['y']
+
+model = LinearRegression()
+model.fit(X, y)
+
+new = pd.DataFrame({'x': [6]})
+print(model.predict(new))</pre></div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Punjabi language is too complex for any model</span></label>
-        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">The microphone could not detect the accent</span></label>
-        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">The training data lacked variety in accents and speech patterns</span></label>
-        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">Speech recognition does not support non English languages</span></label>
+        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">[10.]</span></label>
+        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">[11.]</span></label>
+        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">[12.]</span></label>
+        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">[13.]</span></label>
       </div>
     </div>
 
     <!-- Q6 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 06 </div>
-      <div class="q-text">A company uses speech recognition to automatically flag dangerous words in customer calls. The model works well for male voices but constantly misses the same words when spoken by female voices. What is the most likely cause and fix?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 06</div>
+      <div class="q-text">Kavya is building a model to predict a student's final grade. She has these features — attendance = 0.78, assignments_submitted = 0.81, lucky_number = 0.02, previous_score = 0.85. She uses all four features. What is wrong with her approach?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Female voices have higher pitch which microphones cannot record — replace the microphone</span></label>
-        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">The training dataset had more male voice samples than female — retrain with balanced data</span></label>
-        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">The model needs more classes to handle different genders — add more categories</span></label>
-        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Speech recognition models can only process one voice type — build two separate models</span></label>
+        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">She should use Polynomial Regression because all correlations are below 0.9</span></label>
+        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">lucky_number has near zero correlation — it adds noise and should be dropped</span></label>
+        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">She should only use previous_score since it has the highest correlation</span></label>
+        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Nothing is wrong — more features always improve the model</span></label>
       </div>
     </div>
 
@@ -684,9 +711,8 @@ function firePoppers(){
 }
 
 /* ── QUIZ LOGIC ── */
-const ANSWERS = { q1:'B', q2:'B', q3:'C', q4:'B', q5:'C', q6:'B' };
-
-const TOTAL = Object.keys(ANSWERS).length;
+const ANSWERS = { q1:'C', q2:'A', q3:'C', q4:'C', q5:'C', q6:'B' };
+L = Object.keys(ANSWERS).length;
 let timeLeft=180, timerID=null, started=false, submitted=false;
 
 const timerEl=document.getElementById('timer');
