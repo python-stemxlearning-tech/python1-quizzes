@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STEMxLearning – Lesson 9 Quiz</title>
+  <title>STEMxLearning – Lesson 12 Quiz</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -437,12 +437,11 @@
 
   <!-- HEADER -->
   <div class="hdr">
-    <div class="quiz-label">Lesson 9 Revision Quiz</div>
+    <div class="quiz-label">Lesson 12 Quiz</div>
     <div class="brand">
       <span class="s">S</span><span class="t">T</span><span class="e">E</span><span class="m">M</span><span class="x">x</span><span class="l">L</span><span class="rest">earning</span>
     </div>
-    <h1>Speech Recognition
-
+    <h1>Supervised Learning — Decision Trees
     <p>Answer all 6 questions · Timer starts on first answer</p>
   </div>
 
@@ -466,73 +465,85 @@
 
     <!-- Q1 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 01 </div>
-      <div class="q-text">Which of these is NOT an example of speech recognition being used in real life?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 01</div>
+      <div class="q-text">A Decision Tree is being built to predict whether a loan should be approved. Feature A splits the data into two groups with Gini = 0.18. Feature B splits the data into two groups with Gini = 0.42. Which feature should become the root node and why?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Siri setting an alarm when you speak to it</span></label>
-        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">Google Photos grouping your pictures by face</span></label>
-        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">Zoom generating automatic captions during a call</span></label>
-        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">A call center bot understanding customer complaints</span></label>
+        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Feature B — higher Gini means more learning</span></label>
+        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">Feature A — lower Gini means purer groups and a better split</span></label>
+        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">Both are equal — Gini cannot be used to compare features</span></label>
+        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">Feature B — lower Gini is always bad for the model</span></label>
       </div>
     </div>
 
     <!-- Q2 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 02 </div>
-      <div class="q-text">A sound wave with very high peaks and very low valleys represents what kind of voice?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 02</div>
+      <div class="q-text">A student writes this code to train a Decision Tree but forgets one important step. What is missing?<br><br>
+      <pre>from sklearn.tree import DecisionTreeClassifier
+
+X = [[1, 0], [2, 1], [3, 0], [4, 1]]
+y = [0, 1, 0, 1]
+
+model = DecisionTreeClassifier()
+predictions = model.predict(X)
+print(predictions)</pre></div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">A whisper</span></label>
-        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">A fast voice</span></label>
-        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">A loud voice</span></label>
-        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">A high pitched voice</span></label>
+        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">feature_names is missing — the model cannot work without it</span></label>
+        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">model.fit is missing — the tree was never trained before predicting</span></label>
+        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">train_test_split is missing — data must always be split before training</span></label>
+        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">import pandas is missing — DecisionTreeClassifier needs pandas to work</span></label>
       </div>
     </div>
 
     <!-- Q3 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 03 </div>
-      <div class="q-text">What is the correct order of how speech recognition works?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 03</div>
+      <div class="q-text">A Decision Tree is trained to predict whether a cricket player will be selected or not. The root node splits on Batting Average. The left branch has Entropy = 0.0 and the right branch has Entropy = 0.76. What does Entropy = 0.0 mean for that group?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Text → Wave → Spectrogram → Words</span></label>
-        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Spectrogram → Wave → Text → Words</span></label>
-        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Voice → Wave → Spectrogram → Text</span></label>
-        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Voice → Text → Wave → Spectrogram</span></label>
+        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">The group is completely mixed — impossible to predict</span></label>
+        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">The group has equal number of selected and not selected players</span></label>
+        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">The group is perfectly pure — all players in that group belong to the same class</span></label>
+        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Entropy = 0.0 means the split was a bad one</span></label>
       </div>
     </div>
 
     <!-- Q4 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 04 </div>
-      <div class="q-text">Two people say the exact same sentence. Will their spectrograms look the same?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 04</div>
+      <div class="q-text">Priya trains a Decision Tree on a dataset without standardizing the features. Her colleague says the model will give wrong results because features are not on the same scale. Is her colleague correct?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Yes because the words are identical</span></label>
-        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Yes because the microphone records everyone the same way</span></label>
-        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">No because every voice has a unique wave pattern</span></label>
-        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">No because spectrograms only work for one language</span></label>
+        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Yes — Decision Trees are sensitive to feature scale just like Logistic Regression</span></label>
+        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">No — Decision Trees split based on conditions not distances so scaling does not affect them</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Yes — without standardization the tree will always pick the wrong root node</span></label>
+        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">No — but standardization always improves accuracy so it should be done anyway</span></label>
       </div>
     </div>
 
     <!-- Q5 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 05 </div>
-      <div class="q-text">A speech recognition model is 99% accurate in a recording studio but only 60% accurate in a busy classroom. Without retraining the model what is the single best explanation for this difference?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 05</div>
+      <div class="q-text">A Regression Tree is trained to predict delivery time in minutes. After all splits the tree reaches a leaf node containing these values — 32, 28, 35, 30. What will the tree predict for a new order that falls into this leaf?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Recording studios have better wifi connection</span></label>
-        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">The model was only tested on studio quality audio with no background noise</span></label>
-        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Classrooms have too many students for the model to process</span></label>
-        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">The microphone quality drops in larger rooms</span></label>
+        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">35 — the maximum value in the group</span></label>
+        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">28 — the minimum value in the group</span></label>
+        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">31.25 — the average of all values in the group</span></label>
+        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">32 — the first value in the group</span></label>
       </div>
     </div>
 
     <!-- Q6 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 06 </div>
-      <div class="q-text">A developer wants to build a speech recognition model that works equally well for children, adults and elderly people across five different languages. What is the single most important thing they must focus on while building the dataset?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 06</div>
+      <div class="q-text">A student writes this code to visualise the Decision Tree. Two things are wrong. Identify them.<br><br>
+      <pre>from sklearn.tree import plot_tree
+
+plot_tree(model)
+plt.show()</pre></div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Making sure all recordings are exactly 10 seconds long</span></label>
-        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Using only professional microphones for recording</span></label>
-        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Collecting a large and diverse range of voices across all ages and languages</span></label>
-        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Training the model separately for each language and then combining them</span></label>
+        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">plot_tree needs filled=True and rounded=True otherwise it will not work</span></label>
+        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">matplotlib.pyplot was never imported and plt.figure was never called to set the size</span></label>
+        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">feature_names and class_names are compulsory otherwise the code will give an error</span></label>
+        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">model needs to be retrained before plot_tree can visualise it</span></label>
       </div>
     </div>
 
@@ -684,9 +695,8 @@ function firePoppers(){
 }
 
 /* ── QUIZ LOGIC ── */
-const ANSWERS = { q1:'B', q2:'C', q3:'C', q4:'C', q5:'B', q6:'C' };
-
-const TOTAL = Object.keys(ANSWERS).length;
+const ANSWERS = { q1:'B', q2:'B', q3:'C', q4:'B', q5:'C', q6:'B' };
+L = Object.keys(ANSWERS).length;
 let timeLeft=180, timerID=null, started=false, submitted=false;
 
 const timerEl=document.getElementById('timer');

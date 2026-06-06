@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STEMxLearning – Lesson 9 Quiz</title>
+  <title>STEMxLearning – Lesson 14 Quiz</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -437,12 +437,11 @@
 
   <!-- HEADER -->
   <div class="hdr">
-    <div class="quiz-label">Lesson 9 Revision Quiz</div>
+    <div class="quiz-label">Lesson 14 Revision Quiz</div>
     <div class="brand">
       <span class="s">S</span><span class="t">T</span><span class="e">E</span><span class="m">M</span><span class="x">x</span><span class="l">L</span><span class="rest">earning</span>
     </div>
-    <h1>Speech Recognition
-
+    <h1>Supervised Learning — KNN
     <p>Answer all 6 questions · Timer starts on first answer</p>
   </div>
 
@@ -466,73 +465,73 @@
 
     <!-- Q1 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 01 </div>
-      <div class="q-text">Which of these is NOT an example of speech recognition being used in real life?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 01</div>
+      <div class="q-text">A KNN model with K=5 is classifying a new data point. The 5 nearest neighbors have these classes — Dog, Cat, Dog, Cat, Dog. What is the final prediction and why?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Siri setting an alarm when you speak to it</span></label>
-        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">Google Photos grouping your pictures by face</span></label>
-        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">Zoom generating automatic captions during a call</span></label>
-        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">A call center bot understanding customer complaints</span></label>
+        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Cat — KNN always picks the class that appears last</span></label>
+        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">Dog — majority of neighbors are Dog so Dog wins the vote</span></label>
+        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">No prediction — the model needs all neighbors to agree</span></label>
+        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">Cat — KNN always picks the minority class for balance</span></label>
       </div>
     </div>
 
     <!-- Q2 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 02 </div>
-      <div class="q-text">A sound wave with very high peaks and very low valleys represents what kind of voice?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 02</div>
+      <div class="q-text">A student builds a KNN model and gets 99% training accuracy but only 52% test accuracy. She increases K from 1 to 15. What is she trying to fix and will it help?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">A whisper</span></label>
-        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">A fast voice</span></label>
-        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">A loud voice</span></label>
-        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">A high pitched voice</span></label>
+        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">She is trying to fix underfitting — increasing K will make it worse</span></label>
+        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">She is trying to fix overfitting — increasing K reduces sensitivity to individual points and should improve test accuracy</span></label>
+        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">She is trying to fix standardization — K value has nothing to do with overfitting</span></label>
+        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">She is trying to fix the distance metric — higher K switches from Euclidean to Manhattan automatically</span></label>
       </div>
     </div>
 
     <!-- Q3 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 03 </div>
-      <div class="q-text">What is the correct order of how speech recognition works?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 03</div>
+      <div class="q-text">Point A is at (3, 6) and Point B is at (7, 9). Which of the following is correct?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Text → Wave → Spectrogram → Words</span></label>
-        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Spectrogram → Wave → Text → Words</span></label>
-        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Voice → Wave → Spectrogram → Text</span></label>
-        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Voice → Text → Wave → Spectrogram</span></label>
+        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Euclidean = 5, Manhattan = 7</span></label>
+        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Euclidean = 7, Manhattan = 5</span></label>
+        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Euclidean = 5, Manhattan = 5</span></label>
+        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Euclidean = 7, Manhattan = 7</span></label>
       </div>
     </div>
 
     <!-- Q4 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 04 </div>
-      <div class="q-text">Two people say the exact same sentence. Will their spectrograms look the same?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 04</div>
+      <div class="q-text">A KNN Regression model with K=5 finds these five nearest neighbor values — 50, 60, 55, 70, 65. A student says the prediction will be 65 because that is the most common value. Is the student correct?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Yes because the words are identical</span></label>
-        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Yes because the microphone records everyone the same way</span></label>
-        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">No because every voice has a unique wave pattern</span></label>
-        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">No because spectrograms only work for one language</span></label>
+        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Yes — KNN regression uses majority voting just like classification</span></label>
+        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">No — KNN regression averages all neighbor values — prediction will be 60</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Yes — KNN regression always picks the value that appears most</span></label>
+        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">No — KNN regression picks the median — prediction will be 60</span></label>
       </div>
     </div>
 
     <!-- Q5 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 05 </div>
-      <div class="q-text">A speech recognition model is 99% accurate in a recording studio but only 60% accurate in a busy classroom. Without retraining the model what is the single best explanation for this difference?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 05</div>
+      <div class="q-text">A KNN model is trained with K=3 on a dataset of 100 patients to predict disease. During testing a new patient arrives. The 3 nearest neighbors have these labels — Sick, Healthy, Sick. What does KNN predict and what concept does this demonstrate?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Recording studios have better wifi connection</span></label>
-        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">The model was only tested on studio quality audio with no background noise</span></label>
-        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Classrooms have too many students for the model to process</span></label>
-        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">The microphone quality drops in larger rooms</span></label>
+        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Healthy — KNN always picks the least dangerous prediction</span></label>
+        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">Sick — majority of 3 neighbors are Sick so majority voting gives Sick</span></label>
+        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">No prediction — KNN needs more neighbors to make a medical decision</span></label>
+        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">Sick — KNN always picks the first label it finds among neighbors</span></label>
       </div>
     </div>
 
     <!-- Q6 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 06 </div>
-      <div class="q-text">A developer wants to build a speech recognition model that works equally well for children, adults and elderly people across five different languages. What is the single most important thing they must focus on while building the dataset?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 06</div>
+      <div class="q-text">A KNN model is trained without standardization. Feature A has values between 0 and 1. Feature B has values between 10,000 and 1,00,000. A new point arrives. Which feature will control the distance calculation almost entirely?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Making sure all recordings are exactly 10 seconds long</span></label>
-        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Using only professional microphones for recording</span></label>
-        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Collecting a large and diverse range of voices across all ages and languages</span></label>
-        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Training the model separately for each language and then combining them</span></label>
+        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Feature A — smaller range means more precise distance</span></label>
+        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Feature B — larger values produce larger differences and dominate the distance</span></label>
+        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Both features contribute equally regardless of scale</span></label>
+        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Neither — KNN normalizes features internally before calculating distance</span></label>
       </div>
     </div>
 
@@ -684,9 +683,8 @@ function firePoppers(){
 }
 
 /* ── QUIZ LOGIC ── */
-const ANSWERS = { q1:'B', q2:'C', q3:'C', q4:'C', q5:'B', q6:'C' };
-
-const TOTAL = Object.keys(ANSWERS).length;
+const ANSWERS = { q1:'B', q2:'B', q3:'A', q4:'B', q5:'B', q6:'B' };
+L = Object.keys(ANSWERS).length;
 let timeLeft=180, timerID=null, started=false, submitted=false;
 
 const timerEl=document.getElementById('timer');

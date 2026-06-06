@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STEMxLearning – Lesson 9 Quiz</title>
+  <title>STEMxLearning – Lesson 11 Quiz</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -437,12 +437,11 @@
 
   <!-- HEADER -->
   <div class="hdr">
-    <div class="quiz-label">Lesson 9 Revision Quiz</div>
+    <div class="quiz-label">Lesson 11 Quiz</div>
     <div class="brand">
       <span class="s">S</span><span class="t">T</span><span class="e">E</span><span class="m">M</span><span class="x">x</span><span class="l">L</span><span class="rest">earning</span>
     </div>
-    <h1>Speech Recognition
-
+    <h1>Model Evaluation & Metrics
     <p>Answer all 6 questions · Timer starts on first answer</p>
   </div>
 
@@ -466,73 +465,86 @@
 
     <!-- Q1 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 01 </div>
-      <div class="q-text">Which of these is NOT an example of speech recognition being used in real life?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 01</div>
+      <div class="q-text">A model is trained to detect fraudulent transactions. Out of 200 transactions — 180 are genuine and 20 are fraud. The model predicts everything as genuine and achieves 90% accuracy. What is wrong?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Siri setting an alarm when you speak to it</span></label>
-        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">Google Photos grouping your pictures by face</span></label>
-        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">Zoom generating automatic captions during a call</span></label>
-        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">A call center bot understanding customer complaints</span></label>
+        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">90% accuracy is too low — the model needs retraining</span></label>
+        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">The model never caught a single fraud case — accuracy is hiding a complete failure</span></label>
+        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">The model should use MAE instead of accuracy for this problem</span></label>
+        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">Nothing is wrong — 90% accuracy is excellent for any model</span></label>
       </div>
     </div>
 
     <!-- Q2 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 02 </div>
-      <div class="q-text">A sound wave with very high peaks and very low valleys represents what kind of voice?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 02</div>
+      <div class="q-text">A regression model predicts student exam scores. Model A has MAE of 3.2 and Model B has MAE of 7.8. Both were trained on the same dataset where scores range from 0 to 100. What can you conclude?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">A whisper</span></label>
-        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">A fast voice</span></label>
-        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">A loud voice</span></label>
-        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">A high pitched voice</span></label>
+        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">Model B is better — higher MAE means more learning</span></label>
+        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">Model A is better — lower MAE means predictions are closer to actual scores</span></label>
+        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">Both models are equally good — MAE cannot be used to compare models</span></label>
+        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">Neither model is good — MAE should always be 0</span></label>
       </div>
     </div>
 
     <!-- Q3 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 03 </div>
-      <div class="q-text">What is the correct order of how speech recognition works?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 03</div>
+      <div class="q-text">What will be the output?<br><br>
+      <pre>from sklearn.metrics import confusion_matrix
+
+y_test      = [0, 1, 1, 0, 1, 0, 1, 0]
+predictions = [0, 1, 0, 0, 1, 1, 1, 0]
+
+cm = confusion_matrix(y_test, predictions)
+print(cm[1][1])</pre></div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Text → Wave → Spectrogram → Words</span></label>
-        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Spectrogram → Wave → Text → Words</span></label>
-        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Voice → Wave → Spectrogram → Text</span></label>
-        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Voice → Text → Wave → Spectrogram</span></label>
+        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">2</span></label>
+        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">1</span></label>
+        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">3</span></label>
+        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">4</span></label>
       </div>
     </div>
 
     <!-- Q4 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 04 </div>
-      <div class="q-text">Two people say the exact same sentence. Will their spectrograms look the same?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 04</div>
+      <div class="q-text">Nisha builds two models to predict house prices. Model A has R² of 0.91 and MSE of 12000. Model B has R² of 0.74 and MSE of 38000. Which model is better and why?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Yes because the words are identical</span></label>
-        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Yes because the microphone records everyone the same way</span></label>
-        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">No because every voice has a unique wave pattern</span></label>
-        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">No because spectrograms only work for one language</span></label>
+        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Model B — lower R² means the model is not overfitting</span></label>
+        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Model A — higher R² means it captured more pattern and lower MSE means fewer large mistakes</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Both are equal — R² and MSE cannot be compared together</span></label>
+        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">Model B — higher MSE means it learned more from the data</span></label>
       </div>
     </div>
 
     <!-- Q5 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 05 </div>
-      <div class="q-text">A speech recognition model is 99% accurate in a recording studio but only 60% accurate in a busy classroom. Without retraining the model what is the single best explanation for this difference?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 05</div>
+      <div class="q-text">A spam detection model gives these results — Precision = 0.95, Recall = 0.40. What does this tell you?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Recording studios have better wifi connection</span></label>
-        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">The model was only tested on studio quality audio with no background noise</span></label>
-        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Classrooms have too many students for the model to process</span></label>
-        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">The microphone quality drops in larger rooms</span></label>
+        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">The model is very accurate overall — both scores are good</span></label>
+        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">When the model says spam it is almost always right — but it is missing 60% of actual spam emails</span></label>
+        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">The model is predicting everything as spam — that is why precision is high</span></label>
+        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">Recall of 0.40 means the model is correct 40% of the time overall</span></label>
       </div>
     </div>
 
     <!-- Q6 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 06 </div>
-      <div class="q-text">A developer wants to build a speech recognition model that works equally well for children, adults and elderly people across five different languages. What is the single most important thing they must focus on while building the dataset?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 06</div>
+      <div class="q-text">What will be the output?<br><br>
+      <pre>from sklearn.metrics import r2_score
+
+actual    = [10, 20, 30, 40, 50]
+predicted = [10, 20, 30, 40, 50]
+
+print(r2_score(actual, predicted))</pre></div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Making sure all recordings are exactly 10 seconds long</span></label>
-        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Using only professional microphones for recording</span></label>
-        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Collecting a large and diverse range of voices across all ages and languages</span></label>
-        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Training the model separately for each language and then combining them</span></label>
+        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">0.0</span></label>
+        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">0.5</span></label>
+        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">-1.0</span></label>
+        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">1.0</span></label>
       </div>
     </div>
 
@@ -684,9 +696,8 @@ function firePoppers(){
 }
 
 /* ── QUIZ LOGIC ── */
-const ANSWERS = { q1:'B', q2:'C', q3:'C', q4:'C', q5:'B', q6:'C' };
-
-const TOTAL = Object.keys(ANSWERS).length;
+const ANSWERS = { q1:'B', q2:'B', q3:'C', q4:'B', q5:'B', q6:'D' };
+L = Object.keys(ANSWERS).length;
 let timeLeft=180, timerID=null, started=false, submitted=false;
 
 const timerEl=document.getElementById('timer');

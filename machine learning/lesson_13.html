@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STEMxLearning – Lesson 9 Quiz</title>
+  <title>STEMxLearning – Lesson 13 Quiz</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -437,12 +437,11 @@
 
   <!-- HEADER -->
   <div class="hdr">
-    <div class="quiz-label">Lesson 9 Revision Quiz</div>
+    <div class="quiz-label">Lesson 13 Quiz</div>
     <div class="brand">
       <span class="s">S</span><span class="t">T</span><span class="e">E</span><span class="m">M</span><span class="x">x</span><span class="l">L</span><span class="rest">earning</span>
     </div>
-    <h1>Speech Recognition
-
+    <h1>Supervised Learning — Random Forest
     <p>Answer all 6 questions · Timer starts on first answer</p>
   </div>
 
@@ -466,73 +465,73 @@
 
     <!-- Q1 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 01 </div>
-      <div class="q-text">Which of these is NOT an example of speech recognition being used in real life?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 01</div>
+      <div class="q-text">A Random Forest model is trained on a dataset with 5 features. Which of the following best describes how each tree in the forest makes its splits?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Siri setting an alarm when you speak to it</span></label>
-        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">Google Photos grouping your pictures by face</span></label>
-        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">Zoom generating automatic captions during a call</span></label>
-        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">A call center bot understanding customer complaints</span></label>
+        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">Every tree uses all 5 features for every split</span></label>
+        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">Every tree uses a random subset of features for each split — so trees stay different from each other</span></label>
+        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">Every tree uses only 1 feature — the most important one</span></label>
+        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">Features are assigned equally across all trees</span></label>
       </div>
     </div>
 
     <!-- Q2 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 02 </div>
-      <div class="q-text">A sound wave with very high peaks and very low valleys represents what kind of voice?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 02</div>
+      <div class="q-text">Rahul trains a Random Forest on a dataset with 1000 rows. He sets n_estimators=5. His friend says increasing n_estimators to 100 will slow down training but improve results. Is his friend correct?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">A whisper</span></label>
-        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">A fast voice</span></label>
-        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">A loud voice</span></label>
-        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">A high pitched voice</span></label>
+        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">No — more trees always makes the model faster</span></label>
+        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">Yes — more trees means more stable predictions but takes longer to train</span></label>
+        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">No — n_estimators has no effect on accuracy</span></label>
+        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">Yes — but only if the dataset has more than 5000 rows</span></label>
       </div>
     </div>
 
     <!-- Q3 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 03 </div>
-      <div class="q-text">What is the correct order of how speech recognition works?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 03</div>
+      <div class="q-text">Priya trains a Random Forest with random_state=42 and gets 81% accuracy. She runs the same code again without changing anything. What will happen?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Text → Wave → Spectrogram → Words</span></label>
-        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Spectrogram → Wave → Text → Words</span></label>
-        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Voice → Wave → Spectrogram → Text</span></label>
-        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Voice → Text → Wave → Spectrogram</span></label>
+        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Accuracy will change every time — random_state has no effect on results</span></label>
+        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Accuracy will be different — random_state only affects the first run</span></label>
+        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Accuracy will be exactly 81% every time — random_state fixes the randomness</span></label>
+        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">The code will throw an error on the second run</span></label>
       </div>
     </div>
 
     <!-- Q4 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 04 </div>
-      <div class="q-text">Two people say the exact same sentence. Will their spectrograms look the same?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 04</div>
+      <div class="q-text">A Random Forest Feature Importance chart shows Fare=0.30, Sex=0.27, Age=0.25, Pclass=0.08, SibSp=0.05, Parch=0.04. A student says Pclass is useless and should be removed. Is the student correct?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Yes because the words are identical</span></label>
-        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Yes because the microphone records everyone the same way</span></label>
-        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">No because every voice has a unique wave pattern</span></label>
-        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">No because spectrograms only work for one language</span></label>
+        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Yes — anything below 0.10 should always be removed</span></label>
+        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">No — lower importance means less influence but the feature still contributes to predictions</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Yes — only the top 2 features should ever be kept</span></label>
+        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">No — all importance scores must be equal for a model to work correctly</span></label>
       </div>
     </div>
 
     <!-- Q5 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 05 </div>
-      <div class="q-text">A speech recognition model is 99% accurate in a recording studio but only 60% accurate in a busy classroom. Without retraining the model what is the single best explanation for this difference?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 05</div>
+      <div class="q-text">What is the difference between RandomForestClassifier and RandomForestRegressor?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Recording studios have better wifi connection</span></label>
-        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">The model was only tested on studio quality audio with no background noise</span></label>
-        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Classrooms have too many students for the model to process</span></label>
-        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">The microphone quality drops in larger rooms</span></label>
+        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Classifier builds more trees than Regressor</span></label>
+        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">Classifier predicts a class label using majority voting — Regressor predicts a number using average of all tree outputs</span></label>
+        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Regressor uses Gini Impurity — Classifier uses MSE for splitting</span></label>
+        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">There is no difference — both work exactly the same way</span></label>
       </div>
     </div>
 
     <!-- Q6 -->
     <div class="q-card">
-      <div class="q-num"><div class="q-dot"></div> Question 06 </div>
-      <div class="q-text">A developer wants to build a speech recognition model that works equally well for children, adults and elderly people across five different languages. What is the single most important thing they must focus on while building the dataset?</div>
+      <div class="q-num"><div class="q-dot"></div> Question 06</div>
+      <div class="q-text">A single Decision Tree gives R² of 0.95 on training data and 0.51 on test data. A Random Forest gives R² of 0.88 on training and 0.81 on test data. Which model should be deployed and why?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Making sure all recordings are exactly 10 seconds long</span></label>
-        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Using only professional microphones for recording</span></label>
-        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Collecting a large and diverse range of voices across all ages and languages</span></label>
-        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Training the model separately for each language and then combining them</span></label>
+        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Decision Tree — higher training R² means it learned more</span></label>
+        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Random Forest — consistent performance on both training and test means it generalises better</span></label>
+        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Decision Tree — lower test R² means it is more conservative</span></label>
+        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Both are equal — training R² is the only metric that matters</span></label>
       </div>
     </div>
 
@@ -684,9 +683,8 @@ function firePoppers(){
 }
 
 /* ── QUIZ LOGIC ── */
-const ANSWERS = { q1:'B', q2:'C', q3:'C', q4:'C', q5:'B', q6:'C' };
-
-const TOTAL = Object.keys(ANSWERS).length;
+const ANSWERS = { q1:'B', q2:'B', q3:'C', q4:'B', q5:'B', q6:'B' };
+L = Object.keys(ANSWERS).length;
 let timeLeft=180, timerID=null, started=false, submitted=false;
 
 const timerEl=document.getElementById('timer');
