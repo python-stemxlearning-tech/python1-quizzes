@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STEMxLearning – Lesson 3 Quiz</title>
+  <title>STEMxLearning – Chapter 1 & 2 Quiz</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -35,7 +35,6 @@
       position: relative;
     }
 
-    /* ── STAR FIELD ── */
     #stars-canvas {
       position: fixed;
       inset: 0;
@@ -50,7 +49,6 @@
       margin: 0 auto;
     }
 
-    /* ── HEADER ── */
     .hdr {
       text-align: center;
       padding: 44px 20px 28px;
@@ -94,7 +92,6 @@
     }
     .hdr p { color: var(--muted); font-size: 15px; margin-top: 4px; }
 
-    /* ── HUD ── */
     .hud {
       display: flex;
       gap: 14px;
@@ -130,7 +127,6 @@
     .hud-val.danger { color: var(--accent2); animation: tick .4s steps(1) infinite; }
     @keyframes tick { 0%,100%{opacity:1}50%{opacity:.3} }
 
-    /* ── PROGRESS BAR ── */
     .prog-wrap {
       background: var(--card2);
       border-radius: 40px;
@@ -146,7 +142,6 @@
       transition: width .5s cubic-bezier(.4,0,.2,1);
     }
 
-    /* ── QUESTION CARDS ── */
     .q-card {
       background: var(--card);
       border: 1.5px solid var(--border);
@@ -157,19 +152,22 @@
       overflow: hidden;
       transition: box-shadow .3s;
     }
-    .q-card::before {
+    .q-card:nth-child(odd)::before {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 3px;
       border-radius: 22px 22px 0 0;
+      background: linear-gradient(90deg,#6ee7f7,#a78bfa);
     }
-    .q-card:nth-child(1)::before { background: linear-gradient(90deg,#6ee7f7,#a78bfa); }
-    .q-card:nth-child(2)::before { background: linear-gradient(90deg,#f7c948,#ff6b6b); }
-    .q-card:nth-child(3)::before { background: linear-gradient(90deg,#34d399,#6ee7f7); }
-    .q-card:nth-child(4)::before { background: linear-gradient(90deg,#a78bfa,#ff6b6b); }
-    .q-card:nth-child(5)::before { background: linear-gradient(90deg,#f7c948,#34d399); }
-    .q-card:nth-child(6)::before { background: linear-gradient(90deg,#ff6b6b,#a78bfa); }
+    .q-card:nth-child(even)::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      border-radius: 22px 22px 0 0;
+      background: linear-gradient(90deg,#f7c948,#ff6b6b);
+    }
 
     .q-num {
       display: inline-flex;
@@ -187,12 +185,6 @@
       border-radius: 50%;
       background: var(--accent);
     }
-    .q-card:nth-child(1) .q-dot { background:#6ee7f7; }
-    .q-card:nth-child(2) .q-dot { background:#f7c948; }
-    .q-card:nth-child(3) .q-dot { background:#34d399; }
-    .q-card:nth-child(4) .q-dot { background:#a78bfa; }
-    .q-card:nth-child(5) .q-dot { background:#f7c948; }
-    .q-card:nth-child(6) .q-dot { background:#ff6b6b; }
 
     .q-text {
       font-size: 18px;
@@ -202,30 +194,6 @@
       line-height: 1.6;
     }
 
-    pre {
-      background: #0b0c18;
-      border: 1.5px solid rgba(110,231,247,.15);
-      color: #6ee7f7;
-      padding: 16px 18px;
-      border-radius: 12px;
-      font-size: 15px;
-      font-family: 'Courier New', monospace;
-      margin-bottom: 18px;
-      overflow-x: auto;
-      line-height: 1.7;
-      position: relative;
-    }
-    pre::before {
-      content: '●  ●  ●';
-      position: absolute;
-      top: 8px; left: 14px;
-      font-size: 9px;
-      color: rgba(255,255,255,.2);
-      letter-spacing: 3px;
-    }
-    pre { padding-top: 28px; }
-
-    /* ── OPTIONS ── */
     .options { display: grid; gap: 10px; }
 
     .opt {
@@ -271,7 +239,6 @@
       flex: 1;
     }
 
-    /* result states */
     .opt.correct {
       background: rgba(52,211,153,.12);
       border-color: #34d399;
@@ -306,7 +273,6 @@
     .correct .badge { background: #34d399; color: #0d0e1a; }
     .wrong .badge { background: #f87171; color: #fff; }
 
-    /* ── SUBMIT ── */
     .submit-wrap { text-align: center; margin-top: 10px; }
     .submit-btn {
       display: inline-block;
@@ -325,18 +291,10 @@
       position: relative;
       overflow: hidden;
     }
-    .submit-btn::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(255,255,255,0);
-      transition: background .2s;
-    }
     .submit-btn:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 14px 40px rgba(247,201,72,.4); }
     .submit-btn:active { transform: scale(.98); }
     .submit-btn:disabled { opacity: .4; cursor: not-allowed; transform: none; }
 
-    /* ── RESULT PANEL ── */
     .result-panel {
       display: none;
       margin-top: 40px;
@@ -393,7 +351,6 @@
     }
     .retry-btn:hover { border-color: var(--accent); color: var(--accent); transform: scale(1.05); }
 
-    /* ── CONFETTI ── */
     .confetti-piece {
       position: fixed;
       width: 9px; height: 13px;
@@ -407,7 +364,6 @@
       to { transform: translateY(110vh) rotate(720deg); opacity: 0; }
     }
 
-    /* ── PARTY POPPER emoji burst ── */
     .popper-burst {
       position: fixed;
       font-size: 48px;
@@ -421,7 +377,6 @@
       100%{opacity:0;transform:scale(1) translate(var(--dx),var(--dy))}
     }
 
-    /* ── RESPONSIVE ── */
     @media(max-width:600px){
       .q-card{padding:24px 16px 18px;}
       .opt{padding:12px 14px;}
@@ -435,103 +390,207 @@
 
 <div class="wrap">
 
-  <!-- HEADER -->
   <div class="hdr">
-    <div class="quiz-label">Lesson 3 Quiz</div>
+    <div class="quiz-label">Quiz</div>
     <div class="brand">
       <span class="s">S</span><span class="t">T</span><span class="e">E</span><span class="m">M</span><span class="x">x</span><span class="l">L</span><span class="rest">earning</span>
     </div>
-    <h1> 1.3 Large Numbers Around Us
-    <p>Answer all 6 questions · Timer starts on first answer</p>
+    <h1>Chapter 1 &amp; Chapter 2</h1>
+    <p>Answer all 15 questions · Timer starts on first answer</p>
   </div>
 
-  <!-- HUD -->
   <div class="hud">
     <div class="hud-box">
       <div class="hud-label">⏰ Time Left</div>
-      <div class="hud-val" id="timer">3:00</div>
+      <div class="hud-val" id="timer">12:00</div>
     </div>
     <div class="hud-box">
       <div class="hud-label">📋 Progress</div>
-      <div class="hud-val" id="progress" style="color:#6ee7f7">0 / 6</div>
+      <div class="hud-val" id="progress" style="color:#6ee7f7">0 / 15</div>
     </div>
   </div>
 
-  <!-- PROGRESS BAR -->
   <div class="prog-wrap"><div class="prog-fill" id="progFill"></div></div>
 
-  <!-- QUIZ FORM -->
-<form id="quizForm">
+  <form id="quizForm">
 
     <!-- Q1 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 01</div>
-      <div class="q-text">All five nearest neighbours of a number are 5,00,00,000. Which of these could be that number?</div>
+      <div class="q-text">The smallest 6-digit number is:</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">4,94,99,999</span></label>
-        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">5,03,45,678</span></label>
-        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">5,00,00,001</span></label>
-        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">4,96,78,432</span></label>
+        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">99,999</span></label>
+        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">1,00,001</span></label>
+        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">1,00,000</span></label>
+        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">10,00,000</span></label>
       </div>
     </div>
 
     <!-- Q2 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 02</div>
-      <div class="q-text">The nearest lakh of a number is 8,00,000. Which of these CANNOT be that number?</div>
+      <div class="q-text">How many thousands make one lakh?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">7,54,321</span></label>
-        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">8,49,999</span></label>
-        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">7,50,000</span></label>
-        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">8,50,000</span></label>
+        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">10</span></label>
+        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">1,000</span></label>
+        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">100</span></label>
+        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">10,000</span></label>
       </div>
     </div>
 
     <!-- Q3 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 03</div>
-      <div class="q-text">9,37,42,581 rounded to the nearest ten lakh is:</div>
+      <div class="q-text">The number 5,04,085 in words is:</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">9,30,00,000</span></label>
-        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">9,40,00,000</span></label>
-        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">9,37,00,000</span></label>
-        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">9,00,00,000</span></label>
+        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Five lakh forty thousand eighty five</span></label>
+        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Five lakh four hundred eighty five</span></label>
+        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Five lakh four thousand eighty five</span></label>
+        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Fifty lakh four thousand eighty five</span></label>
       </div>
     </div>
 
     <!-- Q4 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 04</div>
-      <div class="q-text">Which set is arranged in correct ascending order?</div>
+      <div class="q-text">The nearest lakh of the number 6,72,85,183 is:</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">3,07,00,000 | 3,70,00,000 | 37,00,000 | 3,00,70,000</span></label>
-        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">37,00,000 | 3,07,00,000 | 3,00,70,000 | 3,70,00,000</span></label>
-        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">37,00,000 | 3,00,70,000 | 3,07,00,000 | 3,70,00,000</span></label>
-        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">3,00,70,000 | 37,00,000 | 3,07,00,000 | 3,70,00,000</span></label>
+        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">6,72,80,000</span></label>
+        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">6,73,00,000</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">6,72,00,000</span></label>
+        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">6,70,00,000</span></label>
       </div>
     </div>
 
     <!-- Q5 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 05</div>
-      <div class="q-text">Estimated value of 8,43,275 + 3,79,842 rounded to nearest lakh is:</div>
+      <div class="q-text">500 lakhs compared to 5 million is:</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">11,00,000</span></label>
-        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">12,00,000</span></label>
-        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">13,00,000</span></label>
-        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">10,00,000</span></label>
+        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Equal</span></label>
+        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">Less</span></label>
+        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Greater</span></label>
+        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">Cannot be compared</span></label>
       </div>
     </div>
 
     <!-- Q6 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 06</div>
-      <div class="q-text">A shopkeeper has ₹9,85,300 in his account. He rounds this to the nearest lakh for his records. What does he write?</div>
+      <div class="q-text">Roxie evaluated 116 × 5 using a shortcut. Which of the following correctly shows her method?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">₹9,00,000</span></label>
-        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">₹10,00,000</span></label>
-        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">₹9,90,000</span></label>
-        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">₹9,80,000</span></label>
+        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">116 × 5 = 116 × 2 × 10</span></label>
+        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">116 × 5 = (116 ÷ 2) × 10</span></label>
+        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">116 × 5 = 116 + 5 × 10</span></label>
+        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">116 × 5 = 116 × 10 − 5</span></label>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="q-card">
+      <div class="q-num"><div class="q-dot"></div> Question 07</div>
+      <div class="q-text">Using the '+10,000' and '+100' buttons only, how many total button clicks are needed to make 1,20,500?</div>
+      <div class="options">
+        <label class="opt"><input type="radio" name="q7" value="A"><div class="opt-bubble">A</div><span class="opt-label">17</span></label>
+        <label class="opt"><input type="radio" name="q7" value="B"><div class="opt-bubble">B</div><span class="opt-label">25</span></label>
+        <label class="opt"><input type="radio" name="q7" value="C"><div class="opt-bubble">C</div><span class="opt-label">30</span></label>
+        <label class="opt"><input type="radio" name="q7" value="D"><div class="opt-bubble">D</div><span class="opt-label">22</span></label>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="q-card">
+      <div class="q-num"><div class="q-dot"></div> Question 08</div>
+      <div class="q-text">The product of a 5-digit number and another 5-digit number will have:</div>
+      <div class="options">
+        <label class="opt"><input type="radio" name="q8" value="A"><div class="opt-bubble">A</div><span class="opt-label">Exactly 10 digits</span></label>
+        <label class="opt"><input type="radio" name="q8" value="B"><div class="opt-bubble">B</div><span class="opt-label">8 or 9 digits</span></label>
+        <label class="opt"><input type="radio" name="q8" value="C"><div class="opt-bubble">C</div><span class="opt-label">9 or 10 digits</span></label>
+        <label class="opt"><input type="radio" name="q8" value="D"><div class="opt-bubble">D</div><span class="opt-label">Exactly 9 digits</span></label>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="q-card">
+      <div class="q-num"><div class="q-dot"></div> Question 09</div>
+      <div class="q-text">What is the value of 13 + 4 if it must equal ___ + 6?</div>
+      <div class="options">
+        <label class="opt"><input type="radio" name="q9" value="A"><div class="opt-bubble">A</div><span class="opt-label">9</span></label>
+        <label class="opt"><input type="radio" name="q9" value="B"><div class="opt-bubble">B</div><span class="opt-label">11</span></label>
+        <label class="opt"><input type="radio" name="q9" value="C"><div class="opt-bubble">C</div><span class="opt-label">13</span></label>
+        <label class="opt"><input type="radio" name="q9" value="D"><div class="opt-bubble">D</div><span class="opt-label">7</span></label>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="q-card">
+      <div class="q-num"><div class="q-dot"></div> Question 10</div>
+      <div class="q-text">In the expression 6 × 5 + 3, what are the terms?</div>
+      <div class="options">
+        <label class="opt"><input type="radio" name="q10" value="A"><div class="opt-bubble">A</div><span class="opt-label">6, 5, 3</span></label>
+        <label class="opt"><input type="radio" name="q10" value="B"><div class="opt-bubble">B</div><span class="opt-label">6 × 5 and 3</span></label>
+        <label class="opt"><input type="radio" name="q10" value="C"><div class="opt-bubble">C</div><span class="opt-label">6 and 5 + 3</span></label>
+        <label class="opt"><input type="radio" name="q10" value="D"><div class="opt-bubble">D</div><span class="opt-label">6 × 5 × 3</span></label>
+      </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="q-card">
+      <div class="q-num"><div class="q-dot"></div> Question 11</div>
+      <div class="q-text">Which is greater — 1023 + 125 or 1022 + 128?</div>
+      <div class="options">
+        <label class="opt"><input type="radio" name="q11" value="A"><div class="opt-bubble">A</div><span class="opt-label">1023 + 125</span></label>
+        <label class="opt"><input type="radio" name="q11" value="B"><div class="opt-bubble">B</div><span class="opt-label">1022 + 128</span></label>
+        <label class="opt"><input type="radio" name="q11" value="C"><div class="opt-bubble">C</div><span class="opt-label">Both are equal</span></label>
+        <label class="opt"><input type="radio" name="q11" value="D"><div class="opt-bubble">D</div><span class="opt-label">Cannot be determined</span></label>
+      </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="q-card">
+      <div class="q-num"><div class="q-dot"></div> Question 12</div>
+      <div class="q-text">Irfan bought biscuits for ₹15 and toor dal for ₹56. He gave ₹100. Which expression correctly gives his change?</div>
+      <div class="options">
+        <label class="opt"><input type="radio" name="q12" value="A"><div class="opt-bubble">A</div><span class="opt-label">100 − 15 + 56</span></label>
+        <label class="opt"><input type="radio" name="q12" value="B"><div class="opt-bubble">B</div><span class="opt-label">100 + (15 − 56)</span></label>
+        <label class="opt"><input type="radio" name="q12" value="C"><div class="opt-bubble">C</div><span class="opt-label">100 − (15 + 56)</span></label>
+        <label class="opt"><input type="radio" name="q12" value="D"><div class="opt-bubble">D</div><span class="opt-label">(100 − 15) + 56</span></label>
+      </div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="q-card">
+      <div class="q-num"><div class="q-dot"></div> Question 13</div>
+      <div class="q-text">Which property tells us that adding terms in any order gives the same value?</div>
+      <div class="options">
+        <label class="opt"><input type="radio" name="q13" value="A"><div class="opt-bubble">A</div><span class="opt-label">Distributive property</span></label>
+        <label class="opt"><input type="radio" name="q13" value="B"><div class="opt-bubble">B</div><span class="opt-label">Associative property</span></label>
+        <label class="opt"><input type="radio" name="q13" value="C"><div class="opt-bubble">C</div><span class="opt-label">Commutative property</span></label>
+        <label class="opt"><input type="radio" name="q13" value="D"><div class="opt-bubble">D</div><span class="opt-label">Both b and c</span></label>
+      </div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="q-card">
+      <div class="q-num"><div class="q-dot"></div> Question 14</div>
+      <div class="q-text">500 − (250 − 100) simplified without brackets is:</div>
+      <div class="options">
+        <label class="opt"><input type="radio" name="q14" value="A"><div class="opt-bubble">A</div><span class="opt-label">500 − 250 − 100</span></label>
+        <label class="opt"><input type="radio" name="q14" value="B"><div class="opt-bubble">B</div><span class="opt-label">500 + 250 − 100</span></label>
+        <label class="opt"><input type="radio" name="q14" value="C"><div class="opt-bubble">C</div><span class="opt-label">500 − 250 + 100</span></label>
+        <label class="opt"><input type="radio" name="q14" value="D"><div class="opt-bubble">D</div><span class="opt-label">500 + 250 + 100</span></label>
+      </div>
+    </div>
+
+    <!-- Q15 -->
+    <div class="q-card">
+      <div class="q-num"><div class="q-dot"></div> Question 15</div>
+      <div class="q-text">4 × 5 + 3 × 5 is equal to which of the following?</div>
+      <div class="options">
+        <label class="opt"><input type="radio" name="q15" value="A"><div class="opt-bubble">A</div><span class="opt-label">4 × (5 + 3)</span></label>
+        <label class="opt"><input type="radio" name="q15" value="B"><div class="opt-bubble">B</div><span class="opt-label">(4 + 3) × 5</span></label>
+        <label class="opt"><input type="radio" name="q15" value="C"><div class="opt-bubble">C</div><span class="opt-label">5 × (4 − 3)</span></label>
+        <label class="opt"><input type="radio" name="q15" value="D"><div class="opt-bubble">D</div><span class="opt-label">(4 × 3) + 5</span></label>
       </div>
     </div>
 
@@ -539,10 +598,8 @@
       <button type="submit" class="submit-btn" id="submitBtn">🎉 Submit Answers</button>
     </div>
 
-</form>
+  </form>
 
-
-  <!-- RESULT -->
   <div class="result-panel" id="resultPanel">
     <span class="res-emoji" id="resEmoji"></span>
     <div class="res-title" id="resTitle"></div>
@@ -550,10 +607,9 @@
     <button class="retry-btn" onclick="resetQuiz()">🔄 Try Again</button>
   </div>
 
-</div><!-- /wrap -->
+</div>
 
 <script>
-/* ── STARS ── */
 (function(){
   const c = document.getElementById('stars-canvas');
   const ctx = c.getContext('2d');
@@ -581,15 +637,13 @@
   resize(); init(); draw();
 })();
 
-/* ── AUDIO ENGINE ── */
 const AudioCtx = window.AudioContext||window.webkitAudioContext;
 let actx;
 function getCtx(){ if(!actx) actx = new AudioCtx(); return actx; }
 
 function playTrumpet(){
   const ctx = getCtx();
-  // Fanfare: three ascending notes
-  const notes = [523.25, 659.25, 783.99, 1046.50]; // C5 E5 G5 C6
+  const notes = [523.25, 659.25, 783.99, 1046.50];
   notes.forEach((freq, i) => {
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
@@ -602,7 +656,6 @@ function playTrumpet(){
     osc.start(ctx.currentTime + i*0.18);
     osc.stop(ctx.currentTime + i*0.18 + 0.4);
   });
-  // extra chord hit
   [523.25,659.25,783.99].forEach(f=>{
     const o = ctx.createOscillator(), g = ctx.createGain();
     o.connect(g); g.connect(ctx.destination);
@@ -631,8 +684,7 @@ function playPoppers(){
 
 function playSad(){
   const ctx = getCtx();
-  // descending trombone-like wail
-  const notes=[392,349.23,311.13,261.63]; // G4 F4 Eb4 C4
+  const notes=[392,349.23,311.13,261.63];
   notes.forEach((freq,i)=>{
     const o=ctx.createOscillator(), g=ctx.createGain();
     o.connect(g); g.connect(ctx.destination);
@@ -647,7 +699,6 @@ function playSad(){
   });
 }
 
-/* ── CONFETTI ── */
 function fireConfetti(){
   const colors=['#f7c948','#ff6b6b','#6ee7f7','#a78bfa','#34d399','#ffffff'];
   for(let i=0;i<90;i++){
@@ -684,10 +735,9 @@ function firePoppers(){
   }
 }
 
-/* ── QUIZ LOGIC ── */
-const ANSWERS = { q1: "C", q2: "D", q3: "B", q4: "C", q5: "B", q6: "B" };
+const ANSWERS = { q1:"C", q2:"C", q3:"C", q4:"B", q5:"C", q6:"B", q7:"A", q8:"C", q9:"B", q10:"B", q11:"B", q12:"C", q13:"D", q14:"C", q15:"B" };
 const TOTAL = Object.keys(ANSWERS).length;
-let timeLeft=180, timerID=null, started=false, submitted=false;
+let timeLeft=720, timerID=null, started=false, submitted=false;
 
 const timerEl=document.getElementById('timer');
 const progressEl=document.getElementById('progress');
@@ -695,10 +745,8 @@ const progFill=document.getElementById('progFill');
 const form=document.getElementById('quizForm');
 const resultPanel=document.getElementById('resultPanel');
 
-// radio change → track selection visually & start timer
 document.querySelectorAll('input[type=radio]').forEach(r=>{
   r.addEventListener('change',function(){
-    // unmark siblings
     const siblings=document.querySelectorAll(`input[name="${this.name}"]`);
     siblings.forEach(s=>s.closest('.opt').classList.remove('selected'));
     this.closest('.opt').classList.add('selected');
@@ -712,7 +760,7 @@ function startTimer(){
     timeLeft--;
     const m=Math.floor(timeLeft/60), s=timeLeft%60;
     timerEl.textContent=m+':'+(s<10?'0':'')+s;
-    timerEl.className='hud-val'+(timeLeft<=30?' danger':timeLeft<=60?' warn':'');
+    timerEl.className='hud-val'+(timeLeft<=60?' danger':timeLeft<=120?' warn':'');
     if(timeLeft<=0){ clearInterval(timerID); autoSubmit(); }
   },1000);
 }
@@ -741,7 +789,6 @@ function submitQuiz(){
   let score=0;
   for(let q in ANSWERS){
     const checked=document.querySelector(`input[name="${q}"]:checked`);
-    const allOpts=[...document.querySelectorAll(`input[name="${q}"]`)].map(i=>i.closest('.opt'));
     const correctOpt=[...document.querySelectorAll(`input[name="${q}"]`)].find(i=>i.value===ANSWERS[q])?.closest('.opt');
 
     if(checked){
@@ -767,7 +814,6 @@ function submitQuiz(){
       correctOpt.appendChild(b);
     }
 
-    // disable all
     document.querySelectorAll(`input[name="${q}"]`).forEach(i=>i.disabled=true);
   }
 
@@ -777,7 +823,7 @@ function submitQuiz(){
 
 function showResult(score){
   const pct=Math.round(score/TOTAL*100);
-  const win=score>=3;
+  const win=score>=8;
   const resEmoji=document.getElementById('resEmoji');
   const resTitle=document.getElementById('resTitle');
   const resScore=document.getElementById('resScore');
@@ -800,7 +846,6 @@ function showResult(score){
   resultPanel.className='result-panel show '+(win?'win':'lose');
   resultPanel.scrollIntoView({behavior:'smooth',block:'center'});
 
-  // SOUNDS + EFFECTS
   if(win){
     playTrumpet();
     setTimeout(()=>{ fireConfetti(); firePoppers(); playPoppers(); }, 400);
@@ -810,9 +855,9 @@ function showResult(score){
 }
 
 function resetQuiz(){
-  submitted=false; started=false; timeLeft=180;
+  submitted=false; started=false; timeLeft=720;
   if(timerID) clearInterval(timerID); timerID=null;
-  timerEl.textContent='3:00';
+  timerEl.textContent='12:00';
   timerEl.className='hud-val';
   form.reset();
   document.querySelectorAll('.opt').forEach(o=>{ o.classList.remove('correct','wrong','selected'); });
