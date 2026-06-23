@@ -437,12 +437,11 @@
 
   <!-- HEADER -->
   <div class="hdr">
-    <div class="quiz-label">Lesson 6 Revision  Quiz</div>
+    <div class="quiz-label">Lesson 6 Revision Quiz</div>
     <div class="brand">
       <span class="s">S</span><span class="t">T</span><span class="e">E</span><span class="m">M</span><span class="x">x</span><span class="l">L</span><span class="rest">earning</span>
     </div>
-    <h1>Model Testing & Evaluation
-
+    <h1>Clustering & PCA 
     <p>Answer all 6 questions · Timer starts on first answer</p>
   </div>
 
@@ -462,112 +461,84 @@
   <div class="prog-wrap"><div class="prog-fill" id="progFill"></div></div>
 
   <!-- QUIZ FORM -->
-<form id="quizForm">
+  <form id="quizForm">
 
     <!-- Q1 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 01 </div>
-      <div class="q-text">A dataset has <strong>800 healthy patients</strong> and <strong>200 sick patients</strong>. A model always predicts <strong>"Healthy"</strong> for everyone. What accuracy does it get?</div>
+      <div class="q-text">A music app has songs with features like tempo, beat, energy and mood. Without any human input the app groups songs into playlists automatically. A new song comes in with high energy and fast tempo. Where will it go?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">50%</span></label>
-        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">70%</span></label>
-        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">80%</span></label>
-        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">100%</span></label>
+        <label class="opt"><input type="radio" name="q1" value="A"><div class="opt-bubble">A</div><span class="opt-label">The app will ask the user to place it manually</span></label>
+        <label class="opt"><input type="radio" name="q1" value="B"><div class="opt-bubble">B</div><span class="opt-label">It will go into the cluster whose centroid it is closest to based on its features</span></label>
+        <label class="opt"><input type="radio" name="q1" value="C"><div class="opt-bubble">C</div><span class="opt-label">It will create a new cluster automatically</span></label>
+        <label class="opt"><input type="radio" name="q1" value="D"><div class="opt-bubble">D</div><span class="opt-label">It will be deleted because it has no label</span></label>
       </div>
     </div>
 
     <!-- Q2 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 02 </div>
-      <div class="q-text">In a confusion matrix, the model predicted <strong>YES</strong> but the actual answer was <strong>NO</strong>. What is this called?</div>
+      <div class="q-text">A K-Means model is trained with K=4 on a retail dataset. After training the data scientist notices that 3 out of 4 clusters have very few customers and 1 cluster has almost everyone. What does this suggest?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">True Positive</span></label>
-        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">True Negative</span></label>
-        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">False Positive</span></label>
-        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">False Negative</span></label>
+        <label class="opt"><input type="radio" name="q2" value="A"><div class="opt-bubble">A</div><span class="opt-label">The model has overfitted the data</span></label>
+        <label class="opt"><input type="radio" name="q2" value="B"><div class="opt-bubble">B</div><span class="opt-label">K=4 may not be the right number of clusters for this data</span></label>
+        <label class="opt"><input type="radio" name="q2" value="C"><div class="opt-bubble">C</div><span class="opt-label">PCA should have been used instead</span></label>
+        <label class="opt"><input type="radio" name="q2" value="D"><div class="opt-bubble">D</div><span class="opt-label">The centroids are placed correctly</span></label>
       </div>
     </div>
 
     <!-- Q3 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 03 </div>
-      <div class="q-text">A model is built to detect <strong>fraudulent bank transactions</strong>. There are <strong>50 actual fraud cases</strong>. The model caught <strong>35 of them</strong>. What is the recall and which direction should the team push it?</div>
+      <div class="q-text">A centroid in K-Means starts at position (2, 3) in the first step. After all nearby points are assigned to it the average of those points comes out to (5, 7). What happens next?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">Recall = 60%, push precision higher instead</span></label>
-        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">Recall = 70%, push it higher because missing fraud is costly</span></label>
-        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">Recall = 70%, it is already good enough</span></label>
-        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">Recall = 35%, precision matters more in fraud detection</span></label>
+        <label class="opt"><input type="radio" name="q3" value="A"><div class="opt-bubble">A</div><span class="opt-label">The centroid stays at (2, 3) permanently</span></label>
+        <label class="opt"><input type="radio" name="q3" value="B"><div class="opt-bubble">B</div><span class="opt-label">The centroid moves to (5, 7) and the process repeats</span></label>
+        <label class="opt"><input type="radio" name="q3" value="C"><div class="opt-bubble">C</div><span class="opt-label">The cluster is deleted and K is reduced by 1</span></label>
+        <label class="opt"><input type="radio" name="q3" value="D"><div class="opt-bubble">D</div><span class="opt-label">The model stops training immediately</span></label>
       </div>
     </div>
 
     <!-- Q4 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 04 </div>
-      <div class="q-text">A model has <strong>Precision = 0.72</strong> and <strong>Recall = 0.68</strong>. A data scientist calculates the F1 Score. Which range does it fall in?</div>
+      <div class="q-text">A dataset has these columns — monthly income, weekly savings, total expenses, loan amount and credit score. A data scientist says columns 1, 2 and 3 are all basically saying the same thing about money flow. What would PCA do with these three columns?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Below 0.50</span></label>
-        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Between 0.50 and 0.65</span></label>
-        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Between 0.65 and 0.75</span></label>
-        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">Above 0.90</span></label>
+        <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Delete all three columns from the dataset</span></label>
+        <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Keep all three columns as they are</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Combine them into one component that captures the overall money pattern</span></label>
+        <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label">Replace them with random values</span></label>
       </div>
     </div>
 
     <!-- Q5 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 05 </div>
-      <div class="q-text">A student trains a model and gets these results:<br><br>
-        <table style="border-collapse:collapse;width:100%;margin-bottom:10px;font-size:15px;">
-          <thead>
-            <tr style="background:rgba(255,255,255,0.07);">
-              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;"></th>
-              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Training</th>
-              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Test</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Accuracy</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">62%</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">59%</td></tr>
-          </tbody>
-        </table>
-        What is the problem and what is the root cause?</div>
+      <div class="q-text">Two data scientists are arguing. Aisha says "we should always use as many columns as possible — more data means better results." Rohan says "too many columns can actually confuse the model and slow it down." Who is right?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Overfitting — high variance</span></label>
-        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">Underfitting — high bias</span></label>
-        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Overfitting — high bias</span></label>
-        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">The model is performing well — no problem here</span></label>
+        <label class="opt"><input type="radio" name="q5" value="A"><div class="opt-bubble">A</div><span class="opt-label">Aisha — more columns always means better accuracy</span></label>
+        <label class="opt"><input type="radio" name="q5" value="B"><div class="opt-bubble">B</div><span class="opt-label">Rohan — too many columns especially repetitive ones can hurt model performance and PCA helps fix this</span></label>
+        <label class="opt"><input type="radio" name="q5" value="C"><div class="opt-bubble">C</div><span class="opt-label">Both are wrong — the number of columns does not affect the model at all</span></label>
+        <label class="opt"><input type="radio" name="q5" value="D"><div class="opt-bubble">D</div><span class="opt-label">Aisha — but only if all columns are numerical</span></label>
       </div>
     </div>
 
     <!-- Q6 -->
     <div class="q-card">
       <div class="q-num"><div class="q-dot"></div> Question 06 </div>
-      <div class="q-text">A data scientist builds two models for the same problem:<br><br>
-        <table style="border-collapse:collapse;width:100%;margin-bottom:10px;font-size:15px;">
-          <thead>
-            <tr style="background:rgba(255,255,255,0.07);">
-              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;"></th>
-              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Training Accuracy</th>
-              <th style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Test Accuracy</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Model A</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">97%</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">61%</td></tr>
-            <tr style="background:rgba(255,255,255,0.03);"><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">Model B</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">74%</td><td style="padding:8px 14px;border:1px solid rgba(255,255,255,0.1);">72%</td></tr>
-          </tbody>
-        </table>
-        The manager says <em>"Model A is better because it has higher overall accuracy."</em> Why is the manager wrong?</div>
+      <div class="q-text">A food delivery app wants to understand its customers better. It has data on order frequency, average order value, preferred cuisine, time of order and distance from restaurant. Without any predefined categories it wants to find natural customer types. After PCA reduces the data to 3 components K-Means is applied with K=3. What will the final output look like?</div>
       <div class="options">
-        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">Training accuracy is always irrelevant so Model A cannot be evaluated</span></label>
-        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Model A is overfitting — the huge gap between training and test means it memorized the data and will fail in the real world. Model B generalizes far better.</span></label>
-        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">Model B is underfitting because its training accuracy is only 74%</span></label>
-        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Both models have the same problem — neither has above 80% test accuracy</span></label>
+        <label class="opt"><input type="radio" name="q6" value="A"><div class="opt-bubble">A</div><span class="opt-label">A prediction of how much each customer will spend next month</span></label>
+        <label class="opt"><input type="radio" name="q6" value="B"><div class="opt-bubble">B</div><span class="opt-label">Three natural customer segments based on ordering patterns</span></label>
+        <label class="opt"><input type="radio" name="q6" value="C"><div class="opt-bubble">C</div><span class="opt-label">A list of customers who are likely to stop using the app</span></label>
+        <label class="opt"><input type="radio" name="q6" value="D"><div class="opt-bubble">D</div><span class="opt-label">Three columns of compressed data with no grouping</span></label>
       </div>
     </div>
 
     <div class="submit-wrap">
       <button type="submit" class="submit-btn" id="submitBtn">🎉 Submit Answers</button>
     </div>
-
-</form>
+  </form>
   <!-- RESULT -->
   <div class="result-panel" id="resultPanel">
     <span class="res-emoji" id="resEmoji"></span>
@@ -711,7 +682,7 @@ function firePoppers(){
 }
 
 /* ── QUIZ LOGIC ── */
-const ANSWERS = { q1:'C', q2:'C', q3:'B', q4:'C', q5:'B', q6:'B' };
+const ANSWERS = { q1:'B', q2:'B', q3:'B', q4:'C', q5:'B', q6:'B' };
 const TOTAL = Object.keys(ANSWERS).length;
 let timeLeft=180, timerID=null, started=false, submitted=false;
 
