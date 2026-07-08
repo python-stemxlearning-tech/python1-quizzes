@@ -506,7 +506,7 @@
       <div class="options">
         <label class="opt"><input type="radio" name="q4" value="A"><div class="opt-bubble">A</div><span class="opt-label">Metal is cheaper than other materials</span></label>
         <label class="opt"><input type="radio" name="q4" value="B"><div class="opt-bubble">B</div><span class="opt-label">Metal is a poor conductor, so it keeps food cool</span></label>
-        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label">Metal is a poor conductor, so it keeps food cool</span></label>
+        <label class="opt"><input type="radio" name="q4" value="C"><div class="opt-bubble">C</div><span class="opt-label"> Metal is a good conductor, so heat passes through quickly to cook food </span> </label>
         <label class="opt"><input type="radio" name="q4" value="D"><div class="opt-bubble">D</div><span class="opt-label"> Metal looks shinier than plastic or wood</span></label>
       </div>
     </div>
@@ -685,7 +685,7 @@ function firePoppers(){
 }
 
 /* ── QUIZ LOGIC ── */
-const ANSWERS = { q1: "B", q2: "C", q3: "B", q4: "A", q5: "B", q6: "A" };
+const ANSWERS = { q1: "B", q2: "C", q3: "B", q4: "C", q5: "B", q6: "C" };
 const TOTAL = Object.keys(ANSWERS).length;
 let timeLeft=180, timerID=null, started=false, submitted=false;
 
